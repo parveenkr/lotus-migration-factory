@@ -1,0 +1,924 @@
+{
+  "traceability": {
+    "sourceFormName": "休日設定メンテナンス",
+    "sourceFormAlias": "frmSyukuCalendar",
+    "metadataSource": "input\\ExtractedJson\\synopsis.json",
+    "generatedBy": "lotus-notes-form-blueprint-generator",
+    "applicationId": "49257BE3002293FD"
+  },
+  "migrationBlueprintVersion": "1.0",
+  "source": {
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Forms/2"
+    },
+    "metadata": {
+      "Name": "休日設定メンテナンス",
+      "Alias": "frmSyukuCalendar",
+      "FieldNames": [
+        "DelFlag",
+        "DelDate",
+        "SyukuDay",
+        "UpdtDate",
+        "UpdtUser"
+      ],
+      "Actions": [
+        "Action 02編集 [click]:\n@Command([EditDocument])",
+        "Action 02編集 [label]:\n\"編集\"",
+        "Action 03保存 [click]:\n@Command([FileSave])",
+        "Action 03保存 [label]:\n\"保存\"",
+        "Action 閉じる [click]:\n@Command([FileCloseWindow])",
+        "Action 閉じる [label]:\n\"閉じる\"",
+        "Form Event [onsubmit]:\nSub Onsubmit(Source As Notesuidocument, Continue As Variant)\n\tOn Error Goto ERR_HANDLE\n\tDim objAddInfo\t\tAs clsAddressInfo\n\tDim doc\t\t\tAs NotesDocument\n\tDim blnRes\t\t\tAs Boolean\n\tDim strTime\t\tAs String\n\tDim strUserID\t\tAs String\n\tDim nmUserID\t\tAs NotesName\n\tDim strRetMsg\t\tAs String\n\tSet objAddInfo = New clsAddressInfo(\"\")\n\tSet doc\t\t\t= Source.Document\n\tContinue = True\n\tblnRes = funcErrChkDate( Source )\n\tIf blnRes = False Then\n\t\tContinue = False\n\t\tExit Sub\n\tElse\n\t\tstrTime = Format$( Today, \"yyyy/mm/dd\" )\n\t\tIf objAddInfo.InfoFlag = True Then\n\t\t\tSet nmUserID = New NotesName( objAddInfo.UserID )\n\t\t\tstrUserID = nmUserID.Abbreviated\n\t\tElse\n\t\t\tstrRetMsg = funcReturnMsg( \"E019\" )\n\t\t\tMsgbox strRetMsg, 0 + 16, \"システムエラー\"\n\t\t\tContinue = False\n\t\t\tExit Sub\n\t\tEnd If\n\t\tdoc.UpdtDate = strTime\n\t\tdoc.UpdtUser = strUserID\n\tEnd If\n\tExit Sub\nERR_HANDLE:\n\tstrRetMsg = funcReturnMsg( \"E020\" )\n\tMsgbox strRetMsg & Chr(13) & Chr(10) & Chr(13) & Chr(10) & _\n\tfuncOnErrorMsg(\"Onsubmit\",Err, Erl, Error$), 16, \"システムエラー\"\n\tIf doc Is Nothing Then\n\tElse\n\t\tdoc.SaveOptions = \"0\"\n\t\tCall Source.Close( False )\n\tEnd If\n\tExit Sub\nEnd Sub",
+        "Form Event Button Visibility: 02編集; Roles=; Statuses=; HideAttr=edit previewedit; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen=",
+        "Form Event Button Visibility: 03保存; Roles=; Statuses=; HideAttr=preview read; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen=",
+        "Form Event Button Visibility: 閉じる; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+      ],
+      "WindowTitleFormula": "\"休日カレンダー\"",
+      "EventScripts": [],
+      "LayoutRows": [],
+      "LotusScripts": [
+        "Form Script[click]: @Command([EditDocument])",
+        "Form Script[click]: @Command([FileCloseWindow])",
+        "Form Script[click]: @Command([FileSave])",
+        "Form Script[defaultvalue]: 0",
+        "Form Script[defaultvalue]: @ThisValue",
+        "Form Script[funcErrChkDate]: Function funcErrChkDate ( uidoc As NotesUIDocument ) As Boolean\n\tOn Error Goto ERR_HANDLE\n\tDim doc\t\t\tAs NotesDocument\n\tDim blnRet \t\tAs Boolean\n\tDim blnSEM\t\tAs Boolean\n\tDim strRetMsg\t\tAs String\n\tSet doc\t\t\t= uidoc.Document\n\tfuncErrChkDate = True\n\tForall item In doc.SyukuDay\n\t\tblnSEM = funcChkDate( item, blnRet )\n\t\tIf blnSEM = False Then\n\t\t\tExit Function\n\t\tEnd If\n\t\tIf blnRet = False Then\n\t\t\tstrRetMsg = funcReturnMsg( \"E011\" )\n\t\t\tMsgbox strRetMsg, 0 + 16, \"エラー\"\n\t\t\tCall uidoc.GotoField(\"SyukuDay\")\n\t\t\tfuncErrChkDate = False\n\t\t\tExit Function\n\t\tEnd If\n\tEnd Forall\n\tblnRet = True\n\tExit Function\nERR_HAND...",
+        "Form Script[label]: \"保存\"",
+        "Form Script[label]: \"編集\"",
+        "Form Script[label]: \"閉じる\"",
+        "Form Script[onsubmit]: Sub Onsubmit(Source As Notesuidocument, Continue As Variant)\n\tOn Error Goto ERR_HANDLE\n\tDim objAddInfo\t\tAs clsAddressInfo\n\tDim doc\t\t\tAs NotesDocument\n\tDim blnRes\t\t\tAs Boolean\n\tDim strTime\t\tAs String\n\tDim strUserID\t\tAs String\n\tDim nmUserID\t\tAs NotesName\n\tDim strRetMsg\t\tAs String\n\tSet objAddInfo = New clsAddressInfo(\"\")\n\tSet doc\t\t\t= Source.Document\n\tContinue = True\n\tblnRes = funcErrChkDate( Source )\n\tIf blnRes = False Then\n\t\tContinue = False\n\t\tExit Sub\n\tElse\n\t\tstrTime = Format$( Today, \"yyyy/mm/dd\" )\n\t\tIf objAddInfo.InfoFlag = True Then\n\t\t\tSet nmUserID = New NotesName( objAddInfo.UserID )\n\t\t\tstr...",
+        "Form Script[windowtitle]: \"休日カレンダー\""
+      ],
+      "Layout": {
+        "Tabs": [],
+        "Sections": [],
+        "FieldGroups": [
+          {
+            "GroupName": "Ungrouped",
+            "Context": "section",
+            "Fields": [
+              "DelDate",
+              "DelFlag",
+              "SyukuDay",
+              "UpdtDate",
+              "UpdtUser"
+            ]
+          }
+        ],
+        "PageBreaks": [],
+        "Coordinates": [],
+        "Labels": [
+          {
+            "Text": "削除日 ：",
+            "FieldName": "DelDate"
+          },
+          {
+            "Text": "削除フラグ ：",
+            "FieldName": "DelFlag"
+          },
+          {
+            "Text": "最終更新日 ：",
+            "FieldName": "UpdtDate"
+          },
+          {
+            "Text": "最終更新者 ：",
+            "FieldName": "UpdtUser"
+          }
+        ],
+        "VisualStyles": [
+          {
+            "ElementType": "action",
+            "ElementName": "02編集",
+            "IconRef": "5"
+          },
+          {
+            "ElementType": "action",
+            "ElementName": "03保存",
+            "IconRef": "117"
+          },
+          {
+            "ElementType": "action",
+            "ElementName": "閉じる",
+            "IconRef": "27"
+          },
+          {
+            "ElementType": "actionbar",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontSize": "9pt",
+            "TextColor": "system",
+            "BackgroundColor": "#d4d0c8",
+            "BorderStyle": "solid",
+            "BorderColor": "black",
+            "BorderWidth": "0px 0px 1px"
+          },
+          {
+            "ElementType": "actionbuttonstyle",
+            "BackgroundColor": "#d4d0c8"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ ゴシック",
+            "FontName": "ＭＳ ゴシック"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontSize": "9pt",
+            "TextColor": "system"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "TextColor": "red"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontSize": "18pt",
+            "FontStyle": "bold",
+            "TextColor": "red"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "TextColor": "#8f8f8f"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "TextColor": "red"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ ゴシック"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontSize": "18pt",
+            "FontStyle": "bold",
+            "TextColor": "red"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "TextColor": "#8f8f8f"
+          }
+        ],
+        "RichTextTemplates": [
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "1",
+            "Context": "",
+            "Attributes": "hide=read edit print copy preview previewedit embedded; id=1",
+            "SampleText": "******非表示フィールド****************************削除フラグ ：0削除日 ：@ThisValue***********************************************休日設定※) Y..."
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "2",
+            "Context": "",
+            "Attributes": "id=2",
+            "SampleText": "******非表示フィールド****************************削除フラグ ：0削除日 ：@ThisValue***********************************************休日設定※) Y..."
+          },
+          {
+            "TemplateType": "richtext",
+            "TemplateName": "",
+            "Context": "",
+            "Attributes": "",
+            "SampleText": "******非表示フィールド****************************削除フラグ ：0削除日 ：@ThisValue***********************************************休日設定※) YYYY/MM/DD形式で設定すること最終更新日 ： REM {@Modified}; @ThisValue最終更新者 ： REM {@Name([Abbreviate]; @UserName)}; @ThisValue"
+          }
+        ],
+        "EmbeddedElements": [
+          {
+            "ElementType": "icon",
+            "Name": "閉じる",
+            "Context": "",
+            "Source": "REM {内容：文書を閉じる（アイコンは休日設定フォーム用） 2006/04/07 DLS.Chida 新規作成}; @Command([FileCloseWindow])\"閉じる\""
+          },
+          {
+            "ElementType": "icon",
+            "Name": "02編集",
+            "Context": "",
+            "Source": "REM {内容：文書を編集する（通常用） 2006/04/07 DLS.Chida 新規作成}; @Command([EditDocument])\"編集\""
+          },
+          {
+            "ElementType": "icon",
+            "Name": "03保存",
+            "Context": "",
+            "Source": "REM {内容：文書を保存する（通常用） 2006/04/07 DLS.Chida 新規作成}; @Command([FileSave])\"保存\""
+          }
+        ]
+      }
+    }
+  },
+  "form": {
+    "id": "49257BE3002293FD:Forms:234750c26dc255daabb2",
+    "name": "休日設定メンテナンス",
+    "alias": "frmSyukuCalendar",
+    "title": null,
+    "description": null,
+    "windowTitleFormula": "\"休日カレンダー\"",
+    "fieldOrder": [
+      "DelFlag",
+      "DelDate",
+      "SyukuDay",
+      "UpdtDate",
+      "UpdtUser"
+    ]
+  },
+  "layout": {
+    "Tabs": [],
+    "Sections": [],
+    "FieldGroups": [
+      {
+        "GroupName": "Ungrouped",
+        "Context": "section",
+        "Fields": [
+          "DelDate",
+          "DelFlag",
+          "SyukuDay",
+          "UpdtDate",
+          "UpdtUser"
+        ]
+      }
+    ],
+    "PageBreaks": [],
+    "Coordinates": [],
+    "Labels": [
+      {
+        "Text": "削除日 ：",
+        "FieldName": "DelDate"
+      },
+      {
+        "Text": "削除フラグ ：",
+        "FieldName": "DelFlag"
+      },
+      {
+        "Text": "最終更新日 ：",
+        "FieldName": "UpdtDate"
+      },
+      {
+        "Text": "最終更新者 ：",
+        "FieldName": "UpdtUser"
+      }
+    ],
+    "VisualStyles": [
+      {
+        "ElementType": "action",
+        "ElementName": "02編集",
+        "IconRef": "5"
+      },
+      {
+        "ElementType": "action",
+        "ElementName": "03保存",
+        "IconRef": "117"
+      },
+      {
+        "ElementType": "action",
+        "ElementName": "閉じる",
+        "IconRef": "27"
+      },
+      {
+        "ElementType": "actionbar",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontSize": "9pt",
+        "TextColor": "system",
+        "BackgroundColor": "#d4d0c8",
+        "BorderStyle": "solid",
+        "BorderColor": "black",
+        "BorderWidth": "0px 0px 1px"
+      },
+      {
+        "ElementType": "actionbuttonstyle",
+        "BackgroundColor": "#d4d0c8"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ ゴシック",
+        "FontName": "ＭＳ ゴシック"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontSize": "9pt",
+        "TextColor": "system"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "TextColor": "red"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontSize": "18pt",
+        "FontStyle": "bold",
+        "TextColor": "red"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "TextColor": "#8f8f8f"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "TextColor": "red"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ ゴシック"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontSize": "18pt",
+        "FontStyle": "bold",
+        "TextColor": "red"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "TextColor": "#8f8f8f"
+      }
+    ],
+    "RichTextTemplates": [
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "1",
+        "Context": "",
+        "Attributes": "hide=read edit print copy preview previewedit embedded; id=1",
+        "SampleText": "******非表示フィールド****************************削除フラグ ：0削除日 ：@ThisValue***********************************************休日設定※) Y..."
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "2",
+        "Context": "",
+        "Attributes": "id=2",
+        "SampleText": "******非表示フィールド****************************削除フラグ ：0削除日 ：@ThisValue***********************************************休日設定※) Y..."
+      },
+      {
+        "TemplateType": "richtext",
+        "TemplateName": "",
+        "Context": "",
+        "Attributes": "",
+        "SampleText": "******非表示フィールド****************************削除フラグ ：0削除日 ：@ThisValue***********************************************休日設定※) YYYY/MM/DD形式で設定すること最終更新日 ： REM {@Modified}; @ThisValue最終更新者 ： REM {@Name([Abbreviate]; @UserName)}; @ThisValue"
+      }
+    ],
+    "EmbeddedElements": [
+      {
+        "ElementType": "icon",
+        "Name": "閉じる",
+        "Context": "",
+        "Source": "REM {内容：文書を閉じる（アイコンは休日設定フォーム用） 2006/04/07 DLS.Chida 新規作成}; @Command([FileCloseWindow])\"閉じる\""
+      },
+      {
+        "ElementType": "icon",
+        "Name": "02編集",
+        "Context": "",
+        "Source": "REM {内容：文書を編集する（通常用） 2006/04/07 DLS.Chida 新規作成}; @Command([EditDocument])\"編集\""
+      },
+      {
+        "ElementType": "icon",
+        "Name": "03保存",
+        "Context": "",
+        "Source": "REM {内容：文書を保存する（通常用） 2006/04/07 DLS.Chida 新規作成}; @Command([FileSave])\"保存\""
+      }
+    ]
+  },
+  "fields": [
+    {
+      "id": "49257BE3002293FD:field:0c447582067cf3d45fac",
+      "fieldName": "DelFlag",
+      "fieldType": "number",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "0",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/106"
+      },
+      "source": {
+        "Name": "DelFlag",
+        "Type": "number",
+        "DataType": "number",
+        "DisplayName": "Del Flag",
+        "JapaneseLabel": "削除フラグ ：",
+        "SourceForm": "休日設定メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "0",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "0",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "休日設定メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:be7eba50491563c5a97e",
+      "fieldName": "DelDate",
+      "fieldType": "datetime",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/107"
+      },
+      "source": {
+        "Name": "DelDate",
+        "Type": "datetime",
+        "DataType": "datetime",
+        "DisplayName": "Del Date",
+        "JapaneseLabel": "削除日 ：",
+        "SourceForm": "休日設定メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "休日設定メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:29124da6e9be3f43a9f6",
+      "fieldName": "SyukuDay",
+      "fieldType": "text",
+      "classification": "UserField",
+      "required": null,
+      "visible": null,
+      "editable": true,
+      "sourceFormula": "",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/108"
+      },
+      "source": {
+        "Name": "SyukuDay",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Syuku Day",
+        "JapaneseLabel": "",
+        "SourceForm": "休日設定メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "editable",
+        "ComputedFormula": "",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "DirectInput",
+        "IsMultiValue": true,
+        "SourceFormula": "",
+        "SourceFormulaEvent": "",
+        "IsEditable": true,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "休日設定メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:751cb19b84998b4a72e0",
+      "fieldName": "UpdtDate",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/109"
+      },
+      "source": {
+        "Name": "UpdtDate",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Update Date",
+        "JapaneseLabel": "最終更新日 ：",
+        "SourceForm": "休日設定メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "休日設定メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:ffee30f488eeded3c384",
+      "fieldName": "UpdtUser",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/110"
+      },
+      "source": {
+        "Name": "UpdtUser",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Update User",
+        "JapaneseLabel": "最終更新者 ：",
+        "SourceForm": "休日設定メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "休日設定メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    }
+  ],
+  "sections": [],
+  "actions": [
+    {
+      "id": "49257BE3002293FD:formAction:30189291229b22ec7a3d",
+      "name": "02編集",
+      "actionType": "click",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/0"
+      },
+      "source": "Action 02編集 [click]:\n@Command([EditDocument])"
+    },
+    {
+      "id": "49257BE3002293FD:formAction:63ff83f9fe3ab78c5812",
+      "name": "02編集",
+      "actionType": "label",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/1"
+      },
+      "source": "Action 02編集 [label]:\n\"編集\""
+    },
+    {
+      "id": "49257BE3002293FD:formAction:770d2526d0425b98a49f",
+      "name": "03保存",
+      "actionType": "click",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/2"
+      },
+      "source": "Action 03保存 [click]:\n@Command([FileSave])"
+    },
+    {
+      "id": "49257BE3002293FD:formAction:78f27ead4dd0cd4beb66",
+      "name": "03保存",
+      "actionType": "label",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/3"
+      },
+      "source": "Action 03保存 [label]:\n\"保存\""
+    },
+    {
+      "id": "49257BE3002293FD:formAction:5cb2ad867544777430d3",
+      "name": "閉じる",
+      "actionType": "click",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/4"
+      },
+      "source": "Action 閉じる [click]:\n@Command([FileCloseWindow])"
+    },
+    {
+      "id": "49257BE3002293FD:formAction:3f1b20067aad98a107a2",
+      "name": "閉じる",
+      "actionType": "label",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/5"
+      },
+      "source": "Action 閉じる [label]:\n\"閉じる\""
+    },
+    {
+      "id": "49257BE3002293FD:formAction:43ad20cd5fe559124800",
+      "name": null,
+      "actionType": null,
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/6"
+      },
+      "source": "Form Event [onsubmit]:\nSub Onsubmit(Source As Notesuidocument, Continue As Variant)\n\tOn Error Goto ERR_HANDLE\n\tDim objAddInfo\t\tAs clsAddressInfo\n\tDim doc\t\t\tAs NotesDocument\n\tDim blnRes\t\t\tAs Boolean\n\tDim strTime\t\tAs String\n\tDim strUserID\t\tAs String\n\tDim nmUserID\t\tAs NotesName\n\tDim strRetMsg\t\tAs String\n\tSet objAddInfo = New clsAddressInfo(\"\")\n\tSet doc\t\t\t= Source.Document\n\tContinue = True\n\tblnRes = funcErrChkDate( Source )\n\tIf blnRes = False Then\n\t\tContinue = False\n\t\tExit Sub\n\tElse\n\t\tstrTime = Format$( Today, \"yyyy/mm/dd\" )\n\t\tIf objAddInfo.InfoFlag = True Then\n\t\t\tSet nmUserID = New NotesName( objAddInfo.UserID )\n\t\t\tstrUserID = nmUserID.Abbreviated\n\t\tElse\n\t\t\tstrRetMsg = funcReturnMsg( \"E019\" )\n\t\t\tMsgbox strRetMsg, 0 + 16, \"システムエラー\"\n\t\t\tContinue = False\n\t\t\tExit Sub\n\t\tEnd If\n\t\tdoc.UpdtDate = strTime\n\t\tdoc.UpdtUser = strUserID\n\tEnd If\n\tExit Sub\nERR_HANDLE:\n\tstrRetMsg = funcReturnMsg( \"E020\" )\n\tMsgbox strRetMsg & Chr(13) & Chr(10) & Chr(13) & Chr(10) & _\n\tfuncOnErrorMsg(\"Onsubmit\",Err, Erl, Error$), 16, \"システムエラー\"\n\tIf doc Is Nothing Then\n\tElse\n\t\tdoc.SaveOptions = \"0\"\n\t\tCall Source.Close( False )\n\tEnd If\n\tExit Sub\nEnd Sub"
+    },
+    {
+      "id": "49257BE3002293FD:formAction:2226a9e7439a848f2332",
+      "name": null,
+      "actionType": null,
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/7"
+      },
+      "source": "Form Event Button Visibility: 02編集; Roles=; Statuses=; HideAttr=edit previewedit; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    },
+    {
+      "id": "49257BE3002293FD:formAction:1e0ea8eada1b0f465cba",
+      "name": null,
+      "actionType": null,
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/8"
+      },
+      "source": "Form Event Button Visibility: 03保存; Roles=; Statuses=; HideAttr=preview read; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    },
+    {
+      "id": "49257BE3002293FD:formAction:4f6b78a08c902c022754",
+      "name": null,
+      "actionType": null,
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/Actions/9"
+      },
+      "source": "Form Event Button Visibility: 閉じる; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    }
+  ],
+  "formulas": [
+    {
+      "id": "49257BE3002293FD:formFormula:edbceafb88bed19590ca",
+      "formula": "\"休日カレンダー\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/WindowTitleFormula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:fc85e74b151423eac97f",
+      "formula": "Form Script[defaultvalue]: 0",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/LotusScripts/3"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:815550ae61d5545dc5f9",
+      "formula": "Form Script[defaultvalue]: @ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/LotusScripts/4"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:f8d8d753cb6131c8bc1e",
+      "formula": "Form Script[label]: \"保存\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/LotusScripts/6"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:bbe0d6de110ede6e8305",
+      "formula": "Form Script[label]: \"編集\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/LotusScripts/7"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:2e25fad964f06c716108",
+      "formula": "Form Script[label]: \"閉じる\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/LotusScripts/8"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:07ea8bc544ec348990b7",
+      "formula": "Form Script[windowtitle]: \"休日カレンダー\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2/LotusScripts/10"
+      }
+    }
+  ],
+  "subforms": [],
+  "attachments": {
+    "enabled": null,
+    "attachmentFields": [],
+    "restrictions": [],
+    "dependencies": [],
+    "runtimePayloadsAvailable": false
+  },
+  "auditHistory": {
+    "enabled": null,
+    "historyType": null,
+    "trackingFields": [],
+    "approvalTracking": null,
+    "dependencies": []
+  },
+  "responseRelationships": [],
+  "workflowReference": {
+    "analyzedBy": "lotus-workflow-analyzer"
+  },
+  "securityReference": {
+    "analyzedBy": "lotus-security-analyzer"
+  },
+  "logicReference": {
+    "analyzedBy": "lotus-logic-analyzer"
+  },
+  "scriptReference": {
+    "analyzedBy": "lotus-script-analyzer"
+  },
+  "integrationReference": {
+    "analyzedBy": "lotus-integration-analyzer"
+  },
+  "richTextReference": {
+    "analyzedBy": "rich-text-analyzer"
+  },
+  "profileReference": {
+    "analyzedBy": "profile-document-analyzer"
+  },
+  "dependencies": [],
+  "migrationHints": {
+    "metadataOnly": true,
+    "fullBehaviorOwnedBySpecialistAnalyzers": true
+  },
+  "migrationRisks": [
+    {
+      "code": "PARTIAL_SOURCE",
+      "message": "Some exported embedded source/sample strings end with ellipses; source LotusScripts contain replacement characters. Do not treat samples as complete executable bodies.",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2"
+      }
+    },
+    {
+      "code": "UNKNOWN_METADATA",
+      "message": "Null purpose/required/visibility/response semantics are not permissive defaults. Root field kinds and exact source retained."
+    }
+  ],
+  "complexity": {
+    "overall": "Medium",
+    "formStructure": "Medium",
+    "fields": "Medium",
+    "actions": "Medium",
+    "subforms": "Medium",
+    "attachments": "Medium",
+    "auditHistory": "Medium",
+    "responseDocuments": "Medium"
+  },
+  "compatibility": {
+    "unsupportedFeatures": [],
+    "partiallySupportedFeatures": [],
+    "manualMigrationRequired": [
+      "Unresolved script behavior and missing runtime payload evidence"
+    ],
+    "analyzerDependencies": [
+      "lotus-script-analyzer",
+      "lotus-logic-analyzer",
+      "lotus-workflow-analyzer",
+      "lotus-security-analyzer",
+      "rich-text-analyzer",
+      "lotus-navigation-analyzer",
+      "lotus-homepage-analyzer",
+      "lotus-view-analyzer",
+      "lotus-ui-analyzer",
+      "lotus-integration-analyzer",
+      "profile-document-analyzer"
+    ]
+  },
+  "presentationHints": {},
+  "implementationHints": {}
+}

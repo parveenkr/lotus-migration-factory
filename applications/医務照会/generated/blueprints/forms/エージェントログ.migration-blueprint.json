@@ -1,0 +1,939 @@
+{
+  "traceability": {
+    "sourceFormName": "エージェントログ",
+    "sourceFormAlias": "frmLogDoc",
+    "metadataSource": "input\\ExtractedJson\\synopsis.json",
+    "generatedBy": "lotus-notes-form-blueprint-generator",
+    "applicationId": "49257BE3002293FD"
+  },
+  "migrationBlueprintVersion": "1.0",
+  "source": {
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Forms/0"
+    },
+    "metadata": {
+      "Name": "エージェントログ",
+      "Alias": "frmLogDoc",
+      "FieldNames": [
+        "ResultStatus",
+        "AgentName",
+        "ExecSeverName",
+        "ExecStartDate",
+        "ExecEndDate",
+        "D_ResultStatus",
+        "ExecName",
+        "ExecResult"
+      ],
+      "Actions": [],
+      "WindowTitleFormula": "\"エージェントログ\"",
+      "EventScripts": [],
+      "LayoutRows": [],
+      "LotusScripts": [
+        "Form Script[defaultvalue]: @If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+        "Form Script[defaultvalue]: @ThisValue",
+        "Form Script[windowtitle]: \"エージェントログ\""
+      ],
+      "Layout": {
+        "Tabs": [],
+        "Sections": [],
+        "FieldGroups": [
+          {
+            "GroupName": "TableRow:1",
+            "Context": "table-row",
+            "Fields": [
+              "AgentName",
+              "ExecSeverName"
+            ]
+          },
+          {
+            "GroupName": "TableRow:2",
+            "Context": "table-row",
+            "Fields": [
+              "D_ResultStatus",
+              "ExecEndDate",
+              "ExecName",
+              "ExecStartDate"
+            ]
+          },
+          {
+            "GroupName": "TableRow:4",
+            "Context": "table-row",
+            "Fields": [
+              "ExecResult"
+            ]
+          },
+          {
+            "GroupName": "Ungrouped",
+            "Context": "section",
+            "Fields": [
+              "ResultStatus"
+            ]
+          }
+        ],
+        "PageBreaks": [
+          {
+            "Marker": "horizrule",
+            "Context": ""
+          }
+        ],
+        "Coordinates": [
+          {
+            "ElementType": "table",
+            "Width": "6.4972in"
+          },
+          {
+            "ElementType": "table",
+            "Width": "6.5785in"
+          }
+        ],
+        "Labels": [],
+        "VisualStyles": [
+          {
+            "ElementType": "font",
+            "TextColor": "red"
+          },
+          {
+            "ElementType": "font",
+            "FontStyle": "bold",
+            "TextColor": "red",
+            "Context": "Row=2; Column=1"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "multilingual",
+            "FontName": "multilingual",
+            "FontSize": "24pt",
+            "FontStyle": "bold"
+          },
+          {
+            "ElementType": "horizrule",
+            "TextColor": "#00e100"
+          },
+          {
+            "ElementType": "run",
+            "TextColor": "red"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "multilingual",
+            "FontSize": "24pt",
+            "FontStyle": "bold"
+          },
+          {
+            "ElementType": "run",
+            "FontStyle": "bold",
+            "TextColor": "red",
+            "Context": "Row=2; Column=1"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#e0ffbf",
+            "Context": "Row=1"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#e0ffbf",
+            "Context": "Row=2"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#e0ffdf",
+            "Context": "Row=1"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#e0ffff",
+            "Context": "Row=3"
+          }
+        ],
+        "RichTextTemplates": [
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "1",
+            "Context": "",
+            "Attributes": "id=1",
+            "SampleText": "********非表示フィールド**************@ThisValue***********************************エージェントログエージェント名@ThisValue実行サーバー名@ThisValue実行開..."
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "2",
+            "Context": "",
+            "Attributes": "hide=read edit copy preview previewedit embedded; id=2",
+            "SampleText": "********非表示フィールド**************@ThisValue***********************************エージェントログエージェント名@ThisValue実行サーバー名@ThisValue実行開..."
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "4",
+            "Context": "Row=1; Column=1",
+            "Attributes": "id=4; keeptogether=true; keepwithnext=true; rightmargin=0.9681in",
+            "SampleText": "エージェント名"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "5",
+            "Context": "Row=1; Column=2",
+            "Attributes": "id=5; keeptogether=true; keepwithnext=true",
+            "SampleText": "@ThisValue"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "6",
+            "Context": "Row=1; Column=3",
+            "Attributes": "id=6; keeptogether=true; keepwithnext=true",
+            "SampleText": "実行サーバー名"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "7",
+            "Context": "Row=1; Column=4",
+            "Attributes": "id=7; keeptogether=true; keepwithnext=true",
+            "SampleText": "@ThisValue"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "8",
+            "Context": "Row=2; Column=1",
+            "Attributes": "id=8; keeptogether=true; keepwithnext=true",
+            "SampleText": "実行開始日時"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "9",
+            "Context": "Row=1; Column=1",
+            "Attributes": "align=center; id=9; keeptogether=true; keepwithnext=true",
+            "SampleText": "実行結果"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "10",
+            "Context": "Row=1; Column=2",
+            "Attributes": "id=10; keeptogether=true; keepwithnext=true; rightmargin=5.8125in",
+            "SampleText": "処理名"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "11",
+            "Context": "Row=2; Column=2",
+            "Attributes": "id=11; keeptogether=true; keepwithnext=true",
+            "SampleText": "@ThisValue"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "13",
+            "Context": "Row=3; Column=1",
+            "Attributes": "id=13; keeptogether=true; keepwithnext=true",
+            "SampleText": "処理内容"
+          },
+          {
+            "TemplateType": "richtext",
+            "TemplateName": "",
+            "Context": "",
+            "Attributes": "",
+            "SampleText": "********非表示フィールド**************@ThisValue***********************************エージェントログエージェント名@ThisValue実行サーバー名@ThisValue実行開始日時@ThisValue実行終了日時@ThisValue実行結果処理名@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")@ThisValue処理内容@ThisValue"
+          }
+        ]
+      }
+    }
+  },
+  "form": {
+    "id": "49257BE3002293FD:Forms:e45349b23cff67baa5b7",
+    "name": "エージェントログ",
+    "alias": "frmLogDoc",
+    "title": null,
+    "description": null,
+    "windowTitleFormula": "\"エージェントログ\"",
+    "fieldOrder": [
+      "ResultStatus",
+      "AgentName",
+      "ExecSeverName",
+      "ExecStartDate",
+      "ExecEndDate",
+      "D_ResultStatus",
+      "ExecName",
+      "ExecResult"
+    ]
+  },
+  "layout": {
+    "Tabs": [],
+    "Sections": [],
+    "FieldGroups": [
+      {
+        "GroupName": "TableRow:1",
+        "Context": "table-row",
+        "Fields": [
+          "AgentName",
+          "ExecSeverName"
+        ]
+      },
+      {
+        "GroupName": "TableRow:2",
+        "Context": "table-row",
+        "Fields": [
+          "D_ResultStatus",
+          "ExecEndDate",
+          "ExecName",
+          "ExecStartDate"
+        ]
+      },
+      {
+        "GroupName": "TableRow:4",
+        "Context": "table-row",
+        "Fields": [
+          "ExecResult"
+        ]
+      },
+      {
+        "GroupName": "Ungrouped",
+        "Context": "section",
+        "Fields": [
+          "ResultStatus"
+        ]
+      }
+    ],
+    "PageBreaks": [
+      {
+        "Marker": "horizrule",
+        "Context": ""
+      }
+    ],
+    "Coordinates": [
+      {
+        "ElementType": "table",
+        "Width": "6.4972in"
+      },
+      {
+        "ElementType": "table",
+        "Width": "6.5785in"
+      }
+    ],
+    "Labels": [],
+    "VisualStyles": [
+      {
+        "ElementType": "font",
+        "TextColor": "red"
+      },
+      {
+        "ElementType": "font",
+        "FontStyle": "bold",
+        "TextColor": "red",
+        "Context": "Row=2; Column=1"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "multilingual",
+        "FontName": "multilingual",
+        "FontSize": "24pt",
+        "FontStyle": "bold"
+      },
+      {
+        "ElementType": "horizrule",
+        "TextColor": "#00e100"
+      },
+      {
+        "ElementType": "run",
+        "TextColor": "red"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "multilingual",
+        "FontSize": "24pt",
+        "FontStyle": "bold"
+      },
+      {
+        "ElementType": "run",
+        "FontStyle": "bold",
+        "TextColor": "red",
+        "Context": "Row=2; Column=1"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#e0ffbf",
+        "Context": "Row=1"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#e0ffbf",
+        "Context": "Row=2"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#e0ffdf",
+        "Context": "Row=1"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#e0ffff",
+        "Context": "Row=3"
+      }
+    ],
+    "RichTextTemplates": [
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "1",
+        "Context": "",
+        "Attributes": "id=1",
+        "SampleText": "********非表示フィールド**************@ThisValue***********************************エージェントログエージェント名@ThisValue実行サーバー名@ThisValue実行開..."
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "2",
+        "Context": "",
+        "Attributes": "hide=read edit copy preview previewedit embedded; id=2",
+        "SampleText": "********非表示フィールド**************@ThisValue***********************************エージェントログエージェント名@ThisValue実行サーバー名@ThisValue実行開..."
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "4",
+        "Context": "Row=1; Column=1",
+        "Attributes": "id=4; keeptogether=true; keepwithnext=true; rightmargin=0.9681in",
+        "SampleText": "エージェント名"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "5",
+        "Context": "Row=1; Column=2",
+        "Attributes": "id=5; keeptogether=true; keepwithnext=true",
+        "SampleText": "@ThisValue"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "6",
+        "Context": "Row=1; Column=3",
+        "Attributes": "id=6; keeptogether=true; keepwithnext=true",
+        "SampleText": "実行サーバー名"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "7",
+        "Context": "Row=1; Column=4",
+        "Attributes": "id=7; keeptogether=true; keepwithnext=true",
+        "SampleText": "@ThisValue"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "8",
+        "Context": "Row=2; Column=1",
+        "Attributes": "id=8; keeptogether=true; keepwithnext=true",
+        "SampleText": "実行開始日時"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "9",
+        "Context": "Row=1; Column=1",
+        "Attributes": "align=center; id=9; keeptogether=true; keepwithnext=true",
+        "SampleText": "実行結果"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "10",
+        "Context": "Row=1; Column=2",
+        "Attributes": "id=10; keeptogether=true; keepwithnext=true; rightmargin=5.8125in",
+        "SampleText": "処理名"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "11",
+        "Context": "Row=2; Column=2",
+        "Attributes": "id=11; keeptogether=true; keepwithnext=true",
+        "SampleText": "@ThisValue"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "13",
+        "Context": "Row=3; Column=1",
+        "Attributes": "id=13; keeptogether=true; keepwithnext=true",
+        "SampleText": "処理内容"
+      },
+      {
+        "TemplateType": "richtext",
+        "TemplateName": "",
+        "Context": "",
+        "Attributes": "",
+        "SampleText": "********非表示フィールド**************@ThisValue***********************************エージェントログエージェント名@ThisValue実行サーバー名@ThisValue実行開始日時@ThisValue実行終了日時@ThisValue実行結果処理名@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")@ThisValue処理内容@ThisValue"
+      }
+    ]
+  },
+  "fields": [
+    {
+      "id": "49257BE3002293FD:field:d0db6e52491bf507e6be",
+      "fieldName": "ResultStatus",
+      "fieldType": "number",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/84"
+      },
+      "source": {
+        "Name": "ResultStatus",
+        "Type": "number",
+        "DataType": "number",
+        "DisplayName": "Result Status",
+        "JapaneseLabel": "",
+        "SourceForm": "エージェントログ",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": true,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "エージェントログ"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:61d013a29fa31623dbfc",
+      "fieldName": "AgentName",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/85"
+      },
+      "source": {
+        "Name": "AgentName",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Agent Name",
+        "JapaneseLabel": "",
+        "SourceForm": "エージェントログ",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "エージェントログ"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:e83312ca67f5b40335b8",
+      "fieldName": "ExecSeverName",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/86"
+      },
+      "source": {
+        "Name": "ExecSeverName",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Exec Sever Name",
+        "JapaneseLabel": "",
+        "SourceForm": "エージェントログ",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "エージェントログ"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:c422eb51412f32d98edc",
+      "fieldName": "ExecStartDate",
+      "fieldType": "datetime",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/87"
+      },
+      "source": {
+        "Name": "ExecStartDate",
+        "Type": "datetime",
+        "DataType": "datetime",
+        "DisplayName": "Exec Start Date",
+        "JapaneseLabel": "",
+        "SourceForm": "エージェントログ",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "エージェントログ"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:e94eed3ceb249536db6a",
+      "fieldName": "ExecEndDate",
+      "fieldType": "datetime",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/88"
+      },
+      "source": {
+        "Name": "ExecEndDate",
+        "Type": "datetime",
+        "DataType": "datetime",
+        "DisplayName": "Exec End Date",
+        "JapaneseLabel": "",
+        "SourceForm": "エージェントログ",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "エージェントログ"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:b1cb4fd9ee6d02f1ee9b",
+      "fieldName": "D_ResultStatus",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/89"
+      },
+      "source": {
+        "Name": "D_ResultStatus",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "D_Result Status",
+        "JapaneseLabel": "",
+        "SourceForm": "エージェントログ",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedfordisplay",
+        "ComputedFormula": "@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "エージェントログ"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:72df74fffc710c051030",
+      "fieldName": "ExecName",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/90"
+      },
+      "source": {
+        "Name": "ExecName",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Exec Name",
+        "JapaneseLabel": "",
+        "SourceForm": "エージェントログ",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "エージェントログ"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:9be4b604854015ae2581",
+      "fieldName": "ExecResult",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/91"
+      },
+      "source": {
+        "Name": "ExecResult",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Exec Result",
+        "JapaneseLabel": "",
+        "SourceForm": "エージェントログ",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "エージェントログ"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    }
+  ],
+  "sections": [],
+  "actions": [],
+  "formulas": [
+    {
+      "id": "49257BE3002293FD:formFormula:679904c9e85729fc4ece",
+      "formula": "\"エージェントログ\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/0/WindowTitleFormula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:195c5a4f0a93aff49980",
+      "formula": "Form Script[defaultvalue]: @If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/0/LotusScripts/0"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:5dc5a6c021ecf87bfc2f",
+      "formula": "Form Script[defaultvalue]: @ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/0/LotusScripts/1"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:55316a51ef5fa93d323c",
+      "formula": "Form Script[windowtitle]: \"エージェントログ\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/0/LotusScripts/2"
+      }
+    }
+  ],
+  "subforms": [],
+  "attachments": {
+    "enabled": null,
+    "attachmentFields": [],
+    "restrictions": [],
+    "dependencies": [],
+    "runtimePayloadsAvailable": false
+  },
+  "auditHistory": {
+    "enabled": null,
+    "historyType": null,
+    "trackingFields": [],
+    "approvalTracking": null,
+    "dependencies": []
+  },
+  "responseRelationships": [],
+  "workflowReference": {
+    "analyzedBy": "lotus-workflow-analyzer"
+  },
+  "securityReference": {
+    "analyzedBy": "lotus-security-analyzer"
+  },
+  "logicReference": {
+    "analyzedBy": "lotus-logic-analyzer"
+  },
+  "scriptReference": {
+    "analyzedBy": "lotus-script-analyzer"
+  },
+  "integrationReference": {
+    "analyzedBy": "lotus-integration-analyzer"
+  },
+  "richTextReference": {
+    "analyzedBy": "rich-text-analyzer"
+  },
+  "profileReference": {
+    "analyzedBy": "profile-document-analyzer"
+  },
+  "dependencies": [],
+  "migrationHints": {
+    "metadataOnly": true,
+    "fullBehaviorOwnedBySpecialistAnalyzers": true
+  },
+  "migrationRisks": [
+    {
+      "code": "PARTIAL_SOURCE",
+      "message": "Some exported embedded source/sample strings end with ellipses; source LotusScripts contain replacement characters. Do not treat samples as complete executable bodies.",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/0"
+      }
+    },
+    {
+      "code": "UNKNOWN_METADATA",
+      "message": "Null purpose/required/visibility/response semantics are not permissive defaults. Root field kinds and exact source retained."
+    }
+  ],
+  "complexity": {
+    "overall": "Medium",
+    "formStructure": "Medium",
+    "fields": "Medium",
+    "actions": "Medium",
+    "subforms": "Medium",
+    "attachments": "Medium",
+    "auditHistory": "Medium",
+    "responseDocuments": "Medium"
+  },
+  "compatibility": {
+    "unsupportedFeatures": [],
+    "partiallySupportedFeatures": [],
+    "manualMigrationRequired": [
+      "Unresolved script behavior and missing runtime payload evidence"
+    ],
+    "analyzerDependencies": [
+      "lotus-script-analyzer",
+      "lotus-logic-analyzer",
+      "lotus-workflow-analyzer",
+      "lotus-security-analyzer",
+      "rich-text-analyzer",
+      "lotus-navigation-analyzer",
+      "lotus-homepage-analyzer",
+      "lotus-view-analyzer",
+      "lotus-ui-analyzer",
+      "lotus-integration-analyzer",
+      "profile-document-analyzer"
+    ]
+  },
+  "presentationHints": {},
+  "implementationHints": {}
+}

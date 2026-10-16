@@ -1,0 +1,465 @@
+{
+  "migrationBlueprintVersion": "1.0",
+  "source": {
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/5"
+    },
+    "metadata": {
+      "Name": "(99_システム\\01_エージェントログ一覧)",
+      "Alias": "viwLogDoc",
+      "IsDefault": false,
+      "IsFolder": false,
+      "SelectionFormula": "SELECT Form = \"frmLogDoc\"",
+      "RowBackgroundColor": "#e0ffbf",
+      "AltRowBackgroundColor": "",
+      "Details": "View: viwLogDoc\r\nRowStyling: bgcolor=#e0ffbf, altrowcolor=(none)\r\nSelectionFormula: SELECT Form = \"frmLogDoc\"\r\nColumns: 6\r\n-  [$1] => @Date(ExecStartDate) [isCategorized:true]  [headerFontColor:(none) dataFontColor:blue]\r\n- 処理名 [ExecName] [isCategorized:false] \r\n- 結果 [$7] => @If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\") [isCategorized:false]  [headerFontColor:red dataFontColor:red]\r\n- 開始日時 [ExecStartDate] [isCategorized:false] \r\n- 終了日時 [ExecEndDate] [isCategorized:false] \r\n-  [$8] => 1 [isCategorized:false]",
+      "Actions": [],
+      "Columns": [
+        {
+          "Title": "",
+          "ItemName": "$1",
+          "DisplayEn": "Date",
+          "DisplayJp": "",
+          "Formula": "@Date(ExecStartDate)",
+          "HeaderFontColor": "",
+          "DataFontColor": "blue",
+          "IsSorted": true,
+          "IsCategorized": true,
+          "IsHidden": false
+        },
+        {
+          "Title": "処理名",
+          "ItemName": "ExecName",
+          "DisplayEn": "Exec Name",
+          "DisplayJp": "処理名",
+          "Formula": "",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "結果",
+          "ItemName": "$7",
+          "DisplayEn": "結果",
+          "DisplayJp": "結果",
+          "Formula": "@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+          "HeaderFontColor": "red",
+          "DataFontColor": "red",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "開始日時",
+          "ItemName": "ExecStartDate",
+          "DisplayEn": "Exec Start Date",
+          "DisplayJp": "開始日時",
+          "Formula": "",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": true,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "終了日時",
+          "ItemName": "ExecEndDate",
+          "DisplayEn": "Exec End Date",
+          "DisplayJp": "終了日時",
+          "Formula": "",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "",
+          "ItemName": "$8",
+          "DisplayEn": "",
+          "DisplayJp": "",
+          "Formula": "1",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        }
+      ]
+    }
+  },
+  "view": {
+    "id": "49257BE3002293FD:Views:ecb89cae044b6ba4445f",
+    "name": "(99_システム\\01_エージェントログ一覧)",
+    "alias": "viwLogDoc",
+    "isFolder": false,
+    "isDefault": false,
+    "hiddenBySourceName": true,
+    "selectionFormula": "SELECT Form = \"frmLogDoc\""
+  },
+  "columns": [
+    {
+      "id": "49257BE3002293FD:viewColumn:e0495bd1fe8f352ea296",
+      "columnName": "$1",
+      "displayName": "Date",
+      "sourceField": "$1",
+      "dataType": null,
+      "hidden": false,
+      "categorized": true,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "@Date(ExecStartDate)",
+      "position": 0,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/0"
+      },
+      "source": {
+        "Title": "",
+        "ItemName": "$1",
+        "DisplayEn": "Date",
+        "DisplayJp": "",
+        "Formula": "@Date(ExecStartDate)",
+        "HeaderFontColor": "",
+        "DataFontColor": "blue",
+        "IsSorted": true,
+        "IsCategorized": true,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:5b829094886f10a95900",
+      "columnName": "ExecName",
+      "displayName": "処理名",
+      "sourceField": "ExecName",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 1,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/1"
+      },
+      "source": {
+        "Title": "処理名",
+        "ItemName": "ExecName",
+        "DisplayEn": "Exec Name",
+        "DisplayJp": "処理名",
+        "Formula": "",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:111e00d0ba5f63ae0f43",
+      "columnName": "$7",
+      "displayName": "結果",
+      "sourceField": "$7",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+      "position": 2,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/2"
+      },
+      "source": {
+        "Title": "結果",
+        "ItemName": "$7",
+        "DisplayEn": "結果",
+        "DisplayJp": "結果",
+        "Formula": "@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+        "HeaderFontColor": "red",
+        "DataFontColor": "red",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:cb39fcd4f69af65465b0",
+      "columnName": "ExecStartDate",
+      "displayName": "開始日時",
+      "sourceField": "ExecStartDate",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 3,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/3"
+      },
+      "source": {
+        "Title": "開始日時",
+        "ItemName": "ExecStartDate",
+        "DisplayEn": "Exec Start Date",
+        "DisplayJp": "開始日時",
+        "Formula": "",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": true,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:1cc4e9d8a630d07c57c9",
+      "columnName": "ExecEndDate",
+      "displayName": "終了日時",
+      "sourceField": "ExecEndDate",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 4,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/4"
+      },
+      "source": {
+        "Title": "終了日時",
+        "ItemName": "ExecEndDate",
+        "DisplayEn": "Exec End Date",
+        "DisplayJp": "終了日時",
+        "Formula": "",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:41af92a4c7c178c88a10",
+      "columnName": "$8",
+      "displayName": null,
+      "sourceField": "$8",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "1",
+      "position": 5,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/5"
+      },
+      "source": {
+        "Title": "",
+        "ItemName": "$8",
+        "DisplayEn": "",
+        "DisplayJp": "",
+        "Formula": "1",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    }
+  ],
+  "formulas": [
+    {
+      "id": "49257BE3002293FD:viewFormula:79dd8cbec01b2782ded9",
+      "formulaType": "SelectionFormula",
+      "formulaText": "SELECT Form = \"frmLogDoc\"",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/SelectionFormula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:8eb56449624d1a1003ba",
+      "formulaType": "ColumnFormula",
+      "formulaText": "@Date(ExecStartDate)",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/0/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:40c2db96cd44f5fc4757",
+      "formulaType": "ColumnFormula",
+      "formulaText": "@If(ResultStatus = 0;\"○\";ResultStatus = 1;\"△\";ResultStatus = 2;\"×\";\"\")",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/2/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:13b803a2426dbfb31db5",
+      "formulaType": "ColumnFormula",
+      "formulaText": "1",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/5/Formula"
+      }
+    }
+  ],
+  "grouping": {
+    "categorizedColumnIds": [
+      "49257BE3002293FD:viewColumn:e0495bd1fe8f352ea296"
+    ],
+    "sourceOrderPreserved": true
+  },
+  "folderBehavior": {
+    "isFolder": false,
+    "hierarchy": null
+  },
+  "sorting": {
+    "defaultSortedColumns": [
+      {
+        "columnId": "49257BE3002293FD:viewColumn:e0495bd1fe8f352ea296",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      },
+      {
+        "columnId": "49257BE3002293FD:viewColumn:cb39fcd4f69af65465b0",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      }
+    ],
+    "unknownDirectionPreserved": true
+  },
+  "filtering": {
+    "selectionFormula": "SELECT Form = \"frmLogDoc\"",
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/5/SelectionFormula"
+    },
+    "authorization": false
+  },
+  "actions": [],
+  "security": {
+    "roles": [],
+    "readRules": [],
+    "writeRules": [],
+    "visibilityRules": [],
+    "actionRestrictions": [],
+    "columnRestrictions": [],
+    "enforcementNote": "UI filtering/hiding is not database/document authorization."
+  },
+  "navigation": {
+    "defaultAction": null,
+    "documentOpenBehavior": null,
+    "targetForms": [
+      "frmLogDoc"
+    ],
+    "relatedViews": [],
+    "navigationRules": []
+  },
+  "dependencies": [
+    {
+      "id": "49257BE3002293FD:viewFormDependency:30f94126c6e10079395f",
+      "type": "FORM_DISCRIMINATOR_OR_COMPOSE",
+      "sourceId": "49257BE3002293FD:Views:ecb89cae044b6ba4445f",
+      "targetId": "49257BE3002293FD:Forms:e45349b23cff67baa5b7",
+      "targetReference": "frmLogDoc",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFieldDependency:9c55a4136dc064f5e3f3",
+      "type": "COLUMN_FIELD_INPUT",
+      "sourceId": "49257BE3002293FD:viewColumn:e0495bd1fe8f352ea296",
+      "targetId": "49257BE3002293FD:field:c422eb51412f32d98edc",
+      "candidateTargetIds": [
+        "49257BE3002293FD:field:c422eb51412f32d98edc"
+      ],
+      "targetReference": "ExecStartDate",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/0/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFieldDependency:edd7877b676612321cb9",
+      "type": "COLUMN_FIELD_INPUT",
+      "sourceId": "49257BE3002293FD:viewColumn:111e00d0ba5f63ae0f43",
+      "targetId": "49257BE3002293FD:field:d0db6e52491bf507e6be",
+      "candidateTargetIds": [
+        "49257BE3002293FD:field:d0db6e52491bf507e6be"
+      ],
+      "targetReference": "ResultStatus",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5/Columns/2/Formula"
+      }
+    }
+  ],
+  "presentationHints": {
+    "rowBackgroundColor": "#e0ffbf",
+    "altRowBackgroundColor": "",
+    "iconFormulas": []
+  },
+  "implementationHints": {},
+  "migrationHints": {
+    "advisoryOnly": true
+  },
+  "migrationRisks": [
+    {
+      "code": "UNKNOWN_METADATA",
+      "message": "Missing width/alignment/type/sort direction/resort flags/open-event metadata remain null; IsSorted does not prove user-resort capability."
+    },
+    {
+      "code": "PROJECTION_NOT_STORAGE",
+      "message": "Computed column ItemName such as $154 is not a stored-field mapping; source formulas preserved and field binding reviewed separately."
+    },
+    {
+      "code": "MISSING_COLUMN_HEADER",
+      "columnId": "49257BE3002293FD:viewColumn:41af92a4c7c178c88a10",
+      "message": "No DisplayJp/Title/DisplayEn available; header not invented."
+    }
+  ]
+}

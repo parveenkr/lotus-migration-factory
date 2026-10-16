@@ -115,13 +115,18 @@ Known logical folder IDs with different declared skill names:
 - `lotus-navigation-analyzer` -> `lotus-notes-navigation-blueprint-generator`
 - `lotus-view-analyzer` -> `lotus-notes-view-blueprint-generator`
 
-Known contract discrepancies requiring repair before a full run:
+Contract Alignment Notes
 
-- `lotus-script-analyzer/SKILL.md` describes per-form security analysis and emits `generated/blueprints/security/<FormName>.security-blueprint.json`; it is not a general LotusScript analyzer and conflicts with the dedicated `lotus-security-analyzer`. Do not invoke it as script analysis.
-- Form and view analyzers emit per-form/per-view migration blueprint files, not the single application-level form/view filenames previously expected here.
-- Homepage, navigation, integration, and profile analyzers declare paths that differ from the legacy paths previously listed here. Use the exact paths declared by each validated skill.
+The analysis orchestrator must validate analyzer outputs against the currently validated skill contracts.
 
-Resolve these contract gaps in the owning skills before marking the complete analysis phase `ANALYSIS_COMPLETE`.
+Some analyzers may produce both:
+
+- per-object artifacts (for example, per-form or per-view blueprints)
+- application-level inventory or aggregation artifacts
+
+The orchestrator must use the output contracts declared by each validated skill and must not rely on legacy path assumptions.
+
+All currently validated analyzer contracts are considered compatible with this orchestration plan unless a future validation identifies an incompatibility.
 
 ---
 
@@ -139,6 +144,8 @@ lotus-data-model-analyzer
     ↓
 lotus-form-analyzer
     ↓
+lotus-script-analyzer
+    ↓
 lotus-logic-analyzer
     ↓
 lotus-workflow-analyzer
@@ -151,9 +158,9 @@ lotus-navigation-analyzer
     ↓
 lotus-homepage-analyzer
     ↓
-lotus-ui-analyzer
-    ↓
 lotus-view-analyzer
+    ↓
+lotus-ui-analyzer
     ↓
 lotus-integration-analyzer
     ↓
@@ -202,7 +209,7 @@ lotus-application-analyzer
 
 Expected output:
 
-Use the exact output path declared by the validated `lotus-application-analyzer/SKILL.md`. Do not assume this skill's expected output path until its missing contract is restored.
+Use the exact output path declared by the validated `lotus-application-analyzer/SKILL.md`. Use the validated output contract declared by lotus-application-analyzer/SKILL.md.
 
 Validate:
 
@@ -284,6 +291,24 @@ This blueprint becomes the authoritative form definition consumed by UI analysis
 ---
 
 # Stage 5 - Logic Analysis
+
+First run:
+
+lotus-script-analyzer
+
+Expected script output:
+
+generated/blueprints/scripts/application.script-blueprint.json
+
+Validate against `skills/lotus-script-analyzer/templates/script-analysis.schema.json` and the skill's semantic checks. Require evidence-linked coverage of LotusScript, Formula Language, Java agents, and script libraries from `input/ExtractedJson/synopsis.json`. Missing source, uncertain language/context, and unresolved calls must remain findings; no discovered Java source is not proof that the original database had no Java agents. Do not execute source code or treat script analysis as security analysis.
+
+Require script blueprint version `1.1`. Form/View Event Button Visibility/Enabled records must be nonexecutable `UI_METADATA` in `uiBehaviors`, bypass language detection, and create neither UNKNOWN_LANGUAGE nor blocking findings. Preserve embedded formulas and source evidence, validate summary counts against final collections, and pass `handoffs.ui` to `lotus-ui-analyzer`. UNKNOWN_LANGUAGE is valid only for executable-looking source after attempted, unsuccessful language detection; never count metadata as unknown code or as incomplete executable coverage.
+
+Require comment-aware lexing before language detection, parsing, or symbol resolution. Validate `sourceRegions`, executable `regionIds` on references/findings, and `validation.metrics` (`executableRegions`, `commentRegions`, `commentOnlyReferences`, `filteredCommentReferences`). COMMENT_DOCUMENTATION must remain evidence only: no inferred behavior, unresolved symbols, unknown language, missing libraries/functions, workflow dependencies, call edges, or blocking findings. UNRESOLVED_REFERENCE requires an executable reference plus recorded, unsuccessful resolution attempts. Carry this exclusion into logic, workflow, security, and UI handoffs; preserve genuine diagnostics from executable code even when comments mention the same symbol.
+
+Carry script findings and dependencies into business-logic reconciliation. A structurally valid `REVIEW_REQUIRED` script blueprint is partial analysis, not a completed-analysis gate; unresolved required behavior prevents `ANALYSIS_COMPLETE`.
+
+Then run business-logic analysis:
 
 Run:
 
@@ -428,33 +453,7 @@ Recover application entry points and home page behavior.
 
 ---
 
-# Stage 11 - UI Analysis
-
-Run:
-
-lotus-ui-analyzer
-
-Expected output:
-
-Use the exact output path declared by the validated `lotus-ui-analyzer/SKILL.md`. Do not invoke while its skill contract is missing.
-
-Validate:
-
-- forms
-- tabs
-- sections
-- buttons
-- dialogs
-- navigation
-- actions
-
-Purpose:
-
-Recover UI composition.
-
----
-
-# Stage 12 - View Analysis
+# Stage 11 - View Analysis
 
 Run:
 
@@ -479,6 +478,32 @@ Validate:
 Purpose:
 
 Recover user-facing information presentation.
+
+---
+
+# Stage 12 - UI Analysis
+
+Run:
+
+lotus-ui-analyzer
+
+Expected output:
+
+Use the exact output path declared by the validated `lotus-ui-analyzer/SKILL.md`. Do not invoke while its skill contract is missing.
+
+Validate:
+
+- forms
+- tabs
+- sections
+- buttons
+- dialogs
+- navigation
+- actions
+
+Purpose:
+
+Recover UI composition.
 
 ---
 

@@ -1,0 +1,1333 @@
+{
+  "traceability": {
+    "sourceFormName": "選択肢メンテナンス",
+    "sourceFormAlias": "frmSelectionMente",
+    "metadataSource": "input\\ExtractedJson\\synopsis.json",
+    "generatedBy": "lotus-notes-form-blueprint-generator",
+    "applicationId": "49257BE3002293FD"
+  },
+  "migrationBlueprintVersion": "1.0",
+  "source": {
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Forms/3"
+    },
+    "metadata": {
+      "Name": "選択肢メンテナンス",
+      "Alias": "frmSelectionMente",
+      "FieldNames": [
+        "DelFlag",
+        "DelDate",
+        "MenteTarget",
+        "SortNo",
+        "Selection",
+        "UpdtDate",
+        "UpdtUser"
+      ],
+      "Actions": [
+        "Action 02編集 [click]:\n@Command([EditDocument])",
+        "Action 02編集 [label]:\n\"編集\"",
+        "Action 03保存 [click]:\n@Command([FileSave])",
+        "Action 03保存 [label]:\n\"保存\"",
+        "Action 閉じる [click]:\n@Command([FileCloseWindow])",
+        "Action 閉じる [label]:\n\"閉じる\"",
+        "Form Event [onsubmit]:\nSub Onsubmit( Source As Notesuidocument, Continue As Variant )\n\tOn Error Goto ERR_TRAP\n\tDim objAddInfo\t\tAs clsAddressInfo\n\tDim ws \t\t\tAs NotesUIWorkspace\n\tDim ss\t\t\t\tAs NotesSession\n\tDim db\t\t\t\tAs NotesDatabase\n\tDim doc\t\t\tAs NotesDocument\n\tDim strTime\t\tAs String\n\tDim strUserID\t\tAs String\n\tDim strRetMsg\t\tAs String\n\tDim blnChkErrRes\tAs Boolean\n\tDim blnRet\t\t\tAs Boolean\n\tDim nmUserID\t\tAs NotesName\n\tSet ws = New NotesUIWorkspace\n\tSet ss = New NotesSession\n\tSet objAddInfo = New clsAddressInfo(\"\")\n\tSet db = ss.CurrentDatabase\n\tSet Source = ws.CurrentDocument\n\tSet doc = Source.Document\n\tContinue = True\n\tblnChkErrRes = funcErrChkMente( Source, blnRet )\n\tIf blnChkErrRes = False Then\n\t\tContinue = False\n\t\tExit Sub\n\tElseif blnRet = False Then\n\t\tContinue = False\n\t\tExit Sub\n\tElse\n\t\tstrTime = Format$( Today, \"yyyy/mm/dd\" )\n\t\tIf objAddInfo.InfoFlag = True Then\n\t\t\tSet nmUserID = New NotesName( objAddInfo.UserID )\n\t\t\tstrUserID = nmUserID.Abbreviated\n\t\tElse\n\t\t\tstrRetMsg = funcReturnMsg( \"E019\" )\n\t\t\tMsgbox strRetMsg, 0 + 16, \"システムエラー\"\n\t\t\tContinue = False\n\t\t\tExit Sub\n\t\tEnd If\n\t\tdoc.UpdtDate = strTime\n\t\tdoc.UpdtUser = strUserID\n\tEnd If\n\tExit Sub\nERR_TRAP:\n\tstrRetMsg = funcReturnMsg( \"E020\" )\n\tMsgbox strRetMsg & Chr(13) & Chr(10) & Chr(13) & Chr(10) & _\n\tfuncOnErrorMsg(\"Onsubmit\",Err, Erl, Error$), 16, \"システムエラー\"\n\tContinue = False\n\tIf doc Is Nothing Then\n\tElse\n\t\tdoc.SaveOptions = \"0\"\n\t\tCall Source.Close( False )\n\tEnd If\n\tExit Sub\nEnd Sub",
+        "Form Event Button Visibility: 02編集; Roles=; Statuses=; HideAttr=edit previewedit; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen=",
+        "Form Event Button Visibility: 03保存; Roles=; Statuses=; HideAttr=preview read; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen=",
+        "Form Event Button Visibility: 閉じる; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+      ],
+      "WindowTitleFormula": "\"選択肢メンテナンス\"",
+      "EventScripts": [],
+      "LayoutRows": [],
+      "LotusScripts": [
+        "Form Script[click]: @Command([EditDocument])",
+        "Form Script[click]: @Command([FileCloseWindow])",
+        "Form Script[click]: @Command([FileSave])",
+        "Form Script[defaultvalue]: \"商品\"",
+        "Form Script[defaultvalue]: 0",
+        "Form Script[defaultvalue]: @ThisValue",
+        "Form Script[funcErrChkMente]: Function funcErrChkMente( uidoc As NotesUIDocument ,blnErrRes As Boolean ) As Boolean\n\tOn Error Goto ERR_TRAP\n\tDim strErrMsg\t\t\t\tAs String\n\tDim strSortNo\t\t\t\tAs String\n\tDim strSelection\t\t\tAs String\n\tDim strErrList\t\t\t\tList As String\n\tDim intCount\t\t\t\tAs Integer\n\tfuncErrChkMente\t= True\n\tblnErrRes\t\t\t= True\n\tErase\t\t\t\tstrErrList\n\tintCount\t\t\t= 0\n\tstrErrMsg\t\t\t= \"以下のエラーが発生しました。確認してください。\" & Chr(13) & Chr(10)\n\tstrSortNo = uidoc.FieldGetText( \"SortNo\" )\n\tIf strSortNo = \"\" Then\n\t\tstrErrMsg = strErrMsg & Chr(13) & Chr(10) & \"ソート順を入力してください\"\n\t\tstrErrList( intCount ) = \"SortNo\"\n\t\tintCount = intCount + 1\n\t\tblnErr...",
+        "Form Script[label]: \"保存\"",
+        "Form Script[label]: \"編集\"",
+        "Form Script[label]: \"閉じる\"",
+        "Form Script[onsubmit]: Sub Onsubmit( Source As Notesuidocument, Continue As Variant )\n\tOn Error Goto ERR_TRAP\n\tDim objAddInfo\t\tAs clsAddressInfo\n\tDim ws \t\t\tAs NotesUIWorkspace\n\tDim ss\t\t\t\tAs NotesSession\n\tDim db\t\t\t\tAs NotesDatabase\n\tDim doc\t\t\tAs NotesDocument\n\tDim strTime\t\tAs String\n\tDim strUserID\t\tAs String\n\tDim strRetMsg\t\tAs String\n\tDim blnChkErrRes\tAs Boolean\n\tDim blnRet\t\t\tAs Boolean\n\tDim nmUserID\t\tAs NotesName\n\tSet ws = New NotesUIWorkspace\n\tSet ss = New NotesSession\n\tSet objAddInfo = New clsAddressInfo(\"\")\n\tSet db = ss.CurrentDatabase\n\tSet Source = ws.CurrentDocument\n\tSet doc = Source.Document\n\tContinue = True\n\t...",
+        "Form Script[windowtitle]: \"選択肢メンテナンス\""
+      ],
+      "Layout": {
+        "Tabs": [],
+        "Sections": [],
+        "FieldGroups": [
+          {
+            "GroupName": "TableRow:1",
+            "Context": "table-row",
+            "Fields": [
+              "MenteTarget"
+            ]
+          },
+          {
+            "GroupName": "TableRow:2",
+            "Context": "table-row",
+            "Fields": [
+              "SortNo"
+            ]
+          },
+          {
+            "GroupName": "TableRow:3",
+            "Context": "table-row",
+            "Fields": [
+              "Selection"
+            ]
+          },
+          {
+            "GroupName": "Ungrouped",
+            "Context": "section",
+            "Fields": [
+              "DelDate",
+              "DelFlag",
+              "UpdtDate",
+              "UpdtUser"
+            ]
+          }
+        ],
+        "PageBreaks": [],
+        "Coordinates": [
+          {
+            "ElementType": "table",
+            "Width": "6.7750in"
+          }
+        ],
+        "Labels": [
+          {
+            "Text": "削除日 ：",
+            "FieldName": "DelDate"
+          },
+          {
+            "Text": "削除フラグ ：",
+            "FieldName": "DelFlag"
+          },
+          {
+            "Text": "商品請求事由依頼内容回答内容\"商品\"",
+            "FieldName": "MenteTarget",
+            "Row": 1,
+            "Column": 2
+          },
+          {
+            "Text": "最終更新日 ：",
+            "FieldName": "UpdtDate"
+          },
+          {
+            "Text": "最終更新者 ：",
+            "FieldName": "UpdtUser"
+          }
+        ],
+        "VisualStyles": [
+          {
+            "ElementType": "action",
+            "ElementName": "02編集",
+            "IconRef": "5"
+          },
+          {
+            "ElementType": "action",
+            "ElementName": "03保存",
+            "IconRef": "117"
+          },
+          {
+            "ElementType": "action",
+            "ElementName": "閉じる",
+            "IconRef": "27"
+          },
+          {
+            "ElementType": "actionbar",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontSize": "9pt",
+            "TextColor": "system",
+            "BackgroundColor": "#d4d0c8",
+            "BorderStyle": "solid",
+            "BorderColor": "black",
+            "BorderWidth": "0px 0px 1px"
+          },
+          {
+            "ElementType": "actionbuttonstyle",
+            "BackgroundColor": "#d4d0c8"
+          },
+          {
+            "ElementType": "field",
+            "ElementName": "MenteTarget",
+            "BorderStyle": "none",
+            "Context": "Row=1; Column=2"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontSize": "9pt",
+            "TextColor": "system"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "TextColor": "red"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontSize": "14pt",
+            "FontStyle": "bold",
+            "TextColor": "#3f803f"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontStyle": "bold",
+            "TextColor": "#3f803f"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=1; Column=1"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=1; Column=2"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=2; Column=1"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=2; Column=2"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=3; Column=1"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=3; Column=2"
+          },
+          {
+            "ElementType": "font",
+            "ElementName": "ＭＳ Ｐゴシック",
+            "FontName": "ＭＳ Ｐゴシック",
+            "TextColor": "#8f8f8f"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "TextColor": "red"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontSize": "14pt",
+            "FontStyle": "bold",
+            "TextColor": "#3f803f"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "FontStyle": "bold",
+            "TextColor": "#3f803f"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=1; Column=1"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=1; Column=2"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=2; Column=1"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=2; Column=2"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=3; Column=1"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "Context": "Row=3; Column=2"
+          },
+          {
+            "ElementType": "run",
+            "FontName": "ＭＳ Ｐゴシック",
+            "TextColor": "#8f8f8f"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#c2ff91",
+            "Context": "Row=1"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#e0ffbf",
+            "Context": "Row=1"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#c2ff91",
+            "Context": "Row=2"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#e0ffbf",
+            "Context": "Row=2"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#c2ff91",
+            "Context": "Row=3"
+          },
+          {
+            "ElementType": "tablecell",
+            "BackgroundColor": "#e0ffbf",
+            "Context": "Row=3"
+          }
+        ],
+        "RichTextTemplates": [
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "1",
+            "Context": "",
+            "Attributes": "hide=read edit print copy preview previewedit embedded; id=1",
+            "SampleText": "*****非表示フィールド*****************************削除フラグ ：0削除日 ：@ThisValue***********************************************選択肢メンテナン..."
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "2",
+            "Context": "",
+            "Attributes": "id=2",
+            "SampleText": "*****非表示フィールド*****************************削除フラグ ：0削除日 ：@ThisValue***********************************************選択肢メンテナン..."
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "4",
+            "Context": "Row=1; Column=1",
+            "Attributes": "id=4; keeptogether=true; keepwithnext=true",
+            "SampleText": "メンテナンス対象"
+          },
+          {
+            "TemplateType": "pardef",
+            "TemplateName": "5",
+            "Context": "Row=1; Column=2",
+            "Attributes": "id=5; keeptogether=true; keepwithnext=true",
+            "SampleText": "商品請求事由依頼内容回答内容\"商品\""
+          },
+          {
+            "TemplateType": "richtext",
+            "TemplateName": "",
+            "Context": "",
+            "Attributes": "",
+            "SampleText": "*****非表示フィールド*****************************削除フラグ ：0削除日 ：@ThisValue***********************************************選択肢メンテナンス メンテナンス対象商品請求事由依頼内容回答内容\"商品\" ソート順 選択肢項目内容最終更新日 ： @ThisValue最終更新者 ： @ThisValue"
+          }
+        ],
+        "EmbeddedElements": [
+          {
+            "ElementType": "icon",
+            "Name": "閉じる",
+            "Context": "",
+            "Source": "REM {内容：文書を閉じる（アイコンは選択肢メンテナンス用） 2006/06/08 DLS.Chida 新規作成}; @Command([FileCloseWindow])\"閉じる\""
+          },
+          {
+            "ElementType": "icon",
+            "Name": "02編集",
+            "Context": "",
+            "Source": "REM {内容：文書を編集する（通常用） 2006/04/07 DLS.Chida 新規作成}; @Command([EditDocument])\"編集\""
+          },
+          {
+            "ElementType": "icon",
+            "Name": "03保存",
+            "Context": "",
+            "Source": "REM {内容：文書を保存する（通常用） 2006/04/07 DLS.Chida 新規作成}; @Command([FileSave])\"保存\""
+          }
+        ]
+      }
+    }
+  },
+  "form": {
+    "id": "49257BE3002293FD:Forms:9d24221dc3940e312e8f",
+    "name": "選択肢メンテナンス",
+    "alias": "frmSelectionMente",
+    "title": null,
+    "description": null,
+    "windowTitleFormula": "\"選択肢メンテナンス\"",
+    "fieldOrder": [
+      "DelFlag",
+      "DelDate",
+      "MenteTarget",
+      "SortNo",
+      "Selection",
+      "UpdtDate",
+      "UpdtUser"
+    ]
+  },
+  "layout": {
+    "Tabs": [],
+    "Sections": [],
+    "FieldGroups": [
+      {
+        "GroupName": "TableRow:1",
+        "Context": "table-row",
+        "Fields": [
+          "MenteTarget"
+        ]
+      },
+      {
+        "GroupName": "TableRow:2",
+        "Context": "table-row",
+        "Fields": [
+          "SortNo"
+        ]
+      },
+      {
+        "GroupName": "TableRow:3",
+        "Context": "table-row",
+        "Fields": [
+          "Selection"
+        ]
+      },
+      {
+        "GroupName": "Ungrouped",
+        "Context": "section",
+        "Fields": [
+          "DelDate",
+          "DelFlag",
+          "UpdtDate",
+          "UpdtUser"
+        ]
+      }
+    ],
+    "PageBreaks": [],
+    "Coordinates": [
+      {
+        "ElementType": "table",
+        "Width": "6.7750in"
+      }
+    ],
+    "Labels": [
+      {
+        "Text": "削除日 ：",
+        "FieldName": "DelDate"
+      },
+      {
+        "Text": "削除フラグ ：",
+        "FieldName": "DelFlag"
+      },
+      {
+        "Text": "商品請求事由依頼内容回答内容\"商品\"",
+        "FieldName": "MenteTarget",
+        "Row": 1,
+        "Column": 2
+      },
+      {
+        "Text": "最終更新日 ：",
+        "FieldName": "UpdtDate"
+      },
+      {
+        "Text": "最終更新者 ：",
+        "FieldName": "UpdtUser"
+      }
+    ],
+    "VisualStyles": [
+      {
+        "ElementType": "action",
+        "ElementName": "02編集",
+        "IconRef": "5"
+      },
+      {
+        "ElementType": "action",
+        "ElementName": "03保存",
+        "IconRef": "117"
+      },
+      {
+        "ElementType": "action",
+        "ElementName": "閉じる",
+        "IconRef": "27"
+      },
+      {
+        "ElementType": "actionbar",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontSize": "9pt",
+        "TextColor": "system",
+        "BackgroundColor": "#d4d0c8",
+        "BorderStyle": "solid",
+        "BorderColor": "black",
+        "BorderWidth": "0px 0px 1px"
+      },
+      {
+        "ElementType": "actionbuttonstyle",
+        "BackgroundColor": "#d4d0c8"
+      },
+      {
+        "ElementType": "field",
+        "ElementName": "MenteTarget",
+        "BorderStyle": "none",
+        "Context": "Row=1; Column=2"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontSize": "9pt",
+        "TextColor": "system"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "TextColor": "red"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontSize": "14pt",
+        "FontStyle": "bold",
+        "TextColor": "#3f803f"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontStyle": "bold",
+        "TextColor": "#3f803f"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=1; Column=1"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=1; Column=2"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=2; Column=1"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=2; Column=2"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=3; Column=1"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=3; Column=2"
+      },
+      {
+        "ElementType": "font",
+        "ElementName": "ＭＳ Ｐゴシック",
+        "FontName": "ＭＳ Ｐゴシック",
+        "TextColor": "#8f8f8f"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "TextColor": "red"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontSize": "14pt",
+        "FontStyle": "bold",
+        "TextColor": "#3f803f"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "FontStyle": "bold",
+        "TextColor": "#3f803f"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=1; Column=1"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=1; Column=2"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=2; Column=1"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=2; Column=2"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=3; Column=1"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "Context": "Row=3; Column=2"
+      },
+      {
+        "ElementType": "run",
+        "FontName": "ＭＳ Ｐゴシック",
+        "TextColor": "#8f8f8f"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#c2ff91",
+        "Context": "Row=1"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#e0ffbf",
+        "Context": "Row=1"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#c2ff91",
+        "Context": "Row=2"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#e0ffbf",
+        "Context": "Row=2"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#c2ff91",
+        "Context": "Row=3"
+      },
+      {
+        "ElementType": "tablecell",
+        "BackgroundColor": "#e0ffbf",
+        "Context": "Row=3"
+      }
+    ],
+    "RichTextTemplates": [
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "1",
+        "Context": "",
+        "Attributes": "hide=read edit print copy preview previewedit embedded; id=1",
+        "SampleText": "*****非表示フィールド*****************************削除フラグ ：0削除日 ：@ThisValue***********************************************選択肢メンテナン..."
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "2",
+        "Context": "",
+        "Attributes": "id=2",
+        "SampleText": "*****非表示フィールド*****************************削除フラグ ：0削除日 ：@ThisValue***********************************************選択肢メンテナン..."
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "4",
+        "Context": "Row=1; Column=1",
+        "Attributes": "id=4; keeptogether=true; keepwithnext=true",
+        "SampleText": "メンテナンス対象"
+      },
+      {
+        "TemplateType": "pardef",
+        "TemplateName": "5",
+        "Context": "Row=1; Column=2",
+        "Attributes": "id=5; keeptogether=true; keepwithnext=true",
+        "SampleText": "商品請求事由依頼内容回答内容\"商品\""
+      },
+      {
+        "TemplateType": "richtext",
+        "TemplateName": "",
+        "Context": "",
+        "Attributes": "",
+        "SampleText": "*****非表示フィールド*****************************削除フラグ ：0削除日 ：@ThisValue***********************************************選択肢メンテナンス メンテナンス対象商品請求事由依頼内容回答内容\"商品\" ソート順 選択肢項目内容最終更新日 ： @ThisValue最終更新者 ： @ThisValue"
+      }
+    ],
+    "EmbeddedElements": [
+      {
+        "ElementType": "icon",
+        "Name": "閉じる",
+        "Context": "",
+        "Source": "REM {内容：文書を閉じる（アイコンは選択肢メンテナンス用） 2006/06/08 DLS.Chida 新規作成}; @Command([FileCloseWindow])\"閉じる\""
+      },
+      {
+        "ElementType": "icon",
+        "Name": "02編集",
+        "Context": "",
+        "Source": "REM {内容：文書を編集する（通常用） 2006/04/07 DLS.Chida 新規作成}; @Command([EditDocument])\"編集\""
+      },
+      {
+        "ElementType": "icon",
+        "Name": "03保存",
+        "Context": "",
+        "Source": "REM {内容：文書を保存する（通常用） 2006/04/07 DLS.Chida 新規作成}; @Command([FileSave])\"保存\""
+      }
+    ]
+  },
+  "fields": [
+    {
+      "id": "49257BE3002293FD:field:53a1acec8d2d5cd423f7",
+      "fieldName": "DelFlag",
+      "fieldType": "number",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "0",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/111"
+      },
+      "source": {
+        "Name": "DelFlag",
+        "Type": "number",
+        "DataType": "number",
+        "DisplayName": "Del Flag",
+        "JapaneseLabel": "削除フラグ ：",
+        "SourceForm": "選択肢メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "0",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "0",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "選択肢メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:c94666a687517600c215",
+      "fieldName": "DelDate",
+      "fieldType": "datetime",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/112"
+      },
+      "source": {
+        "Name": "DelDate",
+        "Type": "datetime",
+        "DataType": "datetime",
+        "DisplayName": "Del Date",
+        "JapaneseLabel": "削除日 ：",
+        "SourceForm": "選択肢メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "選択肢メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:de2c8e1f83687b65ca9f",
+      "fieldName": "MenteTarget",
+      "fieldType": "keyword",
+      "classification": "UserField",
+      "required": null,
+      "visible": null,
+      "editable": true,
+      "sourceFormula": "\"商品\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/113"
+      },
+      "source": {
+        "Name": "MenteTarget",
+        "Type": "keyword",
+        "DataType": "keyword",
+        "DisplayName": "Mente Target",
+        "JapaneseLabel": "商品請求事由依頼内容回答内容\"商品\"",
+        "SourceForm": "選択肢メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [
+          "商品",
+          "請求事由",
+          "依頼内容",
+          "回答内容"
+        ],
+        "ChoiceFormula": "",
+        "KeywordUi": "radiobutton",
+        "HideWhenFormula": "",
+        "Kind": "editable",
+        "ComputedFormula": "\"商品\"",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "StaticKeywordList",
+        "IsMultiValue": false,
+        "SourceFormula": "\"商品\"",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": true,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "選択肢メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:9e5cc027566f483b2436",
+      "fieldName": "SortNo",
+      "fieldType": "text",
+      "classification": "UserField",
+      "required": null,
+      "visible": null,
+      "editable": true,
+      "sourceFormula": "",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/114"
+      },
+      "source": {
+        "Name": "SortNo",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Sort No",
+        "JapaneseLabel": "",
+        "SourceForm": "選択肢メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "editable",
+        "ComputedFormula": "",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "DirectInput",
+        "IsMultiValue": false,
+        "SourceFormula": "",
+        "SourceFormulaEvent": "",
+        "IsEditable": true,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "選択肢メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:7c69f74ea409852b8f23",
+      "fieldName": "Selection",
+      "fieldType": "text",
+      "classification": "UserField",
+      "required": null,
+      "visible": null,
+      "editable": true,
+      "sourceFormula": "",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/115"
+      },
+      "source": {
+        "Name": "Selection",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Selection",
+        "JapaneseLabel": "",
+        "SourceForm": "選択肢メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "editable",
+        "ComputedFormula": "",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "DirectInput",
+        "IsMultiValue": false,
+        "SourceFormula": "",
+        "SourceFormulaEvent": "",
+        "IsEditable": true,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "選択肢メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:35093c79359cf0633aa1",
+      "fieldName": "UpdtDate",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/116"
+      },
+      "source": {
+        "Name": "UpdtDate",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Update Date",
+        "JapaneseLabel": "最終更新日 ：",
+        "SourceForm": "選択肢メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "選択肢メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    },
+    {
+      "id": "49257BE3002293FD:field:3a0ad4c20b58f8a141ba",
+      "fieldName": "UpdtUser",
+      "fieldType": "text",
+      "classification": "ComputedField",
+      "required": null,
+      "visible": null,
+      "editable": false,
+      "sourceFormula": "@ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/117"
+      },
+      "source": {
+        "Name": "UpdtUser",
+        "Type": "text",
+        "DataType": "text",
+        "DisplayName": "Update User",
+        "JapaneseLabel": "最終更新者 ：",
+        "SourceForm": "選択肢メンテナンス",
+        "SourceSection": "",
+        "AllowedValues": [],
+        "ChoiceFormula": "",
+        "KeywordUi": "",
+        "HideWhenFormula": "",
+        "Kind": "computedwhencomposed",
+        "ComputedFormula": "@ThisValue",
+        "ReferenceTarget": "",
+        "ValidationFormula": "",
+        "ValueSourceType": "Formula",
+        "IsMultiValue": false,
+        "SourceFormula": "@ThisValue",
+        "SourceFormulaEvent": "defaultvalue",
+        "IsEditable": false,
+        "MaxLength": null,
+        "MaxLengthSource": "not-specified",
+        "Forms": [
+          "選択肢メンテナンス"
+        ],
+        "RequiredLevel": "None",
+        "SampleValues": []
+      }
+    }
+  ],
+  "sections": [],
+  "actions": [
+    {
+      "id": "49257BE3002293FD:formAction:5b2c5dc28de3384e356c",
+      "name": "02編集",
+      "actionType": "click",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/0"
+      },
+      "source": "Action 02編集 [click]:\n@Command([EditDocument])"
+    },
+    {
+      "id": "49257BE3002293FD:formAction:35af76a55a8d1b6a094a",
+      "name": "02編集",
+      "actionType": "label",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/1"
+      },
+      "source": "Action 02編集 [label]:\n\"編集\""
+    },
+    {
+      "id": "49257BE3002293FD:formAction:fe4ea73069fc0929633f",
+      "name": "03保存",
+      "actionType": "click",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/2"
+      },
+      "source": "Action 03保存 [click]:\n@Command([FileSave])"
+    },
+    {
+      "id": "49257BE3002293FD:formAction:f2029fe3a3b70848a21f",
+      "name": "03保存",
+      "actionType": "label",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/3"
+      },
+      "source": "Action 03保存 [label]:\n\"保存\""
+    },
+    {
+      "id": "49257BE3002293FD:formAction:9a8415c5e278d500c2f3",
+      "name": "閉じる",
+      "actionType": "click",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/4"
+      },
+      "source": "Action 閉じる [click]:\n@Command([FileCloseWindow])"
+    },
+    {
+      "id": "49257BE3002293FD:formAction:fc0d99d269fd9613c08c",
+      "name": "閉じる",
+      "actionType": "label",
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/5"
+      },
+      "source": "Action 閉じる [label]:\n\"閉じる\""
+    },
+    {
+      "id": "49257BE3002293FD:formAction:b4856f9c3e3b152140c1",
+      "name": null,
+      "actionType": null,
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/6"
+      },
+      "source": "Form Event [onsubmit]:\nSub Onsubmit( Source As Notesuidocument, Continue As Variant )\n\tOn Error Goto ERR_TRAP\n\tDim objAddInfo\t\tAs clsAddressInfo\n\tDim ws \t\t\tAs NotesUIWorkspace\n\tDim ss\t\t\t\tAs NotesSession\n\tDim db\t\t\t\tAs NotesDatabase\n\tDim doc\t\t\tAs NotesDocument\n\tDim strTime\t\tAs String\n\tDim strUserID\t\tAs String\n\tDim strRetMsg\t\tAs String\n\tDim blnChkErrRes\tAs Boolean\n\tDim blnRet\t\t\tAs Boolean\n\tDim nmUserID\t\tAs NotesName\n\tSet ws = New NotesUIWorkspace\n\tSet ss = New NotesSession\n\tSet objAddInfo = New clsAddressInfo(\"\")\n\tSet db = ss.CurrentDatabase\n\tSet Source = ws.CurrentDocument\n\tSet doc = Source.Document\n\tContinue = True\n\tblnChkErrRes = funcErrChkMente( Source, blnRet )\n\tIf blnChkErrRes = False Then\n\t\tContinue = False\n\t\tExit Sub\n\tElseif blnRet = False Then\n\t\tContinue = False\n\t\tExit Sub\n\tElse\n\t\tstrTime = Format$( Today, \"yyyy/mm/dd\" )\n\t\tIf objAddInfo.InfoFlag = True Then\n\t\t\tSet nmUserID = New NotesName( objAddInfo.UserID )\n\t\t\tstrUserID = nmUserID.Abbreviated\n\t\tElse\n\t\t\tstrRetMsg = funcReturnMsg( \"E019\" )\n\t\t\tMsgbox strRetMsg, 0 + 16, \"システムエラー\"\n\t\t\tContinue = False\n\t\t\tExit Sub\n\t\tEnd If\n\t\tdoc.UpdtDate = strTime\n\t\tdoc.UpdtUser = strUserID\n\tEnd If\n\tExit Sub\nERR_TRAP:\n\tstrRetMsg = funcReturnMsg( \"E020\" )\n\tMsgbox strRetMsg & Chr(13) & Chr(10) & Chr(13) & Chr(10) & _\n\tfuncOnErrorMsg(\"Onsubmit\",Err, Erl, Error$), 16, \"システムエラー\"\n\tContinue = False\n\tIf doc Is Nothing Then\n\tElse\n\t\tdoc.SaveOptions = \"0\"\n\t\tCall Source.Close( False )\n\tEnd If\n\tExit Sub\nEnd Sub"
+    },
+    {
+      "id": "49257BE3002293FD:formAction:d60364c46a928ed15813",
+      "name": null,
+      "actionType": null,
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/7"
+      },
+      "source": "Form Event Button Visibility: 02編集; Roles=; Statuses=; HideAttr=edit previewedit; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    },
+    {
+      "id": "49257BE3002293FD:formAction:c76bf501a52be711b44c",
+      "name": null,
+      "actionType": null,
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/8"
+      },
+      "source": "Form Event Button Visibility: 03保存; Roles=; Statuses=; HideAttr=preview read; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    },
+    {
+      "id": "49257BE3002293FD:formAction:940b8934abe781938278",
+      "name": null,
+      "actionType": null,
+      "purpose": null,
+      "visibilityRules": [],
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/Actions/9"
+      },
+      "source": "Form Event Button Visibility: 閉じる; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    }
+  ],
+  "formulas": [
+    {
+      "id": "49257BE3002293FD:formFormula:04697a593a66c71f6854",
+      "formula": "\"選択肢メンテナンス\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/WindowTitleFormula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:a29ed218e56ae264b7fd",
+      "formula": "Form Script[defaultvalue]: \"商品\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/LotusScripts/3"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:7aa1f559e900f3b47f80",
+      "formula": "Form Script[defaultvalue]: 0",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/LotusScripts/4"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:0fabd1787d7aca394ccb",
+      "formula": "Form Script[defaultvalue]: @ThisValue",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/LotusScripts/5"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:2124ada863fc89c751ff",
+      "formula": "Form Script[label]: \"保存\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/LotusScripts/7"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:1be986a21bfa12245eee",
+      "formula": "Form Script[label]: \"編集\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/LotusScripts/8"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:50788289e4df5d0aa5bc",
+      "formula": "Form Script[label]: \"閉じる\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/LotusScripts/9"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:formFormula:fd0a4de170ea04449748",
+      "formula": "Form Script[windowtitle]: \"選択肢メンテナンス\"",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3/LotusScripts/11"
+      }
+    }
+  ],
+  "subforms": [],
+  "attachments": {
+    "enabled": null,
+    "attachmentFields": [],
+    "restrictions": [],
+    "dependencies": [],
+    "runtimePayloadsAvailable": false
+  },
+  "auditHistory": {
+    "enabled": null,
+    "historyType": null,
+    "trackingFields": [],
+    "approvalTracking": null,
+    "dependencies": []
+  },
+  "responseRelationships": [],
+  "workflowReference": {
+    "analyzedBy": "lotus-workflow-analyzer"
+  },
+  "securityReference": {
+    "analyzedBy": "lotus-security-analyzer"
+  },
+  "logicReference": {
+    "analyzedBy": "lotus-logic-analyzer"
+  },
+  "scriptReference": {
+    "analyzedBy": "lotus-script-analyzer"
+  },
+  "integrationReference": {
+    "analyzedBy": "lotus-integration-analyzer"
+  },
+  "richTextReference": {
+    "analyzedBy": "rich-text-analyzer"
+  },
+  "profileReference": {
+    "analyzedBy": "profile-document-analyzer"
+  },
+  "dependencies": [],
+  "migrationHints": {
+    "metadataOnly": true,
+    "fullBehaviorOwnedBySpecialistAnalyzers": true
+  },
+  "migrationRisks": [
+    {
+      "code": "PARTIAL_SOURCE",
+      "message": "Some exported embedded source/sample strings end with ellipses; source LotusScripts contain replacement characters. Do not treat samples as complete executable bodies.",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3"
+      }
+    },
+    {
+      "code": "UNKNOWN_METADATA",
+      "message": "Null purpose/required/visibility/response semantics are not permissive defaults. Root field kinds and exact source retained."
+    }
+  ],
+  "complexity": {
+    "overall": "Medium",
+    "formStructure": "Medium",
+    "fields": "Medium",
+    "actions": "Medium",
+    "subforms": "Medium",
+    "attachments": "Medium",
+    "auditHistory": "Medium",
+    "responseDocuments": "Medium"
+  },
+  "compatibility": {
+    "unsupportedFeatures": [],
+    "partiallySupportedFeatures": [],
+    "manualMigrationRequired": [
+      "Unresolved script behavior and missing runtime payload evidence"
+    ],
+    "analyzerDependencies": [
+      "lotus-script-analyzer",
+      "lotus-logic-analyzer",
+      "lotus-workflow-analyzer",
+      "lotus-security-analyzer",
+      "rich-text-analyzer",
+      "lotus-navigation-analyzer",
+      "lotus-homepage-analyzer",
+      "lotus-view-analyzer",
+      "lotus-ui-analyzer",
+      "lotus-integration-analyzer",
+      "profile-document-analyzer"
+    ]
+  },
+  "presentationHints": {},
+  "implementationHints": {}
+}

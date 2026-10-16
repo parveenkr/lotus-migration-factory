@@ -1,0 +1,65 @@
+{
+  "migrationBlueprintVersion": "1.0",
+  "views": [
+    {
+      "viewName": "(99_システム\\01_エージェントログ一覧)",
+      "viewAlias": "viwLogDoc",
+      "blueprintPath": "generated\\blueprints\\views\\(99_システム%5C01_エージェントログ一覧).migration-blueprint.json"
+    },
+    {
+      "viewName": "(99_システム\\02_削除文書一覧)",
+      "viewAlias": "viwDelDoc",
+      "blueprintPath": "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json"
+    },
+    {
+      "viewName": "(99_システム\\03_競合文書一覧)",
+      "viewAlias": "viwConflict",
+      "blueprintPath": "generated\\blueprints\\views\\(99_システム%5C03_競合文書一覧).migration-blueprint.json"
+    },
+    {
+      "viewName": "(99_システム\\04_選択肢検索用一覧)",
+      "viewAlias": "viwSearchSelection",
+      "blueprintPath": "generated\\blueprints\\views\\(99_システム%5C04_選択肢検索用一覧).migration-blueprint.json"
+    },
+    {
+      "viewName": "(99_システム\\99_All)",
+      "viewAlias": "viwSysAll",
+      "blueprintPath": "generated\\blueprints\\views\\(99_システム%5C99_All).migration-blueprint.json"
+    },
+    {
+      "viewName": "01_業務\\01_進捗確認（進捗別）",
+      "viewAlias": "viwKakuninByStatus",
+      "blueprintPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json"
+    },
+    {
+      "viewName": "01_業務\\02_進捗確認（担当者別）",
+      "viewAlias": "viwKakuninByPerson",
+      "blueprintPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json"
+    },
+    {
+      "viewName": "01_業務\\03_照会参照",
+      "viewAlias": "viwSyokaiSansyou",
+      "blueprintPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json"
+    },
+    {
+      "viewName": "01_業務\\04_受付確認(書類受付用)",
+      "viewAlias": "viwUketuke",
+      "blueprintPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json"
+    },
+    {
+      "viewName": "01_業務\\05_照会確認（Dr確認用）",
+      "viewAlias": "viwSyokaiKakunin",
+      "blueprintPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json"
+    },
+    {
+      "viewName": "20_メンテナンス\\01_休日設定",
+      "viewAlias": "viwSyukuCalendar",
+      "blueprintPath": "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json"
+    },
+    {
+      "viewName": "20_メンテナンス\\02_選択肢メンテナンス",
+      "viewAlias": "viwSelectionMente",
+      "blueprintPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json"
+    }
+  ]
+}

@@ -1,0 +1,1209 @@
+{
+  "applicationId": "49257BE3002293FD",
+  "databaseTitle": "医務照会DB_TEMPLATE",
+  "sourcePath": "input\\ExtractedJson\\synopsis.json",
+  "sourceFingerprint": {
+    "algorithm": "SHA-256",
+    "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+  },
+  "sourceBytes": 686305,
+  "mode": "ANALYZE_ONLY",
+  "status": "REVIEW_REQUIRED",
+  "startedAt": "2026-10-16T02:54:26.534992+00:00",
+  "analyzers": [
+    {
+      "analyzerId": "lotus-application-analyzer",
+      "skillName": "lotus-application-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\application\\application.blueprint.json",
+        "generated\\reports\\application-analysis-report.md"
+      ],
+      "dependencies": [],
+      "startedAt": "2026-10-16T03:16:30.664084+00:00",
+      "completedAt": "2026-10-16T03:16:30.674800+00:00",
+      "durationSeconds": 0.01067,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "Forms": 4,
+        "Subforms": 4,
+        "Views": 12,
+        "Agents": 5,
+        "ScriptLibraries": 4,
+        "Fields": 118
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-data-model-analyzer",
+      "skillName": "lotus-data-model-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\data-model\\application.data-model-blueprint.json",
+        "generated\\reports\\data-model-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-application-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:32.566344+00:00",
+      "completedAt": "2026-10-16T03:16:32.621304+00:00",
+      "durationSeconds": 0.054968,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "entities": 4,
+        "fields": 118,
+        "designElements": 29,
+        "richTextHandoffs": 4,
+        "analyzerHandoffs": 10,
+        "workflowHandoffs": 6
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-form-analyzer",
+      "skillName": "lotus-notes-form-blueprint-generator",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXPLICIT_ORCHESTRATOR_ALIAS",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\forms\\エージェントログ.migration-blueprint.json",
+        "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+        "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+        "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+        "generated\\reports\\form-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-data-model-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:34.375632+00:00",
+      "completedAt": "2026-10-16T03:16:34.425878+00:00",
+      "durationSeconds": 0.050252,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "forms": 4,
+        "referencedSubforms": 4,
+        "formFieldOccurrences": 34,
+        "subformFieldOccurrences": 84,
+        "actionOccurrences": 76
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-script-analyzer",
+      "skillName": "lotus-script-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\scripts\\application.script-blueprint.json"
+      ],
+      "dependencies": [
+        "lotus-form-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:36.223393+00:00",
+      "completedAt": "2026-10-16T03:16:36.997000+00:00",
+      "durationSeconds": 0.773622,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "scriptOccurrences": 476,
+        "routines": 248,
+        "operations": 5000,
+        "dependencies": 394,
+        "findings": 87,
+        "blockingFindings": 87,
+        "areas": [
+          {
+            "area": "LOTUSSCRIPT",
+            "status": "REVIEW_REQUIRED",
+            "discoveredCount": 54,
+            "representedCount": 54,
+            "unresolvedCount": 54,
+            "sourceCompleteness": "UNKNOWN"
+          },
+          {
+            "area": "FORMULA_LANGUAGE",
+            "status": "REVIEW_REQUIRED",
+            "discoveredCount": 404,
+            "representedCount": 404,
+            "unresolvedCount": 37,
+            "sourceCompleteness": "UNKNOWN"
+          },
+          {
+            "area": "JAVA_AGENTS",
+            "status": "NO_SOURCE_DISCOVERED",
+            "discoveredCount": 0,
+            "representedCount": 0,
+            "unresolvedCount": 0,
+            "sourceCompleteness": "UNKNOWN"
+          },
+          {
+            "area": "SCRIPT_LIBRARIES",
+            "status": "REVIEW_REQUIRED",
+            "discoveredCount": 4,
+            "representedCount": 4,
+            "unresolvedCount": 4,
+            "sourceCompleteness": "UNKNOWN"
+          }
+        ]
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-logic-analyzer",
+      "skillName": "lotus-logic-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\logic\\application.logic-blueprint.json",
+        "generated\\reports\\lotus-logic-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-script-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:38.787529+00:00",
+      "completedAt": "2026-10-16T03:16:39.280761+00:00",
+      "durationSeconds": 0.493251,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "fragments": 476,
+        "routines": 248,
+        "calls": 369,
+        "rules": 404,
+        "effects": 178,
+        "controlFlow": 2184,
+        "dataFlow": 1673
+      },
+      "dependenciesConsumed": [
+        "generated\\blueprints\\scripts\\application.script-blueprint.json"
+      ],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "generated\\blueprints\\scripts\\application.script-blueprint.json",
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-workflow-analyzer",
+      "skillName": "lotus-workflow-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\workflow\\application.workflow-blueprint.json",
+        "generated\\reports\\lotus-workflow-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-logic-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:41.047265+00:00",
+      "completedAt": "2026-10-16T03:16:41.398827+00:00",
+      "durationSeconds": 0.351575,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "workflows": 1,
+        "states": 8,
+        "transitions": 9,
+        "entryPoints": 14,
+        "effects": 172
+      },
+      "dependenciesConsumed": [
+        "generated\\blueprints\\logic\\application.logic-blueprint.json"
+      ],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "generated\\blueprints\\logic\\application.logic-blueprint.json",
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-security-analyzer",
+      "skillName": "lotus-security-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\security\\application.security-blueprint.json",
+        "generated\\reports\\lotus-security-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-workflow-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:43.255077+00:00",
+      "completedAt": "2026-10-16T03:16:43.341433+00:00",
+      "durationSeconds": 0.086367,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "securityArtifacts": 208,
+        "categories": {
+          "ACL": 1,
+          "ROLE": 5,
+          "FIELD": 118,
+          "VISIBILITY": 32,
+          "SCRIPT": 29,
+          "NAVIGATION": 1,
+          "AGENT": 5,
+          "PROTECTED_CONTENT": 17
+        },
+        "roles": 5,
+        "aclEntries": 6
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "rich-text-analyzer",
+      "skillName": "rich-text-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\rich-text\\application.rich-text-blueprint.json",
+        "generated\\reports\\rich-text-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-security-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:45.098694+00:00",
+      "completedAt": "2026-10-16T03:16:45.270792+00:00",
+      "durationSeconds": 0.172113,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "richTextFieldOccurrences": 4,
+        "designTemplates": 247,
+        "assets": 1,
+        "operations": 30,
+        "restrictions": 17
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-navigation-analyzer",
+      "skillName": "lotus-notes-navigation-blueprint-generator",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXPLICIT_ORCHESTRATOR_ALIAS",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\navigation\\navigation-blueprint.json"
+      ],
+      "dependencies": [
+        "rich-text-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:47.032718+00:00",
+      "completedAt": "2026-10-16T03:16:47.037286+00:00",
+      "durationSeconds": 0.004569,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "navigationItems": 16,
+        "groups": 2,
+        "resolvedViewRoutes": 7,
+        "unresolvedOutlineReferences": 1
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-homepage-analyzer",
+      "skillName": "lotus-notes-homepage-blueprint-generator",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXPLICIT_ORCHESTRATOR_ALIAS",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\homepage\\homepage-blueprint.json"
+      ],
+      "dependencies": [
+        "lotus-navigation-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:48.844056+00:00",
+      "completedAt": "2026-10-16T03:16:48.850008+00:00",
+      "durationSeconds": 0.00596,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "startupFramesets": 1,
+        "initialContentTargets": 1,
+        "explicitNavigationCards": 0,
+        "explicitQuickLinks": 0,
+        "unresolvedEmbeddedOutlines": 1
+      },
+      "dependenciesConsumed": [
+        "generated\\blueprints\\navigation\\navigation-blueprint.json"
+      ],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "generated\\blueprints\\navigation\\navigation-blueprint.json",
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-view-analyzer",
+      "skillName": "lotus-view-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C01_エージェントログ一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+        "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C03_競合文書一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C04_選択肢検索用一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C99_All).migration-blueprint.json",
+        "generated\\blueprints\\views\\application.view-blueprint.json"
+      ],
+      "dependencies": [
+        "lotus-homepage-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:50.658666+00:00",
+      "completedAt": "2026-10-16T03:16:50.739480+00:00",
+      "durationSeconds": 0.080819,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "views": 12,
+        "folders": 0,
+        "columns": 70,
+        "actions": 47,
+        "sourceCoverageReconciled": true
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-ui-analyzer",
+      "skillName": "lotus-ui-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\ui\\application.ui-blueprint.json",
+        "generated\\reports\\ui-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-view-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:52.529183+00:00",
+      "completedAt": "2026-10-16T03:16:52.595217+00:00",
+      "durationSeconds": 0.066019,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "sourceArtifacts": 23,
+        "forms": 4,
+        "views": 12,
+        "actions": 123,
+        "partialJourneys": 7,
+        "sourcePointersChecked": 169
+      },
+      "dependenciesConsumed": [
+        "generated\\blueprints\\application\\application.blueprint.json",
+        "generated\\blueprints\\data-model\\application.data-model-blueprint.json",
+        "generated\\blueprints\\forms\\エージェントログ.migration-blueprint.json",
+        "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+        "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+        "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+        "generated\\blueprints\\homepage\\homepage-blueprint.json",
+        "generated\\blueprints\\navigation\\navigation-blueprint.json",
+        "generated\\blueprints\\rich-text\\application.rich-text-blueprint.json",
+        "generated\\blueprints\\security\\application.security-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C01_エージェントログ一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C03_競合文書一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C04_選択肢検索用一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C99_All).migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+        "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+        "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+        "generated\\blueprints\\views\\application.view-blueprint.json"
+      ],
+      "sourceSynopsisRead": false,
+      "inputPaths": [
+        "generated\\blueprints\\application\\application.blueprint.json",
+        "generated\\blueprints\\data-model\\application.data-model-blueprint.json",
+        "generated\\blueprints\\forms\\エージェントログ.migration-blueprint.json",
+        "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+        "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+        "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+        "generated\\blueprints\\homepage\\homepage-blueprint.json",
+        "generated\\blueprints\\navigation\\navigation-blueprint.json",
+        "generated\\blueprints\\rich-text\\application.rich-text-blueprint.json",
+        "generated\\blueprints\\security\\application.security-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C01_エージェントログ一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C03_競合文書一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C04_選択肢検索用一覧).migration-blueprint.json",
+        "generated\\blueprints\\views\\(99_システム%5C99_All).migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+        "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+        "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+        "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+        "generated\\blueprints\\views\\application.view-blueprint.json"
+      ]
+    },
+    {
+      "analyzerId": "lotus-integration-analyzer",
+      "skillName": "lotus-integration-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "REVIEW_REQUIRED",
+      "outputPaths": [
+        "generated\\blueprints\\integrations\\application.integration-blueprint.json",
+        "generated\\reports\\lotus-integration-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-ui-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:54.373343+00:00",
+      "completedAt": "2026-10-16T03:16:54.562786+00:00",
+      "durationSeconds": 0.189458,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "operations": 31,
+        "sourceSupportedOccurrences": 19,
+        "candidateOccurrences": 12,
+        "systems": 3,
+        "endpoints": 3
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    },
+    {
+      "analyzerId": "profile-document-analyzer",
+      "skillName": "profile-document-analyzer",
+      "skillVersion": null,
+      "versionDeclared": false,
+      "preflightStatus": "PASSED",
+      "aliasResolution": "EXACT_FOLDER_NAME",
+      "executionStatus": "ANALYZED",
+      "outputPaths": [
+        "generated\\blueprints\\profiles\\application.profile-blueprint.json",
+        "generated\\reports\\profile-document-analysis-report.md"
+      ],
+      "dependencies": [
+        "lotus-integration-analyzer"
+      ],
+      "startedAt": "2026-10-16T03:16:56.345579+00:00",
+      "completedAt": "2026-10-16T03:16:56.429884+00:00",
+      "durationSeconds": 0.084351,
+      "sourceFingerprint": {
+        "algorithm": "SHA-256",
+        "value": "2d4dc0b21ba7798f505e09ab47b9e5092a3f4c73b169050e427662dadb5de333"
+      },
+      "coverage": {
+        "normalizedCodeOccurrencesSearched": 476,
+        "profileApiMatches": 0,
+        "ordinaryConfigurationCandidates": 2,
+        "persistedProfileInstancesSupplied": 0
+      },
+      "dependenciesConsumed": [],
+      "sourceSynopsisRead": true,
+      "inputPaths": [
+        "input\\ExtractedJson\\synopsis.json"
+      ]
+    }
+  ],
+  "commandResults": [
+    {
+      "command": "python analysis_execution.py lotus-application-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-data-model-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-form-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-script-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-logic-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-workflow-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-workflow-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-security-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py rich-text-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-navigation-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-homepage-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-view-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-ui-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-script-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-logic-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-workflow-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-security-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py rich-text-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-navigation-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-homepage-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-view-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-ui-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-integration-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py profile-document-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status ANALYZED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-application-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-data-model-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-form-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-script-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-logic-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-workflow-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-security-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py rich-text-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-navigation-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-homepage-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-view-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-ui-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py lotus-integration-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status REVIEW_REQUIRED"
+    },
+    {
+      "command": "python analysis_execution.py profile-document-analyzer",
+      "outcome": "PASSED",
+      "exitCode": 0,
+      "detail": "Persistent outputs parsed and source pointers checked; semantic status ANALYZED"
+    },
+    {
+      "command": "Initial source-shape inspection using .items() on BusinessRules entries",
+      "exitCode": 1,
+      "outcome": "CORRECTED",
+      "detail": "Actual entries are summary strings, not objects. Subsequent analyses preserve them as SUMMARY evidence."
+    },
+    {
+      "command": "First security root Roles versus Acl.Roles assertion",
+      "exitCode": 1,
+      "outcome": "CORRECTED",
+      "detail": "Actual root Roles are summary strings containing explicit Role tokens and target suggestions. Tokens reconciled; target suggestions are not source authorization. No invalid security blueprint published."
+    },
+    {
+      "command": "Credential literal locator scan",
+      "exitCode": 0,
+      "outcome": "PASSED",
+      "detail": "Zero high-confidence literal password/token/api-key/connection-string assignment candidates; this bounded scan is not a secret-free or security certification."
+    },
+    {
+      "command": "python analysis_execution.py validate",
+      "exitCode": 1,
+      "outcome": "FAILED",
+      "detail": "Final structural/source/coverage/reference checks; semantic readiness remains REVIEW_REQUIRED."
+    },
+    {
+      "command": "Initial source-shape inspection using .items() on BusinessRules entries",
+      "exitCode": 1,
+      "outcome": "CORRECTED",
+      "detail": "Actual entries are summary strings, not objects. Subsequent analyses preserve them as SUMMARY evidence."
+    },
+    {
+      "command": "First security root Roles versus Acl.Roles assertion",
+      "exitCode": 1,
+      "outcome": "CORRECTED",
+      "detail": "Actual root Roles are summary strings containing explicit Role tokens and target suggestions. Tokens reconciled; target suggestions are not source authorization. No invalid security blueprint published."
+    },
+    {
+      "command": "Credential literal locator scan",
+      "exitCode": 0,
+      "outcome": "PASSED",
+      "detail": "Zero high-confidence literal password/token/api-key/connection-string assignment candidates; this bounded scan is not a secret-free or security certification."
+    },
+    {
+      "command": "Correct graph-check endpoint discrimination and revalidate unchanged blueprints",
+      "exitCode": 0,
+      "outcome": "CORRECTED_VALIDATOR",
+      "detail": "Initial validation falsely treated absent targetId on a Call as a null dependency target. Exact record: generated\\blueprints\\logic\\application.logic-blueprint.json#/calls/0, id 49257BE3002293FD:call:59b63b9e618ce8c1ac12; valid calleeId 49257BE3002293FD:routine:9ecf817fd856d2e2e5eb. Corrected checker applies targetId rules only where that field exists, and checks calleeId separately per actual Call contract. No blueprint/source modified to evade validation."
+    },
+    {
+      "command": "python analysis_execution.py validate",
+      "exitCode": 0,
+      "outcome": "PASSED",
+      "detail": "Final structural/source/coverage/reference checks; semantic readiness remains REVIEW_REQUIRED."
+    },
+    {
+      "command": "Post-cleanup persistent artifact hash/existence/source/isolation verification",
+      "exitCode": 0,
+      "outcome": "PASSED",
+      "detail": "39 stage artifact hashes match manifest; exactly 42 required generated files persist; synopsis SHA-256 unchanged; temporary analyzer helper and its bytecode removed."
+    }
+  ],
+  "identityForContractsWithoutIdentity": "49257BE3002293FD",
+  "preflightNotes": [
+    "All 14 skill definitions exist, domain/output contracts read. Three current declared-name aliases explicitly resolved.",
+    "View declares lotus-view-analyzer (exact folder match); known historical generator alias is not needed.",
+    "Workflow/security zero-byte template files are not referenced validation contracts in their SKILL.md; their inline record/output contracts govern.",
+    "No skill declares an analyzer package version. Blueprint version 1.0 is not fabricated as a skill version.",
+    "Python importlib probe: jsonschema unavailable. No installation/dependency change; script uses a bounded explicit schema checker for every keyword in the actual supplied schema."
+  ],
+  "governancePermitted": false,
+  "blueprintOrchestratorInvoked": false,
+  "completedAt": "2026-10-16T03:18:01.363927+00:00",
+  "checks": [
+    {
+      "name": "OUTPUT_EXISTENCE_JSON_AND_SCOPE",
+      "status": "PASSED",
+      "detail": "29 required blueprint JSON files parsed without duplicate keys; all required stage reports present.",
+      "findingIds": []
+    },
+    {
+      "name": "INPUT_IDENTITY_AND_DESIGN_ISOLATION",
+      "status": "PASSED",
+      "detail": "Source SHA-256 unchanged; canonical applicationId corroborated; forbidden design/deployment surfaces remain empty.",
+      "findingIds": []
+    },
+    {
+      "name": "INLINE_CONTRACTS_AND_RECORDS",
+      "status": "PASSED",
+      "detail": "8667 populated typed records checked against required property lists from actual inline skill contracts; common nested root shapes and coverage types/counts checked.",
+      "findingIds": []
+    },
+    {
+      "name": "ACTUAL_SCRIPT_SCHEMA_AND_NEGATIVE_CONTROLS",
+      "status": "PASSED",
+      "detail": "Bundled script-analysis.schema.json evaluated with explicit checker for its actual keyword vocabulary; seven negative mutations rejected. jsonschema package unavailable; no installation.",
+      "findingIds": []
+    },
+    {
+      "name": "PROVENANCE_RAW_VALUES_AND_GENERATED_REFERENCES",
+      "status": "PASSED",
+      "detail": "2878 RFC6901 pointers resolved against actual source/generated artifacts; all retained raw evidence compared exactly; supplied spans and UI source identifiers checked.",
+      "findingIds": []
+    },
+    {
+      "name": "NORMALIZED_IDENTIFIERS_AND_GRAPH_LINKS",
+      "status": "PASSED",
+      "detail": "29647 normalized identifier/evidence/graph references resolved; null endpoints remain explicitly external/unresolved. Collection and evidence IDs unique.",
+      "findingIds": []
+    },
+    {
+      "name": "ALL_FORM_VIEW_AND_FIELD_COVERAGE",
+      "status": "PASSED",
+      "detail": "4/4 forms, 4/4 referenced subforms, 118/118 field occurrences, 12/12 views (0 folders), 70/70 columns and exact view inventory reconciled. Encoded filenames avoid source hierarchy path collisions.",
+      "findingIds": []
+    },
+    {
+      "name": "SCRIPT_SOURCE_RECONCILIATION_AND_GATE",
+      "status": "PASSED",
+      "detail": "476 normalized fragments represent 576 source strings; 100 SourceFormula/ComputedFormula pairs share evidence-linked records. Required semantic gaps correctly block readiness.",
+      "findingIds": []
+    }
+  ],
+  "durationMeasurement": "Per-analyzer durationSeconds measures local generation/validation function execution, not human reasoning/source-contract reading or runtime behavior.",
+  "coverageDefinition": "Represented/discovered counts measure exported source coverage, not complete semantic interpretation. Script/logic/workflow required unknowns remain blocking.",
+  "sourceMetadata": {
+    "sourceSystem": "Lotus Notes",
+    "databaseTitle": "医務照会DB_TEMPLATE",
+    "replicaId": "49257BE3002293FD",
+    "sourceVersion": null,
+    "exportedAt": "",
+    "totalDocuments": 0,
+    "totalAttachments": 0
+  },
+  "unusedSupplementaryInputs": [
+    "input\\supplementary\\data-dictionary\\disyokai.ntf",
+    "input\\supplementary\\data-dictionary\\【Notes】フィールド一覧_v04_医務照会.xlsx",
+    "input\\supplementary\\dxl\\disyokai.xml",
+    "input\\documents\\requirements\\【Notes】設計要素一覧_医務照会.xlsx",
+    "input\\documents\\screenshots\\Navigation.png",
+    "input\\documents\\screenshots\\医務照会.jpg"
+  ],
+  "unusedSupplementaryReason": "Synopsis-only specialized analyzer contracts govern extracted facts; supplied DXL/documents/screenshots were not used to reconstruct omitted script bodies, runtime content or target design.",
+  "findingsSummary": {
+    "findingOccurrences": 123,
+    "blockingFindingOccurrences": 114,
+    "migrationRiskOccurrences": 45,
+    "bySeverity": {
+      "WARNING": 123
+    }
+  },
+  "artifactInventory": [
+    {
+      "path": "generated\\blueprints\\application\\application.blueprint.json",
+      "sha256": "0ab0b9c85b03f5fd2681030e418dbc4341c72db8bbb0a146e0940e8b78aa8144",
+      "bytes": 82460
+    },
+    {
+      "path": "generated\\reports\\application-analysis-report.md",
+      "sha256": "ddd9ff217686af31161f9b6fdf14fe372e910d883095f9da92125292c50398c3",
+      "bytes": 1449
+    },
+    {
+      "path": "generated\\blueprints\\data-model\\application.data-model-blueprint.json",
+      "sha256": "9daba84c550c17e1f60b6c830023877fbfb7e43950405e67abb03dd3a537644c",
+      "bytes": 1208990
+    },
+    {
+      "path": "generated\\reports\\data-model-analysis-report.md",
+      "sha256": "2c62af240ca0b1cf8e9d697c8d9c4e4e0872294d562d677983f32ca656aaf36c",
+      "bytes": 3326
+    },
+    {
+      "path": "generated\\blueprints\\forms\\エージェントログ.migration-blueprint.json",
+      "sha256": "851361cee6c11a433b3bffeef5f7a49221ec80027adfd25d500c1fee90d7c9c3",
+      "bytes": 29677
+    },
+    {
+      "path": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+      "sha256": "3fc690974593b393f2182f35df718433bc2b4155dccf7a83809b4367dc844a56",
+      "bytes": 523737
+    },
+    {
+      "path": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+      "sha256": "b2a1e425070c334476525b7f137c99d1e348cbb0c413b279aad11d44b6c6b22d",
+      "bytes": 34096
+    },
+    {
+      "path": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+      "sha256": "fbef291fdc3cb39f6505e1dc3f6240a9bf56320c6dd9f15516687dac16cb86ef",
+      "bytes": 47198
+    },
+    {
+      "path": "generated\\reports\\form-analysis-report.md",
+      "sha256": "21036fa71a41b66785000c62e7cf0c70f8823a017d2f7197dafcd6274298ddd8",
+      "bytes": 1773
+    },
+    {
+      "path": "generated\\blueprints\\scripts\\application.script-blueprint.json",
+      "sha256": "a01f41b76547a595fdeef3035f6ff87a78159c74e0cf084291c2becfb662d5fc",
+      "bytes": 3606357
+    },
+    {
+      "path": "generated\\blueprints\\logic\\application.logic-blueprint.json",
+      "sha256": "8be3b21414b10bd177cef974988fbe8c87d926673bd8f63bdd44a6ceded64be1",
+      "bytes": 3888135
+    },
+    {
+      "path": "generated\\reports\\lotus-logic-analysis-report.md",
+      "sha256": "054e4abc4f66987427fbc40a59eff46c78680ae8a08bc18a22f082dce7827aab",
+      "bytes": 4240
+    },
+    {
+      "path": "generated\\blueprints\\workflow\\application.workflow-blueprint.json",
+      "sha256": "ca437182bd40da8b6bb364f090111966c97f1bea8f52e7280f5deab74b099c34",
+      "bytes": 4651871
+    },
+    {
+      "path": "generated\\reports\\lotus-workflow-analysis-report.md",
+      "sha256": "df8c34283abb68d571513210b46aec83d11ff7511a1aa4a1d3f63b2724496f6f",
+      "bytes": 4099
+    },
+    {
+      "path": "generated\\blueprints\\security\\application.security-blueprint.json",
+      "sha256": "ee31496765806aba44139b3df5ccd560c988d0eee890d0ff88b09394b0bdd1b5",
+      "bytes": 1069319
+    },
+    {
+      "path": "generated\\reports\\lotus-security-analysis-report.md",
+      "sha256": "0116a85356d345cd1bbf0ed10cdb636972a3417c067d2fca4c5a95c19bf82259",
+      "bytes": 4474
+    },
+    {
+      "path": "generated\\blueprints\\rich-text\\application.rich-text-blueprint.json",
+      "sha256": "a4e26d22e041070dde0916fcaf0506e69aa25a9ebeb7de3d4dbed75c50d23e2b",
+      "bytes": 751707
+    },
+    {
+      "path": "generated\\reports\\rich-text-analysis-report.md",
+      "sha256": "74ad778f4c71a75a5f1fdfbe41a247e54244e8ae90f3ad4eac489145c74d4ac3",
+      "bytes": 3956
+    },
+    {
+      "path": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+      "sha256": "c5fbc6f5b1b8b9e181ae847cba4157d7347c680542e9eed589e95c67ae2e35fd",
+      "bytes": 25217
+    },
+    {
+      "path": "generated\\blueprints\\homepage\\homepage-blueprint.json",
+      "sha256": "b41ed2b9187edc524871adbf694cd9ae382799d0a870fbf7cde787a6aff8aaa0",
+      "bytes": 12134
+    },
+    {
+      "path": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+      "sha256": "bc982f007af69d33b0d45f6cf1e837347bb73a8adb0fad46958a01eecdc098d4",
+      "bytes": 27625
+    },
+    {
+      "path": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+      "sha256": "ae5ef8da1e25eadeefd9161f52fa8be8d4640d86ea5836832471868f2b6608fe",
+      "bytes": 24786
+    },
+    {
+      "path": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+      "sha256": "e1a63d53f64fea28f24d8c549a3a1e2129f5dbedbde78a2c5d13a54ed7b1f26b",
+      "bytes": 29969
+    },
+    {
+      "path": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+      "sha256": "9e8e5ed755f26bdf10622642a77f1dad5644573f8bbe44395d52b9f2062eefa8",
+      "bytes": 32423
+    },
+    {
+      "path": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+      "sha256": "6d6cc07ce5cab6bb7f4831aac00d4983928a2904911a758c3f11d3e24fa7810e",
+      "bytes": 28902
+    },
+    {
+      "path": "generated\\blueprints\\views\\(99_システム%5C01_エージェントログ一覧).migration-blueprint.json",
+      "sha256": "bf875aa8954c05754b19d3b0196c209c9b8c7f9509363fb4eda413aebd308adc",
+      "bytes": 15185
+    },
+    {
+      "path": "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+      "sha256": "6ffd0789f8e0f1d8497f97b23803925d4ebbca885453c606ce63d1c3b746d922",
+      "bytes": 10683
+    },
+    {
+      "path": "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+      "sha256": "dc6c3ae39d5e124eabef307e5041fb2265787ad6c6ba40d345757ec0b9685056",
+      "bytes": 8230
+    },
+    {
+      "path": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+      "sha256": "86245b29b11b06189819934d0b50418c4148e581c1ebf0b3f210e81d2f505f87",
+      "bytes": 18785
+    },
+    {
+      "path": "generated\\blueprints\\views\\(99_システム%5C03_競合文書一覧).migration-blueprint.json",
+      "sha256": "6d86f5e0f8b91952fd4b1bb28adb9ce5452759d1891fb37e00aa5922c0cc8d69",
+      "bytes": 4928
+    },
+    {
+      "path": "generated\\blueprints\\views\\(99_システム%5C04_選択肢検索用一覧).migration-blueprint.json",
+      "sha256": "feeda1e5e3a09892f5c08b2f4d84613c89180e5688ac7c8cf0025a1a638453aa",
+      "bytes": 6938
+    },
+    {
+      "path": "generated\\blueprints\\views\\(99_システム%5C99_All).migration-blueprint.json",
+      "sha256": "a843d9943e1a4d38cba2c7ebe16ee723ca47607da3cb87531bd1158a66bcd521",
+      "bytes": 11863
+    },
+    {
+      "path": "generated\\blueprints\\views\\application.view-blueprint.json",
+      "sha256": "47f52581334370a14abd654bf845c57e07fc04e91362faf06a63bbbb4ce6c1c7",
+      "bytes": 2952
+    },
+    {
+      "path": "generated\\blueprints\\ui\\application.ui-blueprint.json",
+      "sha256": "886967479e45a62eaaa6174171f087f7f9af390fff8fb913542d518c0f71a544",
+      "bytes": 141655
+    },
+    {
+      "path": "generated\\reports\\ui-analysis-report.md",
+      "sha256": "ad63708f4a12b8ee3fbd9fdc33cfbc9b41776e1be15b4cf277421bbfc08756b3",
+      "bytes": 1281
+    },
+    {
+      "path": "generated\\blueprints\\integrations\\application.integration-blueprint.json",
+      "sha256": "47114330e6ac8ad779879a9ee644c163c930ba761712395bfe8bbf1a6541aa0b",
+      "bytes": 290502
+    },
+    {
+      "path": "generated\\reports\\lotus-integration-analysis-report.md",
+      "sha256": "24f449a8d76e6b2aea10125ca185a2a5a6e63a71921308364acfb3258703dd0a",
+      "bytes": 4264
+    },
+    {
+      "path": "generated\\blueprints\\profiles\\application.profile-blueprint.json",
+      "sha256": "779b08891ac4c887967fbad4ab611098401cf285442cd87e354c7919b04446a0",
+      "bytes": 793775
+    },
+    {
+      "path": "generated\\reports\\profile-document-analysis-report.md",
+      "sha256": "1230c4d366786d9bdf7f514f2a742a058ddbc1d64a9bed4b375c769a6b7ebd23",
+      "bytes": 3098
+    }
+  ],
+  "analyzerCounts": {
+    "required": 14,
+    "executed": 14,
+    "analyzed": 1,
+    "reviewRequired": 13
+  },
+  "orchestratorOutputPaths": [
+    "generated\\reports\\analyzer-manifest.json",
+    "generated\\reports\\analyzer-summary.md",
+    "generated\\reports\\cross-blueprint-validation.md"
+  ],
+  "artifactCounts": {
+    "blueprints": 29,
+    "skillReports": 10,
+    "orchestratorArtifacts": 3,
+    "total": 42
+  },
+  "cleanupStatus": "PASSED: app-scoped temporary helper and bytecode removed; required artifacts only"
+}

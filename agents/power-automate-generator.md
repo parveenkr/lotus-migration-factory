@@ -24,14 +24,13 @@ Required inputs:
 - `generated/blueprints/security/application.security-blueprint.json`
 - `generated/blueprints/data-model/application.data-model-blueprint.json`
 - `generated/blueprints/integrations/application.integration-blueprint.json`
-- `generated/workflows/power-automate-solution-mapping.json`
+- `generated/mappings/workflow-mapping.json`
 - `generated/fsd/application.fsd.md`
 - `generated/reports/fsd-generation-report.md`
 - `generated/tsd/application.tsd.md`
 - `generated/reports/tsd-generation-report.md`
 - `generated/dataverse/`
 - `generated/reports/dataverse-readiness-report.md`
-- `generated/mappings/workflow-mapping.json`
 - `generated/mappings/security-mapping.json`
 - `generated/mappings/dataverse-mapping.json`
 - `generated/reports/power-platform-mapping-report.md`

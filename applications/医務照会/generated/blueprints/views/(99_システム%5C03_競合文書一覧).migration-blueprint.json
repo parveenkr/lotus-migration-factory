@@ -1,0 +1,159 @@
+{
+  "migrationBlueprintVersion": "1.0",
+  "source": {
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/9"
+    },
+    "metadata": {
+      "Name": "(99_システム\\03_競合文書一覧)",
+      "Alias": "viwConflict",
+      "IsDefault": false,
+      "IsFolder": false,
+      "SelectionFormula": "SELECT @IsAvailable( $Conflict) & DelFlag != 1",
+      "RowBackgroundColor": "white",
+      "AltRowBackgroundColor": "#d2d2d2",
+      "Details": "View: viwConflict\r\nRowStyling: bgcolor=white, altrowcolor=#d2d2d2\r\nSelectionFormula: SELECT @IsAvailable( $Conflict) & DelFlag != 1\r\nColumns: 1\r\n-  [$2] => @DocNumber [isCategorized:false]",
+      "Actions": [],
+      "Columns": [
+        {
+          "Title": "",
+          "ItemName": "$2",
+          "DisplayEn": "Doc Number",
+          "DisplayJp": "",
+          "Formula": "@DocNumber",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        }
+      ]
+    }
+  },
+  "view": {
+    "id": "49257BE3002293FD:Views:972a99f5fefb369c5a93",
+    "name": "(99_システム\\03_競合文書一覧)",
+    "alias": "viwConflict",
+    "isFolder": false,
+    "isDefault": false,
+    "hiddenBySourceName": true,
+    "selectionFormula": "SELECT @IsAvailable( $Conflict) & DelFlag != 1"
+  },
+  "columns": [
+    {
+      "id": "49257BE3002293FD:viewColumn:b6661d5627852cbba955",
+      "columnName": "$2",
+      "displayName": "Doc Number",
+      "sourceField": "$2",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "@DocNumber",
+      "position": 0,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/9/Columns/0"
+      },
+      "source": {
+        "Title": "",
+        "ItemName": "$2",
+        "DisplayEn": "Doc Number",
+        "DisplayJp": "",
+        "Formula": "@DocNumber",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    }
+  ],
+  "formulas": [
+    {
+      "id": "49257BE3002293FD:viewFormula:feefb4bbe9fb63491424",
+      "formulaType": "SelectionFormula",
+      "formulaText": "SELECT @IsAvailable( $Conflict) & DelFlag != 1",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/9/SelectionFormula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:c1e472ce184003ef5e3b",
+      "formulaType": "ColumnFormula",
+      "formulaText": "@DocNumber",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/9/Columns/0/Formula"
+      }
+    }
+  ],
+  "grouping": {
+    "categorizedColumnIds": [],
+    "sourceOrderPreserved": true
+  },
+  "folderBehavior": {
+    "isFolder": false,
+    "hierarchy": null
+  },
+  "sorting": {
+    "defaultSortedColumns": [],
+    "unknownDirectionPreserved": true
+  },
+  "filtering": {
+    "selectionFormula": "SELECT @IsAvailable( $Conflict) & DelFlag != 1",
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/9/SelectionFormula"
+    },
+    "authorization": false
+  },
+  "actions": [],
+  "security": {
+    "roles": [],
+    "readRules": [],
+    "writeRules": [],
+    "visibilityRules": [],
+    "actionRestrictions": [],
+    "columnRestrictions": [],
+    "enforcementNote": "UI filtering/hiding is not database/document authorization."
+  },
+  "navigation": {
+    "defaultAction": null,
+    "documentOpenBehavior": null,
+    "targetForms": [],
+    "relatedViews": [],
+    "navigationRules": []
+  },
+  "dependencies": [],
+  "presentationHints": {
+    "rowBackgroundColor": "white",
+    "altRowBackgroundColor": "#d2d2d2",
+    "iconFormulas": []
+  },
+  "implementationHints": {},
+  "migrationHints": {
+    "advisoryOnly": true
+  },
+  "migrationRisks": [
+    {
+      "code": "UNKNOWN_METADATA",
+      "message": "Missing width/alignment/type/sort direction/resort flags/open-event metadata remain null; IsSorted does not prove user-resort capability."
+    },
+    {
+      "code": "PROJECTION_NOT_STORAGE",
+      "message": "Computed column ItemName such as $154 is not a stored-field mapping; source formulas preserved and field binding reviewed separately."
+    }
+  ]
+}

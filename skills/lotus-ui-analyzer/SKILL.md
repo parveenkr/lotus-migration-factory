@@ -82,6 +82,8 @@ Required for a complete UI analysis:
 
 - `generated/blueprints/rich-text/application.rich-text-blueprint.json`
 
+- `generated/blueprints/scripts/application.script-blueprint.json` version `1.1`, including `uiBehaviors` and `handoffs.ui` from `lotus-script-analyzer`
+
 If a detailed artifact set is absent, check the upstream analyzer report/inventory first. Do not infer that an empty directory means the application has no forms or views. A partial projection may be published only with `REVIEW_REQUIRED` and explicit `NOT_ASSESSED` coverage for missing categories.
 
 ---
@@ -207,6 +209,14 @@ view interaction model
 ---
 
 # Stage 6 - Action Analysis
+
+Consume the script blueprint's `handoffs.ui.uiBehaviorIds` and resolve every ID to its `uiBehaviors` record. Validate version `1.1`, the active-application path, source evidence links, and handoff completeness. A script-level review status caused by unrelated executable code does not invalidate otherwise usable UI metadata; carry relevant limitations explicitly rather than reclassifying wrappers as code.
+
+Preserve COMMENT_DOCUMENTATION source regions as documentation only. Formula referenced fields, conditions, and behavior must come from executable regions, not examples or annotations in REM/apostrophe comments. Comment-only formulas retain original text and evidence but imply no visibility, enablement, workflow, or security behavior and must not create blocking script findings.
+
+Match metadata to existing form/view actions by owner kind/name/alias and original `buttonName`, not by label alone across the application. Attach the source record to the matched action's `uiBehaviors` array, preserving `classification=UI_METADATA`, source ID, placement flags, roles/statuses, rule type, behavior, HideAttr, exact hide/enable formulas, and formula analysis. Include sourceReferences to the script blueprint, UI behavior ID, and evidence ID. Do not invent click behavior or a new action when the match is ambiguous; retain the record with an unresolved target in `dependencies` and nonblocking UI review notes.
+
+Keep HideWhen polarity (true hides) and enablement predicates unchanged. `ALWAYS_VISIBLE` means no rule-based hide condition, not that ShowInMenu/ShowInBar or context restrictions should be ignored. Null placement values are unknown, not false. Treat roles and statuses as UI dependencies, never server-side authorization. Preserve conflicting specialized evidence with references instead of silently overriding it. UI_METADATA must not generate UNKNOWN_LANGUAGE or blocking script findings; its review notes are nonblocking. Unrelated missing inputs and structural/identity failures retain their normal gates.
 
 Identify:
 
@@ -382,6 +392,7 @@ Verify:
 - source item references resolve or have explicit unresolved findings
 - conflicts are preserved and reported without silently overriding specialized blueprints
 - role-aware UI statements do not claim server-side authorization
+- script UI handoff IDs resolve exactly once, all UI behavior records are retained, metadata is nonexecutable, and original hide/enable formulas and evidence are preserved
 
 Status:
 
@@ -410,6 +421,7 @@ Include:
 - form summary
 - view summary
 - action summary
+- script UI handoff coverage, button visibility/enablement rules, and nonblocking metadata review notes
 - user journey summary
 - role-based experience summary
 - input artifact inventory and coverage by category

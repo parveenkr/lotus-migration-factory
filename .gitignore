@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+.vscode/
+.env
+.env.*
+generated/
+applications/*/generated/
+applications/*/deployment/
+*.log

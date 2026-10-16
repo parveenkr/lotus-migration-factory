@@ -1,0 +1,707 @@
+{
+  "migrationBlueprintVersion": "1.0",
+  "source": {
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/1"
+    },
+    "metadata": {
+      "Name": "01_業務\\04_受付確認(書類受付用)",
+      "Alias": "viwUketuke",
+      "IsDefault": false,
+      "IsFolder": false,
+      "SelectionFormula": "SELECT Form = \"frmImusyokai\" & DelFlag = 0 & StatusCode = \"3000\"",
+      "RowBackgroundColor": "white",
+      "AltRowBackgroundColor": "#ffffc2",
+      "Details": "View: viwUketuke\r\nRowStyling: bgcolor=white, altrowcolor=#ffffc2\r\nSelectionFormula: SELECT Form = \"frmImusyokai\" & DelFlag = 0 & StatusCode = \"3000\"\r\nColumns: 8\r\n-  [$154] => @If(IraiOverFlag = 1; 150; 0) [isCategorized:false]  [headerFontColor:gray dataFontColor:(none)]\r\n- 優先順位 [YusenZyuni] [isCategorized:false]  [headerFontColor:gray dataFontColor:#ff2259]\r\n- 依頼日 [IraiDate] [isCategorized:false]  [headerFontColor:gray dataFontColor:blue]\r\n- 依頼者 [IraiName] [isCategorized:false]  [headerFontColor:gray dataFontColor:(none)]\r\n- 商品 [Syohin] [isCategorized:false]  [headerFontColor:gray dataFontColor:teal]\r\n- 被保険者名 [Hihokensya] [isCategorized:false]  [headerFontColor:gray dataFontColor:(none)]\r\n- 請求事由 [Jiyu] [isCategorized:false]  [headerFontColor:gray dataFontColor:(none)]\r\n-  [$155] => \"\" [isCategorized:false]  [headerFontColor:gray dataFontColor:(none)]",
+      "Actions": [
+        "Action 00閉じる [click]:\n@Command([FileCloseWindow])",
+        "Action 00閉じる [label]:\n\"閉じる\"",
+        "Action 04新規連絡票作成 [click]:\n@Command([Compose];\"frmImusyokai\")",
+        "Action 04新規連絡票作成 [hidewhen]:\n@Contains(@UserRoles ; \"[Admin]\") = @False & @Contains(@UserRoles ; \"[DanTanto]\")= @False",
+        "Action 04新規連絡票作成 [label]:\n\"新規連絡票作成\"",
+        "View Event Button Visibility: 00閉じる; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen=",
+        "View Event Button Visibility: 04新規連絡票作成; Roles=[Admin],[DanTanto]; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=hidden-when-role-missing; HideWhen=@Contains(@UserRoles ; \"[Admin]\") = @False & @Contains(@UserRoles ; \"[DanTanto]\")= @False"
+      ],
+      "Columns": [
+        {
+          "Title": "",
+          "ItemName": "$154",
+          "DisplayEn": "Irai Over Flag",
+          "DisplayJp": "",
+          "Formula": "@If(IraiOverFlag = 1; 150; 0)",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "",
+          "IsSorted": true,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "優先順位",
+          "ItemName": "YusenZyuni",
+          "DisplayEn": "Yusen Zyuni",
+          "DisplayJp": "優先順位",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "#ff2259",
+          "IsSorted": true,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "依頼日",
+          "ItemName": "IraiDate",
+          "DisplayEn": "Irai Date",
+          "DisplayJp": "依頼日",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "blue",
+          "IsSorted": true,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "依頼者",
+          "ItemName": "IraiName",
+          "DisplayEn": "Irai Name",
+          "DisplayJp": "依頼者",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "商品",
+          "ItemName": "Syohin",
+          "DisplayEn": "Syohin",
+          "DisplayJp": "商品",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "teal",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "被保険者名",
+          "ItemName": "Hihokensya",
+          "DisplayEn": "Hihokensya",
+          "DisplayJp": "被保険者名",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "請求事由",
+          "ItemName": "Jiyu",
+          "DisplayEn": "Jiyu",
+          "DisplayJp": "請求事由",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "",
+          "ItemName": "$155",
+          "DisplayEn": "",
+          "DisplayJp": "",
+          "Formula": "\"\"",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        }
+      ]
+    }
+  },
+  "view": {
+    "id": "49257BE3002293FD:Views:073347db76d8a22da9a8",
+    "name": "01_業務\\04_受付確認(書類受付用)",
+    "alias": "viwUketuke",
+    "isFolder": false,
+    "isDefault": false,
+    "hiddenBySourceName": false,
+    "selectionFormula": "SELECT Form = \"frmImusyokai\" & DelFlag = 0 & StatusCode = \"3000\""
+  },
+  "columns": [
+    {
+      "id": "49257BE3002293FD:viewColumn:8d4e731fac327c848717",
+      "columnName": "$154",
+      "displayName": "Irai Over Flag",
+      "sourceField": "$154",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "@If(IraiOverFlag = 1; 150; 0)",
+      "position": 0,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/0"
+      },
+      "source": {
+        "Title": "",
+        "ItemName": "$154",
+        "DisplayEn": "Irai Over Flag",
+        "DisplayJp": "",
+        "Formula": "@If(IraiOverFlag = 1; 150; 0)",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "",
+        "IsSorted": true,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:551035db9cbc5f958afc",
+      "columnName": "YusenZyuni",
+      "displayName": "優先順位",
+      "sourceField": "YusenZyuni",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 1,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/1"
+      },
+      "source": {
+        "Title": "優先順位",
+        "ItemName": "YusenZyuni",
+        "DisplayEn": "Yusen Zyuni",
+        "DisplayJp": "優先順位",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "#ff2259",
+        "IsSorted": true,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:f9ea5706cadd6811e37c",
+      "columnName": "IraiDate",
+      "displayName": "依頼日",
+      "sourceField": "IraiDate",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 2,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/2"
+      },
+      "source": {
+        "Title": "依頼日",
+        "ItemName": "IraiDate",
+        "DisplayEn": "Irai Date",
+        "DisplayJp": "依頼日",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "blue",
+        "IsSorted": true,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:2af5886341836ca391d9",
+      "columnName": "IraiName",
+      "displayName": "依頼者",
+      "sourceField": "IraiName",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 3,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/3"
+      },
+      "source": {
+        "Title": "依頼者",
+        "ItemName": "IraiName",
+        "DisplayEn": "Irai Name",
+        "DisplayJp": "依頼者",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:ce3c1f072ebc8b6522f0",
+      "columnName": "Syohin",
+      "displayName": "商品",
+      "sourceField": "Syohin",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 4,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/4"
+      },
+      "source": {
+        "Title": "商品",
+        "ItemName": "Syohin",
+        "DisplayEn": "Syohin",
+        "DisplayJp": "商品",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "teal",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:81ecf003104d46cf6b21",
+      "columnName": "Hihokensya",
+      "displayName": "被保険者名",
+      "sourceField": "Hihokensya",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 5,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/5"
+      },
+      "source": {
+        "Title": "被保険者名",
+        "ItemName": "Hihokensya",
+        "DisplayEn": "Hihokensya",
+        "DisplayJp": "被保険者名",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:b18c4d0053f6ca45ee54",
+      "columnName": "Jiyu",
+      "displayName": "請求事由",
+      "sourceField": "Jiyu",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 6,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/6"
+      },
+      "source": {
+        "Title": "請求事由",
+        "ItemName": "Jiyu",
+        "DisplayEn": "Jiyu",
+        "DisplayJp": "請求事由",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:dd9d4da92d8d3107f9f4",
+      "columnName": "$155",
+      "displayName": null,
+      "sourceField": "$155",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "\"\"",
+      "position": 7,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/7"
+      },
+      "source": {
+        "Title": "",
+        "ItemName": "$155",
+        "DisplayEn": "",
+        "DisplayJp": "",
+        "Formula": "\"\"",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    }
+  ],
+  "formulas": [
+    {
+      "id": "49257BE3002293FD:viewFormula:5ab4ceffe95a511787b8",
+      "formulaType": "SelectionFormula",
+      "formulaText": "SELECT Form = \"frmImusyokai\" & DelFlag = 0 & StatusCode = \"3000\"",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/SelectionFormula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:b34346357ef2498a7aa3",
+      "formulaType": "ColumnFormula",
+      "formulaText": "@If(IraiOverFlag = 1; 150; 0)",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/0/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:2214e961bb0281e9af5e",
+      "formulaType": "ColumnFormula",
+      "formulaText": "\"\"",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/7/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:7d13a782558619d79b6c",
+      "formulaType": "Actionclick",
+      "formulaText": "Action 00閉じる [click]:\n@Command([FileCloseWindow])",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/0"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:4ad0bc6566bd6d2f65af",
+      "formulaType": "Actionlabel",
+      "formulaText": "Action 00閉じる [label]:\n\"閉じる\"",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/1"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:9a14d460887a0ab7a966",
+      "formulaType": "Actionclick",
+      "formulaText": "Action 04新規連絡票作成 [click]:\n@Command([Compose];\"frmImusyokai\")",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/2"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:e19000b4c4e07abfdcbf",
+      "formulaType": "Actionhidewhen",
+      "formulaText": "Action 04新規連絡票作成 [hidewhen]:\n@Contains(@UserRoles ; \"[Admin]\") = @False & @Contains(@UserRoles ; \"[DanTanto]\")= @False",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/3"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:ed8dca0c082d342995ea",
+      "formulaType": "Actionlabel",
+      "formulaText": "Action 04新規連絡票作成 [label]:\n\"新規連絡票作成\"",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/4"
+      }
+    }
+  ],
+  "grouping": {
+    "categorizedColumnIds": [],
+    "sourceOrderPreserved": true
+  },
+  "folderBehavior": {
+    "isFolder": false,
+    "hierarchy": null
+  },
+  "sorting": {
+    "defaultSortedColumns": [
+      {
+        "columnId": "49257BE3002293FD:viewColumn:8d4e731fac327c848717",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      },
+      {
+        "columnId": "49257BE3002293FD:viewColumn:551035db9cbc5f958afc",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      },
+      {
+        "columnId": "49257BE3002293FD:viewColumn:f9ea5706cadd6811e37c",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      }
+    ],
+    "unknownDirectionPreserved": true
+  },
+  "filtering": {
+    "selectionFormula": "SELECT Form = \"frmImusyokai\" & DelFlag = 0 & StatusCode = \"3000\"",
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/1/SelectionFormula"
+    },
+    "authorization": false
+  },
+  "actions": [
+    {
+      "id": "49257BE3002293FD:viewAction:165726eb21c673c781f7",
+      "name": "00閉じる",
+      "actionType": "click",
+      "displayOrder": 0,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": "@Command([FileCloseWindow])",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/0"
+      },
+      "source": "Action 00閉じる [click]:\n@Command([FileCloseWindow])"
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:c27a18ec9956e18a4402",
+      "name": "00閉じる",
+      "actionType": "label",
+      "displayOrder": 1,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/1"
+      },
+      "source": "Action 00閉じる [label]:\n\"閉じる\""
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:c1cf600735f2a626a989",
+      "name": "04新規連絡票作成",
+      "actionType": "click",
+      "displayOrder": 2,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": "@Command([Compose];\"frmImusyokai\")",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/2"
+      },
+      "source": "Action 04新規連絡票作成 [click]:\n@Command([Compose];\"frmImusyokai\")"
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:b28b79a52e525ff157ce",
+      "name": "04新規連絡票作成",
+      "actionType": "hidewhen",
+      "displayOrder": 3,
+      "visibilityRule": "@Contains(@UserRoles ; \"[Admin]\") = @False & @Contains(@UserRoles ; \"[DanTanto]\")= @False",
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/3"
+      },
+      "source": "Action 04新規連絡票作成 [hidewhen]:\n@Contains(@UserRoles ; \"[Admin]\") = @False & @Contains(@UserRoles ; \"[DanTanto]\")= @False"
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:c615724901b1f6043e1a",
+      "name": "04新規連絡票作成",
+      "actionType": "label",
+      "displayOrder": 4,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/4"
+      },
+      "source": "Action 04新規連絡票作成 [label]:\n\"新規連絡票作成\""
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:3163a8ffc3dfe989ba24",
+      "name": null,
+      "actionType": null,
+      "displayOrder": 5,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/5"
+      },
+      "source": "View Event Button Visibility: 00閉じる; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:a7c6cfd94777da6c794c",
+      "name": null,
+      "actionType": null,
+      "displayOrder": 6,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Actions/6"
+      },
+      "source": "View Event Button Visibility: 04新規連絡票作成; Roles=[Admin],[DanTanto]; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=hidden-when-role-missing; HideWhen=@Contains(@UserRoles ; \"[Admin]\") = @False & @Contains(@UserRoles ; \"[DanTanto]\")= @False"
+    }
+  ],
+  "security": {
+    "roles": [],
+    "readRules": [],
+    "writeRules": [],
+    "visibilityRules": [
+      "@Contains(@UserRoles ; \"[Admin]\") = @False & @Contains(@UserRoles ; \"[DanTanto]\")= @False"
+    ],
+    "actionRestrictions": [],
+    "columnRestrictions": [],
+    "enforcementNote": "UI filtering/hiding is not database/document authorization."
+  },
+  "navigation": {
+    "defaultAction": null,
+    "documentOpenBehavior": null,
+    "targetForms": [
+      "frmImusyokai"
+    ],
+    "relatedViews": [],
+    "navigationRules": []
+  },
+  "dependencies": [
+    {
+      "id": "49257BE3002293FD:viewFormDependency:d0ebd9d7858b4ca76fe7",
+      "type": "FORM_DISCRIMINATOR_OR_COMPOSE",
+      "sourceId": "49257BE3002293FD:Views:073347db76d8a22da9a8",
+      "targetId": "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1",
+      "targetReference": "frmImusyokai",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFieldDependency:304c13702cf9dd68aa4d",
+      "type": "COLUMN_FIELD_INPUT",
+      "sourceId": "49257BE3002293FD:viewColumn:8d4e731fac327c848717",
+      "targetId": "49257BE3002293FD:field:03714923a22b55cafa5d",
+      "candidateTargetIds": [
+        "49257BE3002293FD:field:03714923a22b55cafa5d"
+      ],
+      "targetReference": "IraiOverFlag",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1/Columns/0/Formula"
+      }
+    }
+  ],
+  "presentationHints": {
+    "rowBackgroundColor": "white",
+    "altRowBackgroundColor": "#ffffc2",
+    "iconFormulas": [
+      "@If(IraiOverFlag = 1; 150; 0)"
+    ]
+  },
+  "implementationHints": {},
+  "migrationHints": {
+    "advisoryOnly": true
+  },
+  "migrationRisks": [
+    {
+      "code": "UNKNOWN_METADATA",
+      "message": "Missing width/alignment/type/sort direction/resort flags/open-event metadata remain null; IsSorted does not prove user-resort capability."
+    },
+    {
+      "code": "PROJECTION_NOT_STORAGE",
+      "message": "Computed column ItemName such as $154 is not a stored-field mapping; source formulas preserved and field binding reviewed separately."
+    },
+    {
+      "code": "MISSING_COLUMN_HEADER",
+      "columnId": "49257BE3002293FD:viewColumn:dd9d4da92d8d3107f9f4",
+      "message": "No DisplayJp/Title/DisplayEn available; header not invented."
+    }
+  ]
+}

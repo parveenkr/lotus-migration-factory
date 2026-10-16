@@ -1,0 +1,3841 @@
+{
+  "uiBlueprintVersion": "1.0",
+  "applicationIdentity": {
+    "identifier": "49257BE3002293FD",
+    "identitySource": "APPLICATION_BLUEPRINT_AND_ORCHESTRATOR_SOURCE_FINGERPRINT"
+  },
+  "sourceArtifacts": [
+    {
+      "artifactPath": "generated\\blueprints\\application\\application.blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "APPLICATION",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\data-model\\application.data-model-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "APPLICATION",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\forms\\エージェントログ.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\security\\application.security-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "APPLICATION",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\rich-text\\application.rich-text-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "APPLICATION",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "APPLICATION",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\homepage\\homepage-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "EMBEDDED",
+      "scope": "APPLICATION",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\application.view-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "APPLICATION",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\(99_システム%5C01_エージェントログ一覧).migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\(99_システム%5C03_競合文書一覧).migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\(99_システム%5C04_選択肢検索用一覧).migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\(99_システム%5C99_All).migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+      "applicationId": "49257BE3002293FD",
+      "identitySource": "ORCHESTRATOR_MANIFEST_FINGERPRINT",
+      "scope": "DESIGN_ELEMENT",
+      "status": "REVIEW_REQUIRED"
+    }
+  ],
+  "inputCoverage": {
+    "application": {
+      "artifactCount": 1,
+      "status": "PARTIAL",
+      "limitations": [
+        "Inputs are identity-matched and structurally available; upstream review findings and runtime/semantic gaps remain."
+      ]
+    },
+    "dataModel": {
+      "artifactCount": 1,
+      "status": "PARTIAL",
+      "limitations": [
+        "Inputs are identity-matched and structurally available; upstream review findings and runtime/semantic gaps remain."
+      ]
+    },
+    "security": {
+      "artifactCount": 1,
+      "status": "PARTIAL",
+      "limitations": [
+        "Inputs are identity-matched and structurally available; upstream review findings and runtime/semantic gaps remain."
+      ]
+    },
+    "richText": {
+      "artifactCount": 1,
+      "status": "PARTIAL",
+      "limitations": [
+        "Inputs are identity-matched and structurally available; upstream review findings and runtime/semantic gaps remain."
+      ]
+    },
+    "forms": {
+      "artifactCount": 4,
+      "status": "PARTIAL",
+      "limitations": [
+        "Inputs are identity-matched and structurally available; upstream review findings and runtime/semantic gaps remain."
+      ]
+    },
+    "views": {
+      "artifactCount": 12,
+      "status": "PARTIAL",
+      "limitations": [
+        "Inputs are identity-matched and structurally available; upstream review findings and runtime/semantic gaps remain."
+      ]
+    },
+    "navigation": {
+      "artifactCount": 1,
+      "status": "PARTIAL",
+      "limitations": [
+        "Inputs are identity-matched and structurally available; upstream review findings and runtime/semantic gaps remain."
+      ]
+    },
+    "homepage": {
+      "artifactCount": 1,
+      "status": "PARTIAL",
+      "limitations": [
+        "Inputs are identity-matched and structurally available; upstream review findings and runtime/semantic gaps remain."
+      ]
+    }
+  },
+  "entryPoints": [
+    {
+      "identifier": "49257BE3002293FD:ui:6c64300d11d7fd6841f8",
+      "name": "fraMain",
+      "type": "STARTUP_FRAMESET",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\homepage\\homepage-blueprint.json",
+          "jsonPointer": "/homePage",
+          "sourceItemIdentifier": "/homePage",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "initialContentTarget": "viwKakuninByStatus"
+    }
+  ],
+  "navigationModel": [
+    {
+      "identifier": "49257BE3002293FD:ui:8fa0b68c5f1c06a030f8",
+      "name": "進捗確認（進捗別）",
+      "type": "view",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/0",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:4fabba73d54d28ab26b5",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:a534ae5558e79cc77d81"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": "viwKakuninByStatus",
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:88058f6c6be23a63620f",
+      "name": "(spacer)",
+      "type": "none",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/1",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:65f83936145c83f935c5",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:bf073ab36825303a34bd",
+      "name": "進捗確認（担当者別）",
+      "type": "view",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/2",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:5332c0e9c738076aae52",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:cd675389127e2f6eaae4"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": "viwKakuninByPerson",
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:c0c4a01c54e493e827ec",
+      "name": "(spacer)",
+      "type": "none",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/3",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:c74a65bde0ebf112344d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:5ba34bdf4b475b4460fc",
+      "name": "照会参照",
+      "type": "view",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/4",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:6cc38033379e166064b5",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:b84223fac6c7d584672e"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": "viwSyokaiSansyou",
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:8b947a8e1acf5e8812b0",
+      "name": "(spacer)",
+      "type": "none",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/5",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:8ba644420bfe910d1077",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:01a174dc1bb49a7b6d04",
+      "name": "受付確認（書類受付用）",
+      "type": "view",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/6",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:eedfbc6d6b2211c59a55",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:073347db76d8a22da9a8"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": "viwUketuke",
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:acb2bd27316968901347",
+      "name": "(spacer)",
+      "type": "none",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/7",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:f7dc8868f1526da5f571",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:cc7b8ae69cca6fab1152",
+      "name": "照会確認（Dr確認用）",
+      "type": "view",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/8",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:7ade0ab2baac241abc34",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:504076b2a7f28c4b1b37"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": "viwSyokaiKakunin",
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:ec0db2455239525639b5",
+      "name": "(spacer)",
+      "type": "none",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/9",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:72bc25db0137159b88af",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:79fc4979cb4b2e10324b",
+      "name": "各種メンテナンス",
+      "type": "none",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/10",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:965cd2f2748865532af4",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "@Contains(@UserRoles ; \"[DanKanri]\")= @False",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:7b3433e09635fe6c0dc7",
+      "name": "選択肢メンテナンス",
+      "type": "view",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/11",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:39fd8578a477f3c9e85c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:95813aa654844958a862"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": "viwSelectionMente",
+      "hideWhenFormula": "",
+      "parentId": "49257BE3002293FD:navigation:965cd2f2748865532af4"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:b177ce36c9cc20d0fa52",
+      "name": "休日設定メンテナンス",
+      "type": "view",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/12",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:63b898bdd52812ce9d97",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:b77a838534eaf4df92ac"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": "viwSyukuCalendar",
+      "hideWhenFormula": "",
+      "parentId": "49257BE3002293FD:navigation:965cd2f2748865532af4"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:37f3e27314d636f05e4d",
+      "name": "(spacer)",
+      "type": "none",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/13",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:b17165e199c43fc50038",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:ce8800fe5c44ad2fe1c0",
+      "name": "(spacer)",
+      "type": "none",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/14",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:5cc920f50e1573a9a53e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "",
+      "parentId": null
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:e5c6fb9eee0246b43031",
+      "name": "閉じる",
+      "type": "action",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/navigationItems/15",
+          "sourceItemIdentifier": "49257BE3002293FD:navigation:a59887ea2fa1ee0019d2",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        {
+          "unresolvedTarget": null,
+          "reason": "Source spacer/group/action or unresolved target"
+        }
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "routeIntent": null,
+      "hideWhenFormula": "",
+      "parentId": null
+    }
+  ],
+  "homepages": [
+    {
+      "identifier": "49257BE3002293FD:ui:772b82460d1441480145",
+      "name": null,
+      "type": "EXPORTED_STARTUP_EXPERIENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\homepage\\homepage-blueprint.json",
+          "jsonPointer": "/homePage",
+          "sourceItemIdentifier": "/homePage",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "welcomeContentStatus": "NOT_ASSESSED",
+      "cardsDiscovered": 0,
+      "quickLinksDiscovered": 0
+    }
+  ],
+  "forms": [
+    {
+      "identifier": "49257BE3002293FD:ui:47a1183760a9b1a1818c",
+      "name": "エージェントログ",
+      "type": "FORM",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\エージェントログ.migration-blueprint.json",
+          "jsonPointer": "/form",
+          "sourceItemIdentifier": "49257BE3002293FD:Forms:e45349b23cff67baa5b7",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "frmLogDoc",
+      "fieldIds": [
+        "49257BE3002293FD:field:d0db6e52491bf507e6be",
+        "49257BE3002293FD:field:61d013a29fa31623dbfc",
+        "49257BE3002293FD:field:e83312ca67f5b40335b8",
+        "49257BE3002293FD:field:c422eb51412f32d98edc",
+        "49257BE3002293FD:field:e94eed3ceb249536db6a",
+        "49257BE3002293FD:field:b1cb4fd9ee6d02f1ee9b",
+        "49257BE3002293FD:field:72df74fffc710c051030",
+        "49257BE3002293FD:field:9be4b604854015ae2581"
+      ],
+      "subformAliases": [],
+      "interactionType": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:fad7ee16a5830ddfddea",
+      "name": "医務照会",
+      "type": "FORM",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/form",
+          "sourceItemIdentifier": "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Subforms:7090864ddbb4b54dbdf0",
+        "49257BE3002293FD:Subforms:91424ad7972c515fad5d",
+        "49257BE3002293FD:Subforms:fb7734e068f93ba5c7d5",
+        "49257BE3002293FD:Subforms:645799601acd2d158977"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "frmImusyokai",
+      "fieldIds": [
+        "49257BE3002293FD:field:ab5547de20034c8bf0cc",
+        "49257BE3002293FD:field:df39258cce7b4b62c7e0",
+        "49257BE3002293FD:field:03714923a22b55cafa5d",
+        "49257BE3002293FD:field:70a5c47c552b4d307d9b",
+        "49257BE3002293FD:field:5f8c38dc5b38cc7620e5",
+        "49257BE3002293FD:field:6c961c5661172688c083",
+        "49257BE3002293FD:field:f1d3bfac900e2cab7050",
+        "49257BE3002293FD:field:662ccbcfe4446e638041",
+        "49257BE3002293FD:field:928ca0f76bfda473da01",
+        "49257BE3002293FD:field:d8039527653f631fa231",
+        "49257BE3002293FD:field:ebc297bf9df0ecbc558d",
+        "49257BE3002293FD:field:2aed2f1d9e8e44c2a8c6",
+        "49257BE3002293FD:field:7d9e6f7e7d24c99de29c",
+        "49257BE3002293FD:field:fd403c712fdd3a1b30ca"
+      ],
+      "subformAliases": [
+        "sfmDanjiDisp",
+        "sfmDanjiEdit",
+        "sfmKeiiDisp",
+        "sfmKeiiEdit"
+      ],
+      "interactionType": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:b6845d039d6ed763337c",
+      "name": "休日設定メンテナンス",
+      "type": "FORM",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/form",
+          "sourceItemIdentifier": "49257BE3002293FD:Forms:234750c26dc255daabb2",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "frmSyukuCalendar",
+      "fieldIds": [
+        "49257BE3002293FD:field:0c447582067cf3d45fac",
+        "49257BE3002293FD:field:be7eba50491563c5a97e",
+        "49257BE3002293FD:field:29124da6e9be3f43a9f6",
+        "49257BE3002293FD:field:751cb19b84998b4a72e0",
+        "49257BE3002293FD:field:ffee30f488eeded3c384"
+      ],
+      "subformAliases": [],
+      "interactionType": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de",
+      "name": "選択肢メンテナンス",
+      "type": "FORM",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/form",
+          "sourceItemIdentifier": "49257BE3002293FD:Forms:9d24221dc3940e312e8f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "frmSelectionMente",
+      "fieldIds": [
+        "49257BE3002293FD:field:53a1acec8d2d5cd423f7",
+        "49257BE3002293FD:field:c94666a687517600c215",
+        "49257BE3002293FD:field:de2c8e1f83687b65ca9f",
+        "49257BE3002293FD:field:9e5cc027566f483b2436",
+        "49257BE3002293FD:field:7c69f74ea409852b8f23",
+        "49257BE3002293FD:field:35093c79359cf0633aa1",
+        "49257BE3002293FD:field:3a0ad4c20b58f8a141ba"
+      ],
+      "subformAliases": [],
+      "interactionType": "NOT_ASSESSED"
+    }
+  ],
+  "views": [
+    {
+      "identifier": "49257BE3002293FD:ui:902b57fc8c559ea6f11f",
+      "name": "(99_システム\\01_エージェントログ一覧)",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\(99_システム%5C01_エージェントログ一覧).migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:ecb89cae044b6ba4445f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:e45349b23cff67baa5b7",
+        "49257BE3002293FD:field:c422eb51412f32d98edc",
+        "49257BE3002293FD:field:d0db6e52491bf507e6be"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwLogDoc",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:e0495bd1fe8f352ea296",
+        "49257BE3002293FD:viewColumn:5b829094886f10a95900",
+        "49257BE3002293FD:viewColumn:111e00d0ba5f63ae0f43",
+        "49257BE3002293FD:viewColumn:cb39fcd4f69af65465b0",
+        "49257BE3002293FD:viewColumn:1cc4e9d8a630d07c57c9",
+        "49257BE3002293FD:viewColumn:41af92a4c7c178c88a10"
+      ],
+      "categorizedColumnIds": [
+        "49257BE3002293FD:viewColumn:e0495bd1fe8f352ea296"
+      ],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:f55be3be1e32605cc552",
+      "name": "(99_システム\\02_削除文書一覧)",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:113dbac9afc4dbe2c22e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwDelDoc",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:3ea15c9a468ef200555f",
+        "49257BE3002293FD:viewColumn:79de05cb24f69d4fe251",
+        "49257BE3002293FD:viewColumn:9383cb57cd4f2b374266"
+      ],
+      "categorizedColumnIds": [],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:74829506c57fd0103e0a",
+      "name": "(99_システム\\03_競合文書一覧)",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\(99_システム%5C03_競合文書一覧).migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:972a99f5fefb369c5a93",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwConflict",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:b6661d5627852cbba955"
+      ],
+      "categorizedColumnIds": [],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:459c3c6428dda30b57e6",
+      "name": "(99_システム\\04_選択肢検索用一覧)",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\(99_システム%5C04_選択肢検索用一覧).migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:e9f2c62a6fa0af4c02e6",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:9d24221dc3940e312e8f"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwSearchSelection",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:3270420ac81763081051",
+        "49257BE3002293FD:viewColumn:f94f9766b91e4ce90771"
+      ],
+      "categorizedColumnIds": [],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:686e024f239917af7a3d",
+      "name": "(99_システム\\99_All)",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\(99_システム%5C99_All).migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:22440e29992f97abaade",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwSysAll",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:14435966597a3b478fe3",
+        "49257BE3002293FD:viewColumn:f9a1df654a9e4f5ea72d",
+        "49257BE3002293FD:viewColumn:2d0425dd3e052110943c",
+        "49257BE3002293FD:viewColumn:680506626c31340dbf7b",
+        "49257BE3002293FD:viewColumn:ff95fc0539cba11c52fe"
+      ],
+      "categorizedColumnIds": [
+        "49257BE3002293FD:viewColumn:f9a1df654a9e4f5ea72d"
+      ],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:9258df916e0bd38b9e6d",
+      "name": "01_業務\\01_進捗確認（進捗別）",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:a534ae5558e79cc77d81",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1",
+        "49257BE3002293FD:field:03714923a22b55cafa5d"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwKakuninByStatus",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:f9c664ff27ec8f566854",
+        "49257BE3002293FD:viewColumn:88540b34c6a344ad7ead",
+        "49257BE3002293FD:viewColumn:70dc3d49c50c7e2a540d",
+        "49257BE3002293FD:viewColumn:7ea681cde3aebebeeeb4",
+        "49257BE3002293FD:viewColumn:c97d0110946b73822576",
+        "49257BE3002293FD:viewColumn:03a2c06bb8f39277be34",
+        "49257BE3002293FD:viewColumn:23900ac02e6b065252f4",
+        "49257BE3002293FD:viewColumn:bc7bba78daa8fb61365b",
+        "49257BE3002293FD:viewColumn:037bc60b6a7e6cee6d64",
+        "49257BE3002293FD:viewColumn:362070b99ffec6c58adb",
+        "49257BE3002293FD:viewColumn:54dca53ede18cd6bd245"
+      ],
+      "categorizedColumnIds": [
+        "49257BE3002293FD:viewColumn:88540b34c6a344ad7ead"
+      ],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:2f9e0ecd57ad97ff9a83",
+      "name": "01_業務\\02_進捗確認（担当者別）",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:cd675389127e2f6eaae4",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1",
+        "49257BE3002293FD:field:2b52aad4088897cdf3f1",
+        "49257BE3002293FD:field:03714923a22b55cafa5d"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwKakuninByPerson",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:bf4c7afc2243fd180df1",
+        "49257BE3002293FD:viewColumn:8165c6a3691fd7ce8c09",
+        "49257BE3002293FD:viewColumn:b7a3ae2e9a527915e043",
+        "49257BE3002293FD:viewColumn:a83b0aa662ea60f955a0",
+        "49257BE3002293FD:viewColumn:3f9a00f96062eb963946",
+        "49257BE3002293FD:viewColumn:34ba980ed06ecdfc2c6e",
+        "49257BE3002293FD:viewColumn:5daf1a52a505a258ef1c",
+        "49257BE3002293FD:viewColumn:ba5a45ee2171b77ed2c0",
+        "49257BE3002293FD:viewColumn:d5e488091473b5d3335a",
+        "49257BE3002293FD:viewColumn:4567dd9d19b603b1e12c",
+        "49257BE3002293FD:viewColumn:3e1db8c7259d043a6376",
+        "49257BE3002293FD:viewColumn:828160c3724fa9e54a69"
+      ],
+      "categorizedColumnIds": [
+        "49257BE3002293FD:viewColumn:8165c6a3691fd7ce8c09"
+      ],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:e30c208fb1bb2962eb43",
+      "name": "01_業務\\03_照会参照",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:b84223fac6c7d584672e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1",
+        "49257BE3002293FD:field:591aacdf556acf681bd3",
+        "49257BE3002293FD:field:cf8486a127bd41e11844",
+        "49257BE3002293FD:field:73b9b215ae6a33d36f06",
+        "49257BE3002293FD:field:40fc99c14a3a0f1dcade",
+        "49257BE3002293FD:field:1d34481fb29b59d3e43f",
+        "49257BE3002293FD:field:1aca8d7e5636cb787349"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwSyokaiSansyou",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:fce1454cc3c5e1128f91",
+        "49257BE3002293FD:viewColumn:713ca09be80b9549453c",
+        "49257BE3002293FD:viewColumn:a57a9bff172d20ff36f8",
+        "49257BE3002293FD:viewColumn:1ef96770c69b00944aa8",
+        "49257BE3002293FD:viewColumn:0cbe18809b98d209029c",
+        "49257BE3002293FD:viewColumn:680b5b149bd57cba397e",
+        "49257BE3002293FD:viewColumn:30dfb33c4dbaba0349b9"
+      ],
+      "categorizedColumnIds": [
+        "49257BE3002293FD:viewColumn:fce1454cc3c5e1128f91",
+        "49257BE3002293FD:viewColumn:713ca09be80b9549453c",
+        "49257BE3002293FD:viewColumn:a57a9bff172d20ff36f8",
+        "49257BE3002293FD:viewColumn:1ef96770c69b00944aa8"
+      ],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:dfc7aa7f1dbe044c37d6",
+      "name": "01_業務\\04_受付確認(書類受付用)",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:073347db76d8a22da9a8",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1",
+        "49257BE3002293FD:field:03714923a22b55cafa5d"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwUketuke",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:8d4e731fac327c848717",
+        "49257BE3002293FD:viewColumn:551035db9cbc5f958afc",
+        "49257BE3002293FD:viewColumn:f9ea5706cadd6811e37c",
+        "49257BE3002293FD:viewColumn:2af5886341836ca391d9",
+        "49257BE3002293FD:viewColumn:ce3c1f072ebc8b6522f0",
+        "49257BE3002293FD:viewColumn:81ecf003104d46cf6b21",
+        "49257BE3002293FD:viewColumn:b18c4d0053f6ca45ee54",
+        "49257BE3002293FD:viewColumn:dd9d4da92d8d3107f9f4"
+      ],
+      "categorizedColumnIds": [],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:a842cbe3f8adcb137bc9",
+      "name": "01_業務\\05_照会確認（Dr確認用）",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:504076b2a7f28c4b1b37",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1",
+        "49257BE3002293FD:field:03714923a22b55cafa5d"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwSyokaiKakunin",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:13a463f9bc781bbf1ba6",
+        "49257BE3002293FD:viewColumn:5dc72d307f73a401d1e9",
+        "49257BE3002293FD:viewColumn:66fe35de91736d375375",
+        "49257BE3002293FD:viewColumn:debc8342b3ec0a934fcd",
+        "49257BE3002293FD:viewColumn:d2cc14dceeed07dfa31c",
+        "49257BE3002293FD:viewColumn:262f1944af01b49675bf",
+        "49257BE3002293FD:viewColumn:303a39b43da6b1dfb04b",
+        "49257BE3002293FD:viewColumn:d933a98272b1ec18bf2c",
+        "49257BE3002293FD:viewColumn:1f45ac8aa088d1d5e88f",
+        "49257BE3002293FD:viewColumn:62466316aeae7a75ca3d"
+      ],
+      "categorizedColumnIds": [],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:c8734f162b822d644837",
+      "name": "20_メンテナンス\\01_休日設定",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:b77a838534eaf4df92ac",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:234750c26dc255daabb2"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwSyukuCalendar",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:93c1db98717d7b01830e"
+      ],
+      "categorizedColumnIds": [],
+      "filteringIsAuthorization": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:9799630f48da03df53d8",
+      "name": "20_メンテナンス\\02_選択肢メンテナンス",
+      "type": "VIEW",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/view",
+          "sourceItemIdentifier": "49257BE3002293FD:Views:95813aa654844958a862",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Forms:9d24221dc3940e312e8f",
+        "49257BE3002293FD:field:de2c8e1f83687b65ca9f"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "alias": "viwSelectionMente",
+      "columnIds": [
+        "49257BE3002293FD:viewColumn:41df639b498a1964343a",
+        "49257BE3002293FD:viewColumn:e94e5b67d22b18a036f8",
+        "49257BE3002293FD:viewColumn:2bca968af4d43e775130",
+        "49257BE3002293FD:viewColumn:566f3998c5efbce8b3f2"
+      ],
+      "categorizedColumnIds": [
+        "49257BE3002293FD:viewColumn:e94e5b67d22b18a036f8"
+      ],
+      "filteringIsAuthorization": false
+    }
+  ],
+  "actions": [
+    {
+      "identifier": "49257BE3002293FD:ui:23465c42f4f4192e9359",
+      "name": "01印刷",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:16f4dde57197a25f0538",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "PRINT",
+      "semanticsStatus": "SOURCE_SUPPORTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:1312de9166cc6d5f60c8",
+      "name": "01印刷",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:32f13308badb35838611",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:9154b45bf2d85da4168e",
+      "name": "05役付回付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:d016d67fa65d13a4f42f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:86300d9de29662e76f1f",
+      "name": "05役付回付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:c3639b5b7e5ae82a848f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:52dab7a2cec2658e3da7",
+      "name": "05役付回付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:0ce1208b611428322264",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:97e4ad6b99a0dda72d31",
+      "name": "06役付承認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:478b9476086d1d268c4f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:4d29ccf84dec74f90616",
+      "name": "06役付承認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/6",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:6c4f5fda21f5ff52019e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:2612662f3be36af600cc",
+      "name": "06役付承認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/7",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:ecef725d405fb1c085b8",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:7419a994bdab046a149a",
+      "name": "07依頼送付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/8",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:670aeccbfb4ddf6a0aa2",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:fb8b1ded4e5603df5516",
+      "name": "07依頼送付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/9",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:e22846af92b0ffb7a8c3",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:92acbd11cc9664dc974f",
+      "name": "07依頼送付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/10",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:00390cfeb00aaca5f467",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:485b8a2f78d89cc970fb",
+      "name": "08受付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/11",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:ee0a075c570f2913b800",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:17f8ffb8f5fa52865372",
+      "name": "08受付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/12",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:baae080d73bb4902dbbf",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:ee471e79d5eccf309c1f",
+      "name": "08受付",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/13",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:fc53076f76f10a5d101d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:d23c621c46fd8f3f9792",
+      "name": "09依頼確認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/14",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:797427e382660331da5d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:eba1de693552ce211228",
+      "name": "09依頼確認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/15",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:6a2ec9d3cafe99b921d3",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:13525f907ea8c75c16bd",
+      "name": "09依頼確認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/16",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:82b51b9813f3d4a7df3e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:c49ce6d7a7fe0a93e7eb",
+      "name": "10回答送信",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/17",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:f77e24b172e239c9d259",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:db7ff8cd1c90f47c6e26",
+      "name": "10回答送信",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/18",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:acfff0d1e1060939fab7",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:2601243fe37079659ad3",
+      "name": "10回答送信",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/19",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:cf6d96910ffec9eb271a",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:66f2d54bf312a28ef92f",
+      "name": "11再依頼",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/20",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:b8d977c7e422c03eff8f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:7b24b2ac263c48511527",
+      "name": "11再依頼",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/21",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:ce5730d25958f989170b",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:6004894d4f9aeffc28eb",
+      "name": "11再依頼",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/22",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:194920dedccfcf70b83b",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:be27e1693428fb1d5d05",
+      "name": "12回答確認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/23",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:3cff0d8e58fb99135fd2",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:feafc2aa5db9c56955ca",
+      "name": "12回答確認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/24",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:b2cb2c8b7e79852e2ad3",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:9a26157e87431581adf4",
+      "name": "12回答確認",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/25",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:97ece8ccdaa068281b39",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:0de85c032cf8c13d57af",
+      "name": "13進捗戻し",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/26",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:da421044b01bf5ade8fa",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:ae708e83b37a54800b89",
+      "name": "13進捗戻し",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/27",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:dec454d3a44ae280bd0a",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:4ff4adba50ba5050650d",
+      "name": "13進捗戻し",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/28",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:c88caa942c5f93116126",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:a5a5f5395d912f92bbea",
+      "name": "保存",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/29",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:c4b3a6e69c2214273781",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:3e9fcf7722023eeedc4a",
+      "name": "保存",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/30",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:2858408a4483fa8cfc3f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:83e06a988997bee38ae4",
+      "name": "保存",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/31",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:bbc86dce05e2bfb2b1ad",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:748d924f1daf59b16bed",
+      "name": "編集",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/32",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:61385c9b5cffb98ea3a2",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "EDIT",
+      "semanticsStatus": "SOURCE_SUPPORTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:7e3afb98d9ee2ca50f6e",
+      "name": "編集",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/33",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:38aec7d98090bdfe7a30",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:80d548b41e7586c61fc4",
+      "name": "編集",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/34",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:e48836c3911b45e3674e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:f0120e0f6cad3762d5d8",
+      "name": "閉じる",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/35",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:ec249457429dec60c46c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:b294196697c44721cad8",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/36",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:351677198e8481a9d41c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:4c7357fc235f3b24710b",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/37",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:6016bab2d352ccf2a945",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:0338e6326eb16c20bf81",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/38",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:8f5ca7935e3105bb2824",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:d16f3c1237ac61560863",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/39",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:63036f7e337af223b91d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:791d0f6b870af5648755",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/40",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:24efab724810c288cb7d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:6a7cfe4fd84be793b5af",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/41",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:ea22d131394d660858cc",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:afba6941fabbf3a690b1",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/42",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:f77aff29fd39dcf72510",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:8092244290f68ddc2e81",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/43",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:bb033be4980489229466",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:90de54926bcc9046bcac",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/44",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:4319e059e9bc67727f31",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:4a2ada5dcbc8cbdd72d6",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/45",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:000377bb43ebe3499238",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:0b5bdf8a5bd14419417b",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/46",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:56668aa2dc2896211146",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:81dbe690fd9e91da423e",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/47",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:25593ae8b76797f0fd43",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:c18a29e301ed20c93e76",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/48",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:7f4bfcd84b4ce8e1263a",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:da5672e7dd6d07d49ce5",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/49",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:b6755c960f932d9fe880",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:3ff9e029f3047fc418db",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/50",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:de9324535a8460da8c52",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:34664d4e44e3eb9a8dfa",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/51",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:a2f8e6e902749b8dc9ea",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:4f5ab77d33c1bae16af6",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/52",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:a5b09e5b314114d28620",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:da4a1207fe839a36fbb0",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/53",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:9a09cf605a127cf63e51",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:57828a20ac295f3aaee5",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/54",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:8f9fe4a0fcb10fccdfa4",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:3fea432ecf6e2dd0f290",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/actions/55",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:a7acc27ca809ba263e1a",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:fad7ee16a5830ddfddea"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:f3a4fbc5374534d711d1",
+      "name": "02編集",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:30189291229b22ec7a3d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "EDIT",
+      "semanticsStatus": "SOURCE_SUPPORTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:8cbee414ffa79a03c94e",
+      "name": "02編集",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:63ff83f9fe3ab78c5812",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:0cf7b6cf1e4e4253e58b",
+      "name": "03保存",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:770d2526d0425b98a49f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:c9ff42a89a027313ea10",
+      "name": "03保存",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:78f27ead4dd0cd4beb66",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:013f70ad04cd8ba3cad1",
+      "name": "閉じる",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:5cb2ad867544777430d3",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:a6827212854b7bd5680f",
+      "name": "閉じる",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:3f1b20067aad98a107a2",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:f6cbee1469ae375f8592",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/6",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:43ad20cd5fe559124800",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:5412d95a443d86055492",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/7",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:2226a9e7439a848f2332",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:79beb08f00aac0dfe1cf",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/8",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:1e0ea8eada1b0f465cba",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:1663f35e1d9f900cb1cc",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/9",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:4f6b78a08c902c022754",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:b6845d039d6ed763337c"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:073decfbb09e4dd26a86",
+      "name": "02編集",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:5b2c5dc28de3384e356c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "EDIT",
+      "semanticsStatus": "SOURCE_SUPPORTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:8adb2f2ff445fa9409a0",
+      "name": "02編集",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:35af76a55a8d1b6a094a",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:ab8960c748909ee1b1b6",
+      "name": "03保存",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:fe4ea73069fc0929633f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:e629aed73c7bae407ed6",
+      "name": "03保存",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:f2029fe3a3b70848a21f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:2268eb3d42d67ac54fd6",
+      "name": "閉じる",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:9a8415c5e278d500c2f3",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:7cef8272f84618df944d",
+      "name": "閉じる",
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:fc0d99d269fd9613c08c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:44b9f74693b4b261eb49",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/6",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:b4856f9c3e3b152140c1",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:1a929d194edc8d98bdb8",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/7",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:d60364c46a928ed15813",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:8cb9e49befcf9e80ebf4",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/8",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:c76bf501a52be711b44c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:e93d6a75f54b72956958",
+      "name": null,
+      "type": "FORM_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/9",
+          "sourceItemIdentifier": "49257BE3002293FD:formAction:940b8934abe781938278",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:ui:01f7d83dd5df1c6ab6de"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM",
+      "semanticsStatus": "NOT_ASSESSED"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:07eb81075245438c2baa",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:c088ba262f759e7ab025",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:a68b39e62c92e5b3be89",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:a4ddf7da1d1a3ae9bc4d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:94822d56863fb09b399c",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\(99_システム%5C02_削除文書一覧).migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:f6ee653818913880ddb1",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:d4149805af6e58fcaef1",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:35ece3f99f6d60fa9a6e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:e7710c82b4c278ed1727",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:777d7d7edecdb6739b48",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:794f4ffb3ff5c1e03ad8",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:b7b577069f782fff67c2",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:a556fe5f9f9051e8af4f",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:c327736ef7a65fc9df52",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:b89bd324e282cc11c615",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:e290da15975316ec2924",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:053f9b301419b16d76e4",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:ecc0128eab191b44c6a7",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:638c34bededf7a5ba2ed",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C01_進捗確認（進捗別）.migration-blueprint.json",
+          "jsonPointer": "/actions/6",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:a68d5dd39afa3a637af6",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:05581454b1bd8ce62f7a",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:cc4076bbc7714b98dbbb",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:b72cf9f2ab6f891a1313",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:6039d97f35c2df3461a5",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:b95071c442ab0edd094a",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:14b913b37160a1b9d9b3",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:55c6e4b338b57562ea77",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:31bd7e2a12be12946f87",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:5ca5d237cbd42cfdeaa5",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:94a8e1f994d86b645e88",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:56f0e87df92e5463bdda",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:5f4b0f2e685e07d2622f",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:30be29b1df5aa551d43e",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C02_進捗確認（担当者別）.migration-blueprint.json",
+          "jsonPointer": "/actions/6",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:46aed46b7e04a6e376f2",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:26368a17c0e08da70932",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:bf89a5098d993e33d4f5",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:393cdc4874bef9516e22",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:a69b663ac452ce02d5a8",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:03ea3956bd6982eab762",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:6ba041b20c3882e91ee8",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:2cc894dab621d527a48c",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:a59f80a92a31cf8b17a8",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:70c2ed9fa5efb07306d8",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:ea58838767c2f7ffc605",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:4e7701d3e83a16edd778",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:39ea0c378e6a0da12ba7",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:5e197eb0d677a8512a8d",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C03_照会参照.migration-blueprint.json",
+          "jsonPointer": "/actions/6",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:0565da40e982e051fc2c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:a73f0ecdad52394de216",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:165726eb21c673c781f7",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:aa6a8e3776484d28f153",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:c27a18ec9956e18a4402",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:9498674ddee582bfb226",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:c1cf600735f2a626a989",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:de598f471bdde9f5bd8c",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:b28b79a52e525ff157ce",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:c4d0723fdeefaa33ee40",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:c615724901b1f6043e1a",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:64f31a7f6aef38bfe8c9",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:3163a8ffc3dfe989ba24",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:4e07035d322abf940f22",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C04_受付確認(書類受付用).migration-blueprint.json",
+          "jsonPointer": "/actions/6",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:a7c6cfd94777da6c794c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:b41cb05007a6b5260645",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:951b3eb87e5fda38e5a1",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:84ff49e9aaa267a50e5c",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:6ea0c759fea1c0f8f2fa",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:f36369ae53230c577f25",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:e114ab1b5da33407462c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:0860e1759499481e7857",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:657bb0c7e2d42cbb307e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "hidewhen",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:6666221790b8f204dac4",
+      "name": "04新規連絡票作成",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:6aab42d7e9b88d52ea2d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:0cea0d911046e473336f",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:ebf84544a2e31537d9e1",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:027cdf048053e592e7a5",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\01_業務%5C05_照会確認（Dr確認用）.migration-blueprint.json",
+          "jsonPointer": "/actions/6",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:b50358308ebff1603521",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:2436cc23aa7a6ab19b44",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:15173a6749b687f2f213",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:b1c7be44ef0c9a309d62",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:80e4e484746b5b59301d",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:c1e7e78352487662d5a8",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C01_休日設定.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:73fe0c272b4b1fd83d2b",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:1a6f75697a91b4445ca0",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/0",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:ddf7a817b964085dca0c",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:1e39bbea68eca68a22d5",
+      "name": "00閉じる",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/1",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:cde04f54c17fa9e6d4f9",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:82de6883be51fd984049",
+      "name": "選択肢メンテナンス",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/2",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:b2bed4e247d54df336eb",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "click",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:744153837276d0d0eae8",
+      "name": "選択肢メンテナンス",
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/3",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:bf74b9003bed0a64e286",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": "label",
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:f316e2bdbde4d47289ba",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/4",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:84d7b6c835f0b265ef7e",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:83222bc225af9cc9a370",
+      "name": null,
+      "type": "VIEW_ACTION_OCCURRENCE",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\views\\20_メンテナンス%5C02_選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/actions/5",
+          "sourceItemIdentifier": "49257BE3002293FD:viewAction:6453d080c2f4ac533284",
+          "sourceIdentityKind": "MODEL_ID"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sourceActionType": null,
+      "interactionCategory": "CUSTOM"
+    }
+  ],
+  "dialogs": [],
+  "layoutPatterns": [
+    {
+      "identifier": "49257BE3002293FD:ui:9ad36e6932f0a3de80c0",
+      "name": "エージェントログ",
+      "type": "SOURCE_FORM_LAYOUT",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\エージェントログ.migration-blueprint.json",
+          "jsonPointer": "/layout",
+          "sourceItemIdentifier": "/layout",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sections": [],
+      "tabs": [],
+      "groups": [
+        {
+          "GroupName": "TableRow:1",
+          "Context": "table-row",
+          "Fields": [
+            "AgentName",
+            "ExecSeverName"
+          ]
+        },
+        {
+          "GroupName": "TableRow:2",
+          "Context": "table-row",
+          "Fields": [
+            "D_ResultStatus",
+            "ExecEndDate",
+            "ExecName",
+            "ExecStartDate"
+          ]
+        },
+        {
+          "GroupName": "TableRow:4",
+          "Context": "table-row",
+          "Fields": [
+            "ExecResult"
+          ]
+        },
+        {
+          "GroupName": "Ungrouped",
+          "Context": "section",
+          "Fields": [
+            "ResultStatus"
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:212a038e6c8068bfad78",
+      "name": "医務照会",
+      "type": "SOURCE_FORM_LAYOUT",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\医務照会.migration-blueprint.json",
+          "jsonPointer": "/layout",
+          "sourceItemIdentifier": "/layout",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sections": [
+        {
+          "Name": "更新履歴",
+          "Alias": "",
+          "ExpandState": "true",
+          "HideWhenFormula": ""
+        }
+      ],
+      "tabs": [
+        "更新履歴"
+      ],
+      "groups": [
+        {
+          "GroupName": "TableRow:1",
+          "Context": "table-row",
+          "Fields": [
+            "SaiFlag",
+            "StatusName"
+          ]
+        },
+        {
+          "GroupName": "Ungrouped",
+          "Context": "section",
+          "Fields": [
+            "BtnFlag",
+            "DelDate",
+            "DelFlag",
+            "EditDate",
+            "IraiKana",
+            "IraiOverFlag",
+            "SaveOptions",
+            "StatusCode"
+          ]
+        },
+        {
+          "GroupName": "更新履歴",
+          "Context": "section",
+          "Fields": [
+            "KousinDate",
+            "KousinSosiki",
+            "KousinStatus",
+            "Kousinsya"
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:98c2a730e5f215133559",
+      "name": "休日設定メンテナンス",
+      "type": "SOURCE_FORM_LAYOUT",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\休日設定メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/layout",
+          "sourceItemIdentifier": "/layout",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sections": [],
+      "tabs": [],
+      "groups": [
+        {
+          "GroupName": "Ungrouped",
+          "Context": "section",
+          "Fields": [
+            "DelDate",
+            "DelFlag",
+            "SyukuDay",
+            "UpdtDate",
+            "UpdtUser"
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:14aff8e06785f7f1c453",
+      "name": "選択肢メンテナンス",
+      "type": "SOURCE_FORM_LAYOUT",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\forms\\選択肢メンテナンス.migration-blueprint.json",
+          "jsonPointer": "/layout",
+          "sourceItemIdentifier": "/layout",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "sections": [],
+      "tabs": [],
+      "groups": [
+        {
+          "GroupName": "TableRow:1",
+          "Context": "table-row",
+          "Fields": [
+            "MenteTarget"
+          ]
+        },
+        {
+          "GroupName": "TableRow:2",
+          "Context": "table-row",
+          "Fields": [
+            "SortNo"
+          ]
+        },
+        {
+          "GroupName": "TableRow:3",
+          "Context": "table-row",
+          "Fields": [
+            "Selection"
+          ]
+        },
+        {
+          "GroupName": "Ungrouped",
+          "Context": "section",
+          "Fields": [
+            "DelDate",
+            "DelFlag",
+            "UpdtDate",
+            "UpdtUser"
+          ]
+        }
+      ]
+    }
+  ],
+  "userJourneys": [
+    {
+      "identifier": "49257BE3002293FD:ui:befcefd95e3af5848d1f",
+      "name": "viwKakuninByStatus",
+      "type": "NAVIGATE_TO_VIEW_ONLY",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/routes/0",
+          "sourceItemIdentifier": "/routes/0",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:a534ae5558e79cc77d81"
+      ],
+      "evidenceStatus": "DERIVED",
+      "edges": [
+        {
+          "targetId": "49257BE3002293FD:Views:a534ae5558e79cc77d81",
+          "outcome": "Source route target only; action/persistence outcome not established."
+        }
+      ],
+      "completeBusinessJourney": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:3c8c1d68e176298fd8ef",
+      "name": "viwKakuninByPerson",
+      "type": "NAVIGATE_TO_VIEW_ONLY",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/routes/1",
+          "sourceItemIdentifier": "/routes/1",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:cd675389127e2f6eaae4"
+      ],
+      "evidenceStatus": "DERIVED",
+      "edges": [
+        {
+          "targetId": "49257BE3002293FD:Views:cd675389127e2f6eaae4",
+          "outcome": "Source route target only; action/persistence outcome not established."
+        }
+      ],
+      "completeBusinessJourney": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:ca956fd5cd7d88932448",
+      "name": "viwSyokaiSansyou",
+      "type": "NAVIGATE_TO_VIEW_ONLY",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/routes/2",
+          "sourceItemIdentifier": "/routes/2",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:b84223fac6c7d584672e"
+      ],
+      "evidenceStatus": "DERIVED",
+      "edges": [
+        {
+          "targetId": "49257BE3002293FD:Views:b84223fac6c7d584672e",
+          "outcome": "Source route target only; action/persistence outcome not established."
+        }
+      ],
+      "completeBusinessJourney": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:37fdbb1ff8826fcff23d",
+      "name": "viwUketuke",
+      "type": "NAVIGATE_TO_VIEW_ONLY",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/routes/3",
+          "sourceItemIdentifier": "/routes/3",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:073347db76d8a22da9a8"
+      ],
+      "evidenceStatus": "DERIVED",
+      "edges": [
+        {
+          "targetId": "49257BE3002293FD:Views:073347db76d8a22da9a8",
+          "outcome": "Source route target only; action/persistence outcome not established."
+        }
+      ],
+      "completeBusinessJourney": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:69ac271f0a7e98e9f681",
+      "name": "viwSyokaiKakunin",
+      "type": "NAVIGATE_TO_VIEW_ONLY",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/routes/4",
+          "sourceItemIdentifier": "/routes/4",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:504076b2a7f28c4b1b37"
+      ],
+      "evidenceStatus": "DERIVED",
+      "edges": [
+        {
+          "targetId": "49257BE3002293FD:Views:504076b2a7f28c4b1b37",
+          "outcome": "Source route target only; action/persistence outcome not established."
+        }
+      ],
+      "completeBusinessJourney": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:1cc9a8a19b644f121f0f",
+      "name": "viwSelectionMente",
+      "type": "NAVIGATE_TO_VIEW_ONLY",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/routes/5",
+          "sourceItemIdentifier": "/routes/5",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:95813aa654844958a862"
+      ],
+      "evidenceStatus": "DERIVED",
+      "edges": [
+        {
+          "targetId": "49257BE3002293FD:Views:95813aa654844958a862",
+          "outcome": "Source route target only; action/persistence outcome not established."
+        }
+      ],
+      "completeBusinessJourney": false
+    },
+    {
+      "identifier": "49257BE3002293FD:ui:c5be0e00d6e093dfce41",
+      "name": "viwSyukuCalendar",
+      "type": "NAVIGATE_TO_VIEW_ONLY",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/routes/6",
+          "sourceItemIdentifier": "/routes/6",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:Views:b77a838534eaf4df92ac"
+      ],
+      "evidenceStatus": "DERIVED",
+      "edges": [
+        {
+          "targetId": "49257BE3002293FD:Views:b77a838534eaf4df92ac",
+          "outcome": "Source route target only; action/persistence outcome not established."
+        }
+      ],
+      "completeBusinessJourney": false
+    }
+  ],
+  "roleBasedExperiences": [
+    {
+      "identifier": "49257BE3002293FD:ui:81f54ddffa54d99e34f8",
+      "name": "[DanKanri]",
+      "type": "UI_VISIBILITY_DEPENDENCY",
+      "sourceReferences": [
+        {
+          "artifactPath": "generated\\blueprints\\navigation\\navigation-blueprint.json",
+          "jsonPointer": "/roleMappings/0",
+          "sourceItemIdentifier": "/roleMappings/0",
+          "sourceIdentityKind": "JSON_POINTER"
+        }
+      ],
+      "dependencyReferences": [
+        "49257BE3002293FD:navigation:965cd2f2748865532af4"
+      ],
+      "evidenceStatus": "EXTRACTED",
+      "visibilityRule": "@Contains(@UserRoles ; \"[DanKanri]\")= @False",
+      "serverAuthorization": false
+    }
+  ],
+  "dependencies": [],
+  "findings": [
+    {
+      "id": "49257BE3002293FD:finding:6925e750351a6a9b5e79",
+      "code": "UPSTREAM_REVIEW_REQUIRED",
+      "severity": "WARNING",
+      "message": "UI projection preserves specialized sources without overriding review status. Script/logic/workflow/security findings prevent complete behavior or authorization claims.",
+      "recordIds": [],
+      "evidenceIds": [],
+      "blocksImplementation": true,
+      "requiredReview": true
+    },
+    {
+      "id": "49257BE3002293FD:finding:abdbb1d729c221442a9d",
+      "code": "UNRESOLVED_NAVIGATION",
+      "severity": "WARNING",
+      "message": "Embedded outline utlMain versus olMainMenu unresolved; complete page content/close action missing.",
+      "recordIds": [],
+      "evidenceIds": [],
+      "blocksImplementation": true,
+      "requiredReview": true
+    },
+    {
+      "id": "49257BE3002293FD:finding:7ad59939d7e2611b6512",
+      "code": "PARTIAL_JOURNEYS",
+      "severity": "WARNING",
+      "message": "Seven source navigation-to-view edges recovered; full creation/approval/maintenance outcomes cannot be fabricated from inventories.",
+      "recordIds": [],
+      "evidenceIds": [],
+      "blocksImplementation": true,
+      "requiredReview": true
+    }
+  ]
+}

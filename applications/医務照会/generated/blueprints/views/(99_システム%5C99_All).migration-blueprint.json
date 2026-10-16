@@ -1,0 +1,389 @@
+{
+  "migrationBlueprintVersion": "1.0",
+  "source": {
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/11"
+    },
+    "metadata": {
+      "Name": "(99_システム\\99_All)",
+      "Alias": "viwSysAll",
+      "IsDefault": false,
+      "IsFolder": false,
+      "SelectionFormula": "SELECT @All",
+      "RowBackgroundColor": "white",
+      "AltRowBackgroundColor": "#e0e0ff",
+      "Details": "View: viwSysAll\r\nRowStyling: bgcolor=white, altrowcolor=#e0e0ff\r\nSelectionFormula: SELECT @All\r\nColumns: 5\r\n-  [$3] => 1 [isCategorized:false] \r\n- Form [isCategorized:true] \r\n- 作成日 [$1] => @Created [isCategorized:false] \r\n- 更新日 [$2] => @Modified [isCategorized:false] \r\n- 作成者 [$4] => @Name([CN]; @Author) [isCategorized:false]",
+      "Actions": [],
+      "Columns": [
+        {
+          "Title": "",
+          "ItemName": "$3",
+          "DisplayEn": "",
+          "DisplayJp": "",
+          "Formula": "1",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "Form",
+          "ItemName": "Form",
+          "DisplayEn": "Form",
+          "DisplayJp": "",
+          "Formula": "",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": true,
+          "IsCategorized": true,
+          "IsHidden": false
+        },
+        {
+          "Title": "作成日",
+          "ItemName": "$1",
+          "DisplayEn": "作成日",
+          "DisplayJp": "作成日",
+          "Formula": "@Created",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": true,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "更新日",
+          "ItemName": "$2",
+          "DisplayEn": "更新日",
+          "DisplayJp": "更新日",
+          "Formula": "@Modified",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "作成者",
+          "ItemName": "$4",
+          "DisplayEn": "作成者",
+          "DisplayJp": "作成者",
+          "Formula": "@Name([CN]; @Author)",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        }
+      ]
+    }
+  },
+  "view": {
+    "id": "49257BE3002293FD:Views:22440e29992f97abaade",
+    "name": "(99_システム\\99_All)",
+    "alias": "viwSysAll",
+    "isFolder": false,
+    "isDefault": false,
+    "hiddenBySourceName": true,
+    "selectionFormula": "SELECT @All"
+  },
+  "columns": [
+    {
+      "id": "49257BE3002293FD:viewColumn:14435966597a3b478fe3",
+      "columnName": "$3",
+      "displayName": null,
+      "sourceField": "$3",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "1",
+      "position": 0,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/0"
+      },
+      "source": {
+        "Title": "",
+        "ItemName": "$3",
+        "DisplayEn": "",
+        "DisplayJp": "",
+        "Formula": "1",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:f9a1df654a9e4f5ea72d",
+      "columnName": "Form",
+      "displayName": "Form",
+      "sourceField": "Form",
+      "dataType": null,
+      "hidden": false,
+      "categorized": true,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 1,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/1"
+      },
+      "source": {
+        "Title": "Form",
+        "ItemName": "Form",
+        "DisplayEn": "Form",
+        "DisplayJp": "",
+        "Formula": "",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": true,
+        "IsCategorized": true,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:2d0425dd3e052110943c",
+      "columnName": "$1",
+      "displayName": "作成日",
+      "sourceField": "$1",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "@Created",
+      "position": 2,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/2"
+      },
+      "source": {
+        "Title": "作成日",
+        "ItemName": "$1",
+        "DisplayEn": "作成日",
+        "DisplayJp": "作成日",
+        "Formula": "@Created",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": true,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:680506626c31340dbf7b",
+      "columnName": "$2",
+      "displayName": "更新日",
+      "sourceField": "$2",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "@Modified",
+      "position": 3,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/3"
+      },
+      "source": {
+        "Title": "更新日",
+        "ItemName": "$2",
+        "DisplayEn": "更新日",
+        "DisplayJp": "更新日",
+        "Formula": "@Modified",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:ff95fc0539cba11c52fe",
+      "columnName": "$4",
+      "displayName": "作成者",
+      "sourceField": "$4",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "@Name([CN]; @Author)",
+      "position": 4,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/4"
+      },
+      "source": {
+        "Title": "作成者",
+        "ItemName": "$4",
+        "DisplayEn": "作成者",
+        "DisplayJp": "作成者",
+        "Formula": "@Name([CN]; @Author)",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    }
+  ],
+  "formulas": [
+    {
+      "id": "49257BE3002293FD:viewFormula:5001c17d242e7ed7e6b3",
+      "formulaType": "SelectionFormula",
+      "formulaText": "SELECT @All",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/SelectionFormula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:894b8f37d5ea9824f033",
+      "formulaType": "ColumnFormula",
+      "formulaText": "1",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/0/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:85eadfb33cad6b363dae",
+      "formulaType": "ColumnFormula",
+      "formulaText": "@Created",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/2/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:a1bed791a065f458382d",
+      "formulaType": "ColumnFormula",
+      "formulaText": "@Modified",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/3/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:d5445b48c6ad0600bd5d",
+      "formulaType": "ColumnFormula",
+      "formulaText": "@Name([CN]; @Author)",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11/Columns/4/Formula"
+      }
+    }
+  ],
+  "grouping": {
+    "categorizedColumnIds": [
+      "49257BE3002293FD:viewColumn:f9a1df654a9e4f5ea72d"
+    ],
+    "sourceOrderPreserved": true
+  },
+  "folderBehavior": {
+    "isFolder": false,
+    "hierarchy": null
+  },
+  "sorting": {
+    "defaultSortedColumns": [
+      {
+        "columnId": "49257BE3002293FD:viewColumn:f9a1df654a9e4f5ea72d",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      },
+      {
+        "columnId": "49257BE3002293FD:viewColumn:2d0425dd3e052110943c",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      }
+    ],
+    "unknownDirectionPreserved": true
+  },
+  "filtering": {
+    "selectionFormula": "SELECT @All",
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/11/SelectionFormula"
+    },
+    "authorization": false
+  },
+  "actions": [],
+  "security": {
+    "roles": [],
+    "readRules": [],
+    "writeRules": [],
+    "visibilityRules": [],
+    "actionRestrictions": [],
+    "columnRestrictions": [],
+    "enforcementNote": "UI filtering/hiding is not database/document authorization."
+  },
+  "navigation": {
+    "defaultAction": null,
+    "documentOpenBehavior": null,
+    "targetForms": [],
+    "relatedViews": [],
+    "navigationRules": []
+  },
+  "dependencies": [],
+  "presentationHints": {
+    "rowBackgroundColor": "white",
+    "altRowBackgroundColor": "#e0e0ff",
+    "iconFormulas": []
+  },
+  "implementationHints": {},
+  "migrationHints": {
+    "advisoryOnly": true
+  },
+  "migrationRisks": [
+    {
+      "code": "UNKNOWN_METADATA",
+      "message": "Missing width/alignment/type/sort direction/resort flags/open-event metadata remain null; IsSorted does not prove user-resort capability."
+    },
+    {
+      "code": "PROJECTION_NOT_STORAGE",
+      "message": "Computed column ItemName such as $154 is not a stored-field mapping; source formulas preserved and field binding reviewed separately."
+    },
+    {
+      "code": "MISSING_COLUMN_HEADER",
+      "columnId": "49257BE3002293FD:viewColumn:14435966597a3b478fe3",
+      "message": "No DisplayJp/Title/DisplayEn available; header not invented."
+    }
+  ]
+}

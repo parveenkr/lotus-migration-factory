@@ -1,0 +1,767 @@
+{
+  "navigationBlueprintVersion": "1.0",
+  "application": {
+    "applicationId": "49257BE3002293FD",
+    "name": "医務照会DB_TEMPLATE",
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/DatabaseTitle"
+    }
+  },
+  "homePage": {
+    "title": null,
+    "description": null,
+    "defaultRoute": "fraMain",
+    "dependencies": [
+      "49257BE3002293FD:Views:a534ae5558e79cc77d81"
+    ],
+    "startupMode": "openframeset",
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Navigation"
+    },
+    "framesets": [
+      {
+        "Name": "メインフレーム",
+        "Alias": "fraMain",
+        "Layout": "22% 77%",
+        "BorderColor": "silver",
+        "Spacing": "0px",
+        "Frames": [
+          {
+            "Name": "fraLeft",
+            "TargetType": "page",
+            "TargetName": "pgMainMenu",
+            "Scrolling": "never",
+            "Border3d": ""
+          },
+          {
+            "Name": "fraRight",
+            "TargetType": "view",
+            "TargetName": "viwKakuninByStatus",
+            "Scrolling": "",
+            "Border3d": "false"
+          }
+        ]
+      }
+    ],
+    "pageStyles": [
+      {
+        "Name": "メインメニュー",
+        "Alias": "pgMainMenu",
+        "BackgroundColor": "#ffffc2",
+        "BackgroundImage": "back.jpg",
+        "BackgroundRepeat": "vrepeat"
+      }
+    ],
+    "embeddedOutlines": [
+      {
+        "Name": "支払査定ＤＢ",
+        "OutlineName": "utlMain",
+        "Height": "4.0104in",
+        "ExpandState": "none",
+        "TitleColor": "teal",
+        "TopLevelStyle": "normalcolor=#424282; selectedcolor=#9f9fe0; mouseovercolor=#9f9fe0",
+        "SubLevelStyle": "normalcolor=#424282; selectedcolor=#9f9fe0; mouseovercolor=#9f9fe0"
+      }
+    ],
+    "initialContentTarget": "viwKakuninByStatus"
+  },
+  "navigationGroups": [
+    {
+      "id": "49257BE3002293FD:outline:f346d9ac1733b53f932a",
+      "title": "メインメニュー",
+      "children": [
+        "49257BE3002293FD:navigation:4fabba73d54d28ab26b5",
+        "49257BE3002293FD:navigation:65f83936145c83f935c5",
+        "49257BE3002293FD:navigation:5332c0e9c738076aae52",
+        "49257BE3002293FD:navigation:c74a65bde0ebf112344d",
+        "49257BE3002293FD:navigation:6cc38033379e166064b5",
+        "49257BE3002293FD:navigation:8ba644420bfe910d1077",
+        "49257BE3002293FD:navigation:eedfbc6d6b2211c59a55",
+        "49257BE3002293FD:navigation:f7dc8868f1526da5f571",
+        "49257BE3002293FD:navigation:7ade0ab2baac241abc34",
+        "49257BE3002293FD:navigation:72bc25db0137159b88af",
+        "49257BE3002293FD:navigation:965cd2f2748865532af4",
+        "49257BE3002293FD:navigation:b17165e199c43fc50038",
+        "49257BE3002293FD:navigation:5cc920f50e1573a9a53e",
+        "49257BE3002293FD:navigation:a59887ea2fa1ee0019d2"
+      ],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:navigation:965cd2f2748865532af4",
+      "title": "各種メンテナンス",
+      "children": [
+        "49257BE3002293FD:navigation:39fd8578a477f3c9e85c",
+        "49257BE3002293FD:navigation:63b898bdd52812ce9d97"
+      ],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10"
+      },
+      "visibilityRule": "@Contains(@UserRoles ; \"[DanKanri]\")= @False"
+    }
+  ],
+  "navigationItems": [
+    {
+      "id": "49257BE3002293FD:navigation:4fabba73d54d28ab26b5",
+      "title": "進捗確認（進捗別）",
+      "route": "viwKakuninByStatus",
+      "sourceType": "view",
+      "sourceName": "viwKakuninByStatus",
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": false,
+      "parentId": null,
+      "position": 0,
+      "frameTarget": "fraRight",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/0"
+      },
+      "source": {
+        "Label": "進捗確認（進捗別）",
+        "Level": 0,
+        "TargetType": "view",
+        "TargetName": "viwKakuninByStatus",
+        "FrameTarget": "fraRight",
+        "HideWhenFormula": "",
+        "IsSpacer": false
+      },
+      "targetId": "49257BE3002293FD:Views:a534ae5558e79cc77d81"
+    },
+    {
+      "id": "49257BE3002293FD:navigation:65f83936145c83f935c5",
+      "title": "(spacer)",
+      "route": null,
+      "sourceType": "none",
+      "sourceName": null,
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": true,
+      "parentId": null,
+      "position": 1,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/1"
+      },
+      "source": {
+        "Label": "(spacer)",
+        "Level": 0,
+        "TargetType": "none",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "",
+        "IsSpacer": true
+      },
+      "targetId": null
+    },
+    {
+      "id": "49257BE3002293FD:navigation:5332c0e9c738076aae52",
+      "title": "進捗確認（担当者別）",
+      "route": "viwKakuninByPerson",
+      "sourceType": "view",
+      "sourceName": "viwKakuninByPerson",
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": false,
+      "parentId": null,
+      "position": 2,
+      "frameTarget": "fraRight",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/2"
+      },
+      "source": {
+        "Label": "進捗確認（担当者別）",
+        "Level": 0,
+        "TargetType": "view",
+        "TargetName": "viwKakuninByPerson",
+        "FrameTarget": "fraRight",
+        "HideWhenFormula": "",
+        "IsSpacer": false
+      },
+      "targetId": "49257BE3002293FD:Views:cd675389127e2f6eaae4"
+    },
+    {
+      "id": "49257BE3002293FD:navigation:c74a65bde0ebf112344d",
+      "title": "(spacer)",
+      "route": null,
+      "sourceType": "none",
+      "sourceName": null,
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": true,
+      "parentId": null,
+      "position": 3,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/3"
+      },
+      "source": {
+        "Label": "(spacer)",
+        "Level": 0,
+        "TargetType": "none",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "",
+        "IsSpacer": true
+      },
+      "targetId": null
+    },
+    {
+      "id": "49257BE3002293FD:navigation:6cc38033379e166064b5",
+      "title": "照会参照",
+      "route": "viwSyokaiSansyou",
+      "sourceType": "view",
+      "sourceName": "viwSyokaiSansyou",
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": false,
+      "parentId": null,
+      "position": 4,
+      "frameTarget": "fraRight",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/4"
+      },
+      "source": {
+        "Label": "照会参照",
+        "Level": 0,
+        "TargetType": "view",
+        "TargetName": "viwSyokaiSansyou",
+        "FrameTarget": "fraRight",
+        "HideWhenFormula": "",
+        "IsSpacer": false
+      },
+      "targetId": "49257BE3002293FD:Views:b84223fac6c7d584672e"
+    },
+    {
+      "id": "49257BE3002293FD:navigation:8ba644420bfe910d1077",
+      "title": "(spacer)",
+      "route": null,
+      "sourceType": "none",
+      "sourceName": null,
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": true,
+      "parentId": null,
+      "position": 5,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/5"
+      },
+      "source": {
+        "Label": "(spacer)",
+        "Level": 0,
+        "TargetType": "none",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "",
+        "IsSpacer": true
+      },
+      "targetId": null
+    },
+    {
+      "id": "49257BE3002293FD:navigation:eedfbc6d6b2211c59a55",
+      "title": "受付確認（書類受付用）",
+      "route": "viwUketuke",
+      "sourceType": "view",
+      "sourceName": "viwUketuke",
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": false,
+      "parentId": null,
+      "position": 6,
+      "frameTarget": "fraRight",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/6"
+      },
+      "source": {
+        "Label": "受付確認（書類受付用）",
+        "Level": 0,
+        "TargetType": "view",
+        "TargetName": "viwUketuke",
+        "FrameTarget": "fraRight",
+        "HideWhenFormula": "",
+        "IsSpacer": false
+      },
+      "targetId": "49257BE3002293FD:Views:073347db76d8a22da9a8"
+    },
+    {
+      "id": "49257BE3002293FD:navigation:f7dc8868f1526da5f571",
+      "title": "(spacer)",
+      "route": null,
+      "sourceType": "none",
+      "sourceName": null,
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": true,
+      "parentId": null,
+      "position": 7,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/7"
+      },
+      "source": {
+        "Label": "(spacer)",
+        "Level": 0,
+        "TargetType": "none",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "",
+        "IsSpacer": true
+      },
+      "targetId": null
+    },
+    {
+      "id": "49257BE3002293FD:navigation:7ade0ab2baac241abc34",
+      "title": "照会確認（Dr確認用）",
+      "route": "viwSyokaiKakunin",
+      "sourceType": "view",
+      "sourceName": "viwSyokaiKakunin",
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": false,
+      "parentId": null,
+      "position": 8,
+      "frameTarget": "fraRight",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/8"
+      },
+      "source": {
+        "Label": "照会確認（Dr確認用）",
+        "Level": 0,
+        "TargetType": "view",
+        "TargetName": "viwSyokaiKakunin",
+        "FrameTarget": "fraRight",
+        "HideWhenFormula": "",
+        "IsSpacer": false
+      },
+      "targetId": "49257BE3002293FD:Views:504076b2a7f28c4b1b37"
+    },
+    {
+      "id": "49257BE3002293FD:navigation:72bc25db0137159b88af",
+      "title": "(spacer)",
+      "route": null,
+      "sourceType": "none",
+      "sourceName": null,
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": true,
+      "parentId": null,
+      "position": 9,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/9"
+      },
+      "source": {
+        "Label": "(spacer)",
+        "Level": 0,
+        "TargetType": "none",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "",
+        "IsSpacer": true
+      },
+      "targetId": null
+    },
+    {
+      "id": "49257BE3002293FD:navigation:965cd2f2748865532af4",
+      "title": "各種メンテナンス",
+      "route": null,
+      "sourceType": "none",
+      "sourceName": null,
+      "visible": null,
+      "hideWhenFormula": "@Contains(@UserRoles ; \"[DanKanri]\")= @False",
+      "isSpacer": false,
+      "parentId": null,
+      "position": 10,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10"
+      },
+      "source": {
+        "Label": "各種メンテナンス",
+        "Level": 0,
+        "TargetType": "none",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "@Contains(@UserRoles ; \"[DanKanri]\")= @False",
+        "IsSpacer": false,
+        "Children": [
+          {
+            "Label": "選択肢メンテナンス",
+            "Level": 1,
+            "TargetType": "view",
+            "TargetName": "viwSelectionMente",
+            "FrameTarget": "fraRight",
+            "HideWhenFormula": "",
+            "IsSpacer": false
+          },
+          {
+            "Label": "休日設定メンテナンス",
+            "Level": 1,
+            "TargetType": "view",
+            "TargetName": "viwSyukuCalendar",
+            "FrameTarget": "fraRight",
+            "HideWhenFormula": "",
+            "IsSpacer": false
+          }
+        ]
+      },
+      "targetId": null
+    },
+    {
+      "id": "49257BE3002293FD:navigation:39fd8578a477f3c9e85c",
+      "title": "選択肢メンテナンス",
+      "route": "viwSelectionMente",
+      "sourceType": "view",
+      "sourceName": "viwSelectionMente",
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": false,
+      "parentId": "49257BE3002293FD:navigation:965cd2f2748865532af4",
+      "position": 0,
+      "frameTarget": "fraRight",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10/Children/0"
+      },
+      "source": {
+        "Label": "選択肢メンテナンス",
+        "Level": 1,
+        "TargetType": "view",
+        "TargetName": "viwSelectionMente",
+        "FrameTarget": "fraRight",
+        "HideWhenFormula": "",
+        "IsSpacer": false
+      },
+      "targetId": "49257BE3002293FD:Views:95813aa654844958a862"
+    },
+    {
+      "id": "49257BE3002293FD:navigation:63b898bdd52812ce9d97",
+      "title": "休日設定メンテナンス",
+      "route": "viwSyukuCalendar",
+      "sourceType": "view",
+      "sourceName": "viwSyukuCalendar",
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": false,
+      "parentId": "49257BE3002293FD:navigation:965cd2f2748865532af4",
+      "position": 1,
+      "frameTarget": "fraRight",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10/Children/1"
+      },
+      "source": {
+        "Label": "休日設定メンテナンス",
+        "Level": 1,
+        "TargetType": "view",
+        "TargetName": "viwSyukuCalendar",
+        "FrameTarget": "fraRight",
+        "HideWhenFormula": "",
+        "IsSpacer": false
+      },
+      "targetId": "49257BE3002293FD:Views:b77a838534eaf4df92ac"
+    },
+    {
+      "id": "49257BE3002293FD:navigation:b17165e199c43fc50038",
+      "title": "(spacer)",
+      "route": null,
+      "sourceType": "none",
+      "sourceName": null,
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": true,
+      "parentId": null,
+      "position": 11,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/11"
+      },
+      "source": {
+        "Label": "(spacer)",
+        "Level": 0,
+        "TargetType": "none",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "",
+        "IsSpacer": true
+      },
+      "targetId": null
+    },
+    {
+      "id": "49257BE3002293FD:navigation:5cc920f50e1573a9a53e",
+      "title": "(spacer)",
+      "route": null,
+      "sourceType": "none",
+      "sourceName": null,
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": true,
+      "parentId": null,
+      "position": 12,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/12"
+      },
+      "source": {
+        "Label": "(spacer)",
+        "Level": 0,
+        "TargetType": "none",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "",
+        "IsSpacer": true
+      },
+      "targetId": null
+    },
+    {
+      "id": "49257BE3002293FD:navigation:a59887ea2fa1ee0019d2",
+      "title": "閉じる",
+      "route": null,
+      "sourceType": "action",
+      "sourceName": null,
+      "visible": true,
+      "hideWhenFormula": "",
+      "isSpacer": false,
+      "parentId": null,
+      "position": 13,
+      "frameTarget": "",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/13"
+      },
+      "source": {
+        "Label": "閉じる",
+        "Level": 0,
+        "TargetType": "action",
+        "TargetName": "",
+        "FrameTarget": "",
+        "HideWhenFormula": "",
+        "IsSpacer": false
+      },
+      "targetId": null
+    }
+  ],
+  "routes": [
+    {
+      "route": "viwKakuninByStatus",
+      "targetType": "view",
+      "targetName": "viwKakuninByStatus",
+      "targetId": "49257BE3002293FD:Views:a534ae5558e79cc77d81",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/0"
+      },
+      "resolutionStatus": "RESOLVED"
+    },
+    {
+      "route": "viwKakuninByPerson",
+      "targetType": "view",
+      "targetName": "viwKakuninByPerson",
+      "targetId": "49257BE3002293FD:Views:cd675389127e2f6eaae4",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/2"
+      },
+      "resolutionStatus": "RESOLVED"
+    },
+    {
+      "route": "viwSyokaiSansyou",
+      "targetType": "view",
+      "targetName": "viwSyokaiSansyou",
+      "targetId": "49257BE3002293FD:Views:b84223fac6c7d584672e",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/4"
+      },
+      "resolutionStatus": "RESOLVED"
+    },
+    {
+      "route": "viwUketuke",
+      "targetType": "view",
+      "targetName": "viwUketuke",
+      "targetId": "49257BE3002293FD:Views:073347db76d8a22da9a8",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/6"
+      },
+      "resolutionStatus": "RESOLVED"
+    },
+    {
+      "route": "viwSyokaiKakunin",
+      "targetType": "view",
+      "targetName": "viwSyokaiKakunin",
+      "targetId": "49257BE3002293FD:Views:504076b2a7f28c4b1b37",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/8"
+      },
+      "resolutionStatus": "RESOLVED"
+    },
+    {
+      "route": "viwSelectionMente",
+      "targetType": "view",
+      "targetName": "viwSelectionMente",
+      "targetId": "49257BE3002293FD:Views:95813aa654844958a862",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10/Children/0"
+      },
+      "resolutionStatus": "RESOLVED"
+    },
+    {
+      "route": "viwSyukuCalendar",
+      "targetType": "view",
+      "targetName": "viwSyukuCalendar",
+      "targetId": "49257BE3002293FD:Views:b77a838534eaf4df92ac",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10/Children/1"
+      },
+      "resolutionStatus": "RESOLVED"
+    }
+  ],
+  "roleMappings": [
+    {
+      "role": "[DanKanri]",
+      "navigationItems": [
+        "49257BE3002293FD:navigation:965cd2f2748865532af4"
+      ],
+      "visibilityRule": "@Contains(@UserRoles ; \"[DanKanri]\")= @False",
+      "enforcementLayer": "UI_ONLY",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10/HideWhenFormula"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "49257BE3002293FD:navigationDependency:909483c11db15c7ade60",
+      "sourceId": "49257BE3002293FD:navigation:4fabba73d54d28ab26b5",
+      "targetId": "49257BE3002293FD:Views:a534ae5558e79cc77d81",
+      "targetReference": "viwKakuninByStatus",
+      "type": "SOURCE_NAVIGATION_TARGET",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/0"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:navigationDependency:cb9aa112d218f3e6eaea",
+      "sourceId": "49257BE3002293FD:navigation:5332c0e9c738076aae52",
+      "targetId": "49257BE3002293FD:Views:cd675389127e2f6eaae4",
+      "targetReference": "viwKakuninByPerson",
+      "type": "SOURCE_NAVIGATION_TARGET",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/2"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:navigationDependency:0831c1dd269c57805820",
+      "sourceId": "49257BE3002293FD:navigation:6cc38033379e166064b5",
+      "targetId": "49257BE3002293FD:Views:b84223fac6c7d584672e",
+      "targetReference": "viwSyokaiSansyou",
+      "type": "SOURCE_NAVIGATION_TARGET",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/4"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:navigationDependency:99616bfc76fdd797dd08",
+      "sourceId": "49257BE3002293FD:navigation:eedfbc6d6b2211c59a55",
+      "targetId": "49257BE3002293FD:Views:073347db76d8a22da9a8",
+      "targetReference": "viwUketuke",
+      "type": "SOURCE_NAVIGATION_TARGET",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/6"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:navigationDependency:59ee21cba0416190897b",
+      "sourceId": "49257BE3002293FD:navigation:7ade0ab2baac241abc34",
+      "targetId": "49257BE3002293FD:Views:504076b2a7f28c4b1b37",
+      "targetReference": "viwSyokaiKakunin",
+      "type": "SOURCE_NAVIGATION_TARGET",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/8"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:navigationDependency:8b606c16f00ce114d702",
+      "sourceId": "49257BE3002293FD:navigation:39fd8578a477f3c9e85c",
+      "targetId": "49257BE3002293FD:Views:95813aa654844958a862",
+      "targetReference": "viwSelectionMente",
+      "type": "SOURCE_NAVIGATION_TARGET",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10/Children/0"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:navigationDependency:8fe2e16ec9d43108e72c",
+      "sourceId": "49257BE3002293FD:navigation:63b898bdd52812ce9d97",
+      "targetId": "49257BE3002293FD:Views:b77a838534eaf4df92ac",
+      "targetReference": "viwSyukuCalendar",
+      "type": "SOURCE_NAVIGATION_TARGET",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0/Entries/10/Children/1"
+      }
+    }
+  ],
+  "presentationHints": {},
+  "implementationHints": {},
+  "migrationHints": {},
+  "migrationRisks": [
+    {
+      "code": "UNRESOLVED_OUTLINE",
+      "message": "Embedded outline target not declared: utlMain",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/EmbeddedOutlines"
+      }
+    },
+    {
+      "code": "UNKNOWN_ACTION",
+      "message": "Close outline item has TargetType action but no action body/target. Do not invent a command."
+    },
+    {
+      "code": "UI_ONLY_VISIBILITY",
+      "message": "DanKanri maintenance-group HideWhen is UI visibility, not authorization."
+    },
+    {
+      "code": "SOURCE_CONTENT_MISSING",
+      "message": "PageStyles identifies pgMainMenu style, not complete page content."
+    }
+  ]
+}

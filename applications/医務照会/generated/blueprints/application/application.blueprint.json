@@ -1,0 +1,2691 @@
+{
+  "applicationBlueprintVersion": "1.0",
+  "applicationIdentity": {
+    "identifier": "49257BE3002293FD",
+    "displayName": "医務照会",
+    "resolutionSource": "CALLER_STABLE_ID_CORROBORATED_BY_REPLICAID"
+  },
+  "applicationMetadata": {
+    "databaseTitle": "医務照会DB_TEMPLATE",
+    "replicaId": "49257BE3002293FD",
+    "sourceSystem": "Lotus Notes",
+    "exportedAt": "",
+    "server": null,
+    "filepath": null,
+    "template": null,
+    "inheritance": null
+  },
+  "sourceCoverage": {
+    "synopsisPath": "input\\ExtractedJson\\synopsis.json",
+    "parseResult": "PASSED",
+    "sourceAreasExamined": [
+      "SourceSystem",
+      "DatabaseTitle",
+      "ReplicaId",
+      "ExportedAt",
+      "TotalDocuments",
+      "TotalAttachments",
+      "Forms",
+      "Views",
+      "Agents",
+      "ScriptLibraries",
+      "Subforms",
+      "Fields",
+      "Roles",
+      "Acl",
+      "Navigation",
+      "BusinessRules",
+      "ExternalDependencies",
+      "StyleProfile"
+    ],
+    "areasPresent": [
+      "SourceSystem",
+      "DatabaseTitle",
+      "ReplicaId",
+      "ExportedAt",
+      "TotalDocuments",
+      "TotalAttachments",
+      "Forms",
+      "Views",
+      "Agents",
+      "ScriptLibraries",
+      "Subforms",
+      "Fields",
+      "Roles",
+      "Acl",
+      "Navigation",
+      "BusinessRules",
+      "ExternalDependencies",
+      "StyleProfile"
+    ],
+    "areasAbsentFromExport": [
+      "Documents",
+      "Attachments",
+      "Pages",
+      "SharedFields"
+    ],
+    "areasNotExportedOrUnreadable": [
+      "runtime documents",
+      "attachment payloads",
+      "effective identities"
+    ],
+    "recordCounts": {
+      "Forms": 4,
+      "Subforms": 4,
+      "Views": 12,
+      "Agents": 5,
+      "ScriptLibraries": 4,
+      "Fields": 118
+    },
+    "knownCompletenessLimitations": [
+      "ExportedAt is an empty string.",
+      "Runtime data absent; export completeness unproven."
+    ]
+  },
+  "forms": [
+    {
+      "identifier": "49257BE3002293FD:Forms:e45349b23cff67baa5b7",
+      "name": "エージェントログ",
+      "type": "Form",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "frmLogDoc"
+      ],
+      "fieldCount": 8,
+      "actionCount": 0
+    },
+    {
+      "identifier": "49257BE3002293FD:Forms:75891fb0fb7fc2b8a7c1",
+      "name": "医務照会",
+      "type": "Form",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/1"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "frmImusyokai"
+      ],
+      "fieldCount": 14,
+      "actionCount": 56
+    },
+    {
+      "identifier": "49257BE3002293FD:Forms:234750c26dc255daabb2",
+      "name": "休日設定メンテナンス",
+      "type": "Form",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/2"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "frmSyukuCalendar"
+      ],
+      "fieldCount": 5,
+      "actionCount": 10
+    },
+    {
+      "identifier": "49257BE3002293FD:Forms:9d24221dc3940e312e8f",
+      "name": "選択肢メンテナンス",
+      "type": "Form",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Forms/3"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "frmSelectionMente"
+      ],
+      "fieldCount": 7,
+      "actionCount": 10
+    }
+  ],
+  "subforms": [
+    {
+      "identifier": "49257BE3002293FD:Subforms:7090864ddbb4b54dbdf0",
+      "name": "01団事（参照）",
+      "type": "Subform",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Subforms/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "sfmDanjiDisp"
+      ],
+      "fieldCount": 29,
+      "actionCount": 0
+    },
+    {
+      "identifier": "49257BE3002293FD:Subforms:91424ad7972c515fad5d",
+      "name": "01団事（編集）",
+      "type": "Subform",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Subforms/1"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "sfmDanjiEdit"
+      ],
+      "fieldCount": 33,
+      "actionCount": 0
+    },
+    {
+      "identifier": "49257BE3002293FD:Subforms:fb7734e068f93ba5c7d5",
+      "name": "02契医（参照）",
+      "type": "Subform",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Subforms/2"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "sfmKeiiDisp"
+      ],
+      "fieldCount": 11,
+      "actionCount": 0
+    },
+    {
+      "identifier": "49257BE3002293FD:Subforms:645799601acd2d158977",
+      "name": "02契医（編集）",
+      "type": "Subform",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Subforms/3"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "sfmKeiiEdit"
+      ],
+      "fieldCount": 11,
+      "actionCount": 0
+    }
+  ],
+  "views": [
+    {
+      "identifier": "49257BE3002293FD:Views:504076b2a7f28c4b1b37",
+      "name": "01_業務\\05_照会確認（Dr確認用）",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwSyokaiKakunin"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": false
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:073347db76d8a22da9a8",
+      "name": "01_業務\\04_受付確認(書類受付用)",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/1"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwUketuke"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": false
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:a534ae5558e79cc77d81",
+      "name": "01_業務\\01_進捗確認（進捗別）",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/2"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwKakuninByStatus"
+      ],
+      "isFolder": false,
+      "isDefault": true,
+      "hiddenByName": false
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:cd675389127e2f6eaae4",
+      "name": "01_業務\\02_進捗確認（担当者別）",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/3"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwKakuninByPerson"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": false
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:b84223fac6c7d584672e",
+      "name": "01_業務\\03_照会参照",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/4"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwSyokaiSansyou"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": false
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:ecb89cae044b6ba4445f",
+      "name": "(99_システム\\01_エージェントログ一覧)",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/5"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwLogDoc"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": true
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:113dbac9afc4dbe2c22e",
+      "name": "(99_システム\\02_削除文書一覧)",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/6"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwDelDoc"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": true
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:b77a838534eaf4df92ac",
+      "name": "20_メンテナンス\\01_休日設定",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/7"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwSyukuCalendar"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": false
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:95813aa654844958a862",
+      "name": "20_メンテナンス\\02_選択肢メンテナンス",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwSelectionMente"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": false
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:972a99f5fefb369c5a93",
+      "name": "(99_システム\\03_競合文書一覧)",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/9"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwConflict"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": true
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:e9f2c62a6fa0af4c02e6",
+      "name": "(99_システム\\04_選択肢検索用一覧)",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/10"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwSearchSelection"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": true
+    },
+    {
+      "identifier": "49257BE3002293FD:Views:22440e29992f97abaade",
+      "name": "(99_システム\\99_All)",
+      "type": "View",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/11"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "viwSysAll"
+      ],
+      "isFolder": false,
+      "isDefault": false,
+      "hiddenByName": true
+    }
+  ],
+  "folders": [],
+  "agents": [
+    {
+      "identifier": "49257BE3002293FD:Agents:822c579d49ba6597cc41",
+      "name": "D01.時効削除処理",
+      "type": "Agent",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Agents/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "agtDelDoc"
+      ],
+      "trigger": "scheduled",
+      "language": "NOT_DECLARED"
+    },
+    {
+      "identifier": "49257BE3002293FD:Agents:64db92a42e54df61e387",
+      "name": "D02.依頼日超過フラグセット処理",
+      "type": "Agent",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Agents/1"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "agSetFlag"
+      ],
+      "trigger": "scheduled",
+      "language": "NOT_DECLARED"
+    },
+    {
+      "identifier": "49257BE3002293FD:Agents:ed098efb598d1045d249",
+      "name": "D03.競合文書削除処理",
+      "type": "Agent",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Agents/2"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [
+        "agtDelConflict"
+      ],
+      "trigger": "scheduled",
+      "language": "NOT_DECLARED"
+    },
+    {
+      "identifier": "49257BE3002293FD:Agents:5cc4a9277e3e25b908de",
+      "name": "ItemViewer",
+      "type": "Agent",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Agents/3"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "trigger": "actionsmenu",
+      "language": "NOT_DECLARED"
+    },
+    {
+      "identifier": "49257BE3002293FD:Agents:2540f92aae23866cf11a",
+      "name": "DataChange",
+      "type": "Agent",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Agents/4"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "trigger": "actionsmenu",
+      "language": "NOT_DECLARED"
+    }
+  ],
+  "scriptLibraries": [
+    {
+      "identifier": "49257BE3002293FD:ScriptLibraries:571b7e45beebcc6e4b1e",
+      "name": "libCommon",
+      "type": "ScriptLibrarie",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/ScriptLibraries/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": []
+    },
+    {
+      "identifier": "49257BE3002293FD:ScriptLibraries:7c9001b9608749afbe98",
+      "name": "clsAddressInfo",
+      "type": "ScriptLibrarie",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/ScriptLibraries/1"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": []
+    },
+    {
+      "identifier": "49257BE3002293FD:ScriptLibraries:b2ff3b247771e4d4d4de",
+      "name": "libErrorCheck",
+      "type": "ScriptLibrarie",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/ScriptLibraries/2"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": []
+    },
+    {
+      "identifier": "49257BE3002293FD:ScriptLibraries:8d18d18460d7fd23f11f",
+      "name": "libImuForm",
+      "type": "ScriptLibrarie",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/ScriptLibraries/3"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": []
+    }
+  ],
+  "resources": [
+    {
+      "identifier": "49257BE3002293FD:resource:d772052a4a9761239549",
+      "name": "メインメニュー",
+      "type": "PageStyles",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/PageStyles/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:resource:93cd6f0c28cdb416b0f5",
+      "name": "メインフレーム",
+      "type": "Framesets",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Framesets/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:resource:9629fe0526f7a5b993e9",
+      "name": "fraLeft",
+      "type": "Frames",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Framesets/0/Frames/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:resource:ebacd28db0ac6c1fad09",
+      "name": "fraRight",
+      "type": "Frames",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Framesets/0/Frames/1"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:resource:f0e3dda2fbbae2185f89",
+      "name": "メインメニュー",
+      "type": "Outlines",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/Outlines/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED"
+    },
+    {
+      "identifier": "49257BE3002293FD:resource:843c1f7990dc30f3b866",
+      "name": "支払査定ＤＢ",
+      "type": "EmbeddedOutlines",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Navigation/EmbeddedOutlines/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED"
+    }
+  ],
+  "fields": [
+    {
+      "identifier": "49257BE3002293FD:field:dae33850c1662a10edfd",
+      "name": "KyogiIraiDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/0"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:6963b0c284b2a6a89a26",
+      "name": "KaizyoDateDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/1"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:dccd998b8c91758c2c91",
+      "name": "YusenZyuniDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/2"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:b41b6ac45894622cffd1",
+      "name": "SyohinDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/3"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:73315fe5f69790d62d67",
+      "name": "JiyuDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/4"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:e2603dd1d54c226fb7a4",
+      "name": "DNoDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/5"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:63f2244222dbe575a0a1",
+      "name": "UmuDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/6"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7e0d4d0432210c76a316",
+      "name": "HihokensyaDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/7"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:23e4a7d65b11a769fb41",
+      "name": "HihokenNoDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/8"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7a0189a50edf9fad99f1",
+      "name": "SeibetuDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/9"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7c7d3da19a4f1e4fb578",
+      "name": "BirthdayDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/10"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:05777c3d03a939afa70c",
+      "name": "AgeDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/11"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:998051631e07112b6126",
+      "name": "KokutiDateDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/12"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7d823803d3189c3fc25b",
+      "name": "SekininDateDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/13"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:274fd7367577f9640ea1",
+      "name": "IraiNaiyo1Disp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/14"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:5dd24afe2d60a300ece4",
+      "name": "IraiNaiyo2Disp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/15"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:3e26cb1e7c629fb978c7",
+      "name": "IraiNaiyo3Disp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/16"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:9538df038c9a3430cc56",
+      "name": "SyobyoDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/17"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:d62e5c4044661771e0f6",
+      "name": "Hosoku",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/18"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:b2bb8f453a94d1998a0f",
+      "name": "HosokuDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/19"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:9b881908518fce0a6068",
+      "name": "IraiNameDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/20"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:be33024d752b6ab5b8ae",
+      "name": "IraiNaisenDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/21"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:23a4b3948951019468b2",
+      "name": "KakuninNameDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/22"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:f14222cb6844dcc8c1b3",
+      "name": "BessoSiryoDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/23"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7835f053764d95740745",
+      "name": "AttatchUmu1Disp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/24"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:56a7a4f262abc03cd31c",
+      "name": "AttatchDoc1",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/25"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "richtext",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:4575753b711831f951ce",
+      "name": "IraiTantoYakudukiDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/26"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:3efc57e3a6462b7a3bca",
+      "name": "IraiDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/27"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:999860bb4fb540fe3b8c",
+      "name": "KakuninDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/28"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（参照）"
+      ],
+      "sourceForm": "Subform:01団事（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:4509778c0527a220f495",
+      "name": "KyogiIrai",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/29"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:873436bb9465f318746b",
+      "name": "KyogiIraiDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/30"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:56ad2def48e861fd7459",
+      "name": "KaizyoDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/31"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:f3927699e2e6a4eafa5a",
+      "name": "KaizyoDateDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/32"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:538bc77d2b4c2b7c699f",
+      "name": "YusenZyuni",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/33"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:6a8f6b1af3da121bfd59",
+      "name": "YusenZyuniDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/34"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:591aacdf556acf681bd3",
+      "name": "Syohin",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/35"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:cf8486a127bd41e11844",
+      "name": "Jiyu",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/36"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:5ae78cb717eba1b51e33",
+      "name": "DNo",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/37"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:5d786c5bb52c39a17473",
+      "name": "Umu",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/38"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:37dc8d061dd44a509e2b",
+      "name": "UmuDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/39"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:ff53ada2b88a685c0953",
+      "name": "Hihokensya",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/40"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:30bb0222f735c49d9871",
+      "name": "HihokenNo",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/41"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:e19d82bce4d8756db461",
+      "name": "Seibetu",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/42"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7ddf52ade038282cc26c",
+      "name": "SeibetuDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/43"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:af624a2a3b7dba166c1d",
+      "name": "Birthday",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/44"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:ffd329182f37933b4ff5",
+      "name": "Age",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/45"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:41efc77d336f1154990c",
+      "name": "KokutiDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/46"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:97491efed5bf7ce4e5de",
+      "name": "SekininDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/47"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:73b9b215ae6a33d36f06",
+      "name": "IraiNaiyo1",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/48"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:40fc99c14a3a0f1dcade",
+      "name": "IraiNaiyo2",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/49"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:1d34481fb29b59d3e43f",
+      "name": "IraiNaiyo3",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/50"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:1aca8d7e5636cb787349",
+      "name": "Syobyo",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/51"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:56262330158c9ac8b3fa",
+      "name": "Hosoku",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/52"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:2b52aad4088897cdf3f1",
+      "name": "IraiName",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/53"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:b7d5d956628935e8a71d",
+      "name": "IraiNaisen",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/54"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:9cb23261a8a5ed2a9a6c",
+      "name": "KakuninName",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/55"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:b9df5ccab5dc5e5f6faf",
+      "name": "BessoSiryo",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/56"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:c03f8c70a8db4062317e",
+      "name": "AttatchUmu1",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/57"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:b31af9fd74ba8233ea5f",
+      "name": "AttatchDoc1",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/58"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "richtext",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:3c82bb76ac4115d4e7c3",
+      "name": "IraiTantoYakuduki",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/59"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:70d086530676f38bce5f",
+      "name": "IraiDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/60"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:31eaeb6f4f5241d4d961",
+      "name": "KakuninDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/61"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:01団事（編集）"
+      ],
+      "sourceForm": "Subform:01団事（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:519361ce59f0b3d9d2bd",
+      "name": "Ans1Disp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/62"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:f683673c76872acdc6be",
+      "name": "Ans2Disp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/63"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:f60510b647a2b6e46936",
+      "name": "Ans3Disp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/64"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:b706a342155ce7368ac2",
+      "name": "AnsMemoDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/65"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7dc4861fda68aed9539a",
+      "name": "UketukeDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/66"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:48cc1c63d6d9bf6ad989",
+      "name": "UketukeNameDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/67"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:9a90b656fb2070843b66",
+      "name": "BessoUmuDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/68"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:5efadbbe2587521f5193",
+      "name": "AttatchUmu2Disp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/69"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:9de0d7f8ce6b72a4daf6",
+      "name": "AttatchDoc2",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/70"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "richtext",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:753de9c1bfcf16197554",
+      "name": "AnsDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/71"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:1283904db71cdcb4ade1",
+      "name": "AnsUserNameDisp",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/72"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（参照）"
+      ],
+      "sourceForm": "Subform:02契医（参照）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:dfffb4e51b7c99178433",
+      "name": "Ans1",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/73"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:1795022bceaa3ef02260",
+      "name": "Ans2",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/74"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:e13afacf259ef3393483",
+      "name": "Ans3",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/75"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:e6fec9b60dbc1df9e95d",
+      "name": "AnsMemo",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/76"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:139a0b0f311d12ed8508",
+      "name": "UketukeDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/77"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:bc03eb81650114e7a661",
+      "name": "UketukeName",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/78"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:9491eaee7e98d749e06e",
+      "name": "BessoUmu",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/79"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:5391fe88bca11b1b0611",
+      "name": "AttatchUmu2",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/80"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:3e86f8aef6e72fe88793",
+      "name": "AttatchDoc2",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/81"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "richtext",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:bb6e791e1e1d10ddfeee",
+      "name": "AnsDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/82"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:ce8f632a2b6fcd5317c6",
+      "name": "AnsUserName",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/83"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "Subform:02契医（編集）"
+      ],
+      "sourceForm": "Subform:02契医（編集）"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:d0db6e52491bf507e6be",
+      "name": "ResultStatus",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/84"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "number",
+      "usageLocations": [
+        "エージェントログ"
+      ],
+      "sourceForm": "エージェントログ"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:61d013a29fa31623dbfc",
+      "name": "AgentName",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/85"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "エージェントログ"
+      ],
+      "sourceForm": "エージェントログ"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:e83312ca67f5b40335b8",
+      "name": "ExecSeverName",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/86"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "エージェントログ"
+      ],
+      "sourceForm": "エージェントログ"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:c422eb51412f32d98edc",
+      "name": "ExecStartDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/87"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "エージェントログ"
+      ],
+      "sourceForm": "エージェントログ"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:e94eed3ceb249536db6a",
+      "name": "ExecEndDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/88"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "エージェントログ"
+      ],
+      "sourceForm": "エージェントログ"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:b1cb4fd9ee6d02f1ee9b",
+      "name": "D_ResultStatus",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/89"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "エージェントログ"
+      ],
+      "sourceForm": "エージェントログ"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:72df74fffc710c051030",
+      "name": "ExecName",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/90"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "エージェントログ"
+      ],
+      "sourceForm": "エージェントログ"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:9be4b604854015ae2581",
+      "name": "ExecResult",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/91"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "エージェントログ"
+      ],
+      "sourceForm": "エージェントログ"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:ab5547de20034c8bf0cc",
+      "name": "DelFlag",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/92"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "number",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:df39258cce7b4b62c7e0",
+      "name": "DelDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/93"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:03714923a22b55cafa5d",
+      "name": "IraiOverFlag",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/94"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "number",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:70a5c47c552b4d307d9b",
+      "name": "StatusCode",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/95"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:5f8c38dc5b38cc7620e5",
+      "name": "IraiKana",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/96"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:6c961c5661172688c083",
+      "name": "EditDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/97"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:f1d3bfac900e2cab7050",
+      "name": "SaveOptions",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/98"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:662ccbcfe4446e638041",
+      "name": "BtnFlag",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/99"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:928ca0f76bfda473da01",
+      "name": "StatusName",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/100"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:d8039527653f631fa231",
+      "name": "SaiFlag",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/101"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:ebc297bf9df0ecbc558d",
+      "name": "KousinDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/102"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:2aed2f1d9e8e44c2a8c6",
+      "name": "KousinSosiki",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/103"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7d9e6f7e7d24c99de29c",
+      "name": "Kousinsya",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/104"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:fd403c712fdd3a1b30ca",
+      "name": "KousinStatus",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/105"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "医務照会"
+      ],
+      "sourceForm": "医務照会"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:0c447582067cf3d45fac",
+      "name": "DelFlag",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/106"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "number",
+      "usageLocations": [
+        "休日設定メンテナンス"
+      ],
+      "sourceForm": "休日設定メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:be7eba50491563c5a97e",
+      "name": "DelDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/107"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "休日設定メンテナンス"
+      ],
+      "sourceForm": "休日設定メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:29124da6e9be3f43a9f6",
+      "name": "SyukuDay",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/108"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "休日設定メンテナンス"
+      ],
+      "sourceForm": "休日設定メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:751cb19b84998b4a72e0",
+      "name": "UpdtDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/109"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "休日設定メンテナンス"
+      ],
+      "sourceForm": "休日設定メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:ffee30f488eeded3c384",
+      "name": "UpdtUser",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/110"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "休日設定メンテナンス"
+      ],
+      "sourceForm": "休日設定メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:53a1acec8d2d5cd423f7",
+      "name": "DelFlag",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/111"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "number",
+      "usageLocations": [
+        "選択肢メンテナンス"
+      ],
+      "sourceForm": "選択肢メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:c94666a687517600c215",
+      "name": "DelDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/112"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "datetime",
+      "usageLocations": [
+        "選択肢メンテナンス"
+      ],
+      "sourceForm": "選択肢メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:de2c8e1f83687b65ca9f",
+      "name": "MenteTarget",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/113"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "keyword",
+      "usageLocations": [
+        "選択肢メンテナンス"
+      ],
+      "sourceForm": "選択肢メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:9e5cc027566f483b2436",
+      "name": "SortNo",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/114"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "選択肢メンテナンス"
+      ],
+      "sourceForm": "選択肢メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:7c69f74ea409852b8f23",
+      "name": "Selection",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/115"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "選択肢メンテナンス"
+      ],
+      "sourceForm": "選択肢メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:35093c79359cf0633aa1",
+      "name": "UpdtDate",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/116"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "選択肢メンテナンス"
+      ],
+      "sourceForm": "選択肢メンテナンス"
+    },
+    {
+      "identifier": "49257BE3002293FD:field:3a0ad4c20b58f8a141ba",
+      "name": "UpdtUser",
+      "type": "Field",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Fields/117"
+      },
+      "dependencyReferences": [],
+      "evidenceStatus": "EXTRACTED",
+      "aliases": [],
+      "sourceType": "text",
+      "usageLocations": [
+        "選択肢メンテナンス"
+      ],
+      "sourceForm": "選択肢メンテナンス"
+    }
+  ],
+  "dependencies": [
+    {
+      "identifier": "49257BE3002293FD:dependency:b6208e7d0bd746009c29",
+      "sourceIdentifier": null,
+      "targetIdentifier": null,
+      "dependencyType": "DatabaseOpen",
+      "classification": "UNKNOWN",
+      "sourceEvidence": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/ExternalDependencies/0"
+      },
+      "targetReference": "g_Server, g_Path",
+      "resolutionStatus": "UNRESOLVED"
+    },
+    {
+      "identifier": "49257BE3002293FD:dependency:9fe3ad08cd912c94b3e2",
+      "sourceIdentifier": null,
+      "targetIdentifier": null,
+      "dependencyType": "DatabaseOpen",
+      "classification": "UNKNOWN",
+      "sourceEvidence": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/ExternalDependencies/1"
+      },
+      "targetReference": "varDBInfo(0), varDBInfo(1), False",
+      "resolutionStatus": "UNRESOLVED"
+    },
+    {
+      "identifier": "49257BE3002293FD:dependency:e3f2a4adcdf444c15ce4",
+      "sourceIdentifier": null,
+      "targetIdentifier": null,
+      "dependencyType": "NsfPathLiteral",
+      "classification": "UNKNOWN",
+      "sourceEvidence": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/ExternalDependencies/2"
+      },
+      "targetReference": "info.nsf",
+      "resolutionStatus": "UNRESOLVED"
+    }
+  ],
+  "findings": [
+    {
+      "id": "49257BE3002293FD:finding:21612c41342268069e9d",
+      "code": "MISSING_METADATA",
+      "severity": "WARNING",
+      "message": "Export time empty; server/path/template inheritance not exported. Identity is corroborated, runtime completeness is not.",
+      "recordIds": [],
+      "evidenceIds": [],
+      "blocksImplementation": false,
+      "requiredReview": false
+    },
+    {
+      "id": "49257BE3002293FD:finding:84ca16515914ba86aafb",
+      "code": "UNRESOLVED_REFERENCE",
+      "severity": "WARNING",
+      "message": "External dependency expressions require static caller/assignment resolution and environment evidence.",
+      "recordIds": [],
+      "evidenceIds": [],
+      "blocksImplementation": true,
+      "requiredReview": true
+    }
+  ]
+}

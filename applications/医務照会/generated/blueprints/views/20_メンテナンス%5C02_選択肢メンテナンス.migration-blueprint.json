@@ -1,0 +1,488 @@
+{
+  "migrationBlueprintVersion": "1.0",
+  "source": {
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/8"
+    },
+    "metadata": {
+      "Name": "20_メンテナンス\\02_選択肢メンテナンス",
+      "Alias": "viwSelectionMente",
+      "IsDefault": false,
+      "IsFolder": false,
+      "SelectionFormula": "SELECT Form = \"frmSelectionMente\" & DelFlag = 0",
+      "RowBackgroundColor": "white",
+      "AltRowBackgroundColor": "#e0ffbf",
+      "Details": "View: viwSelectionMente\r\nRowStyling: bgcolor=white, altrowcolor=#e0ffbf\r\nSelectionFormula: SELECT Form = \"frmSelectionMente\" & DelFlag = 0\r\nColumns: 4\r\n-  [$7] => REM {\n【内容】\t：\t選択肢のソートのための判定式。選択肢の追加時にデータ変更が必要ない。　 \n【作成日】 \t：\t2006/05/30\n【作成者】 \t：\tDLS.Chida\n};\n\n\n@If(MenteTarget = \"商品\";\"01\";\n\tMenteTarget = \"請求事由\";\"02\";\n\tMenteTarget = \"依頼内容\";\"03\";\n\tMenteTarget = \"回答内容\";\"04\";\"99\") [isCategorized:false]  [hidden]\r\n- 選択肢 [MenteTarget] [isCategorized:true]  [headerFontColor:gray dataFontColor:blue]\r\n- ソートNo [SortNo] [isCategorized:false]  [headerFontColor:gray dataFontColor:(none)]\r\n- 選択肢項目内容 [Selection] [isCategorized:false]  [headerFontColor:gray dataFontColor:(none)]",
+      "Actions": [
+        "Action 00閉じる [click]:\n@Command([FileCloseWindow])",
+        "Action 00閉じる [label]:\n\"閉じる\"",
+        "Action 選択肢メンテナンス [click]:\n@Command([Compose];\"frmSelectionMente\")",
+        "Action 選択肢メンテナンス [label]:\n\"選択肢メンテナンス\"",
+        "View Event Button Visibility: 00閉じる; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen=",
+        "View Event Button Visibility: 選択肢メンテナンス; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+      ],
+      "Columns": [
+        {
+          "Title": "",
+          "ItemName": "$7",
+          "DisplayEn": "DLS",
+          "DisplayJp": "",
+          "Formula": "REM {\n【内容】\t：\t選択肢のソートのための判定式。選択肢の追加時にデータ変更が必要ない。　 \n【作成日】 \t：\t2006/05/30\n【作成者】 \t：\tDLS.Chida\n};\n\n\n@If(MenteTarget = \"商品\";\"01\";\n\tMenteTarget = \"請求事由\";\"02\";\n\tMenteTarget = \"依頼内容\";\"03\";\n\tMenteTarget = \"回答内容\";\"04\";\"99\")",
+          "HeaderFontColor": "",
+          "DataFontColor": "",
+          "IsSorted": true,
+          "IsCategorized": false,
+          "IsHidden": true
+        },
+        {
+          "Title": "選択肢",
+          "ItemName": "MenteTarget",
+          "DisplayEn": "Mente Target",
+          "DisplayJp": "選択肢",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "blue",
+          "IsSorted": true,
+          "IsCategorized": true,
+          "IsHidden": false
+        },
+        {
+          "Title": "ソートNo",
+          "ItemName": "SortNo",
+          "DisplayEn": "Sort No",
+          "DisplayJp": "ソートNo",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "",
+          "IsSorted": true,
+          "IsCategorized": false,
+          "IsHidden": false
+        },
+        {
+          "Title": "選択肢項目内容",
+          "ItemName": "Selection",
+          "DisplayEn": "Selection",
+          "DisplayJp": "選択肢項目内容",
+          "Formula": "",
+          "HeaderFontColor": "gray",
+          "DataFontColor": "",
+          "IsSorted": false,
+          "IsCategorized": false,
+          "IsHidden": false
+        }
+      ]
+    }
+  },
+  "view": {
+    "id": "49257BE3002293FD:Views:95813aa654844958a862",
+    "name": "20_メンテナンス\\02_選択肢メンテナンス",
+    "alias": "viwSelectionMente",
+    "isFolder": false,
+    "isDefault": false,
+    "hiddenBySourceName": false,
+    "selectionFormula": "SELECT Form = \"frmSelectionMente\" & DelFlag = 0"
+  },
+  "columns": [
+    {
+      "id": "49257BE3002293FD:viewColumn:41df639b498a1964343a",
+      "columnName": "$7",
+      "displayName": "DLS",
+      "sourceField": "$7",
+      "dataType": null,
+      "hidden": true,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": true,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "REM {\n【内容】\t：\t選択肢のソートのための判定式。選択肢の追加時にデータ変更が必要ない。　 \n【作成日】 \t：\t2006/05/30\n【作成者】 \t：\tDLS.Chida\n};\n\n\n@If(MenteTarget = \"商品\";\"01\";\n\tMenteTarget = \"請求事由\";\"02\";\n\tMenteTarget = \"依頼内容\";\"03\";\n\tMenteTarget = \"回答内容\";\"04\";\"99\")",
+      "position": 0,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Columns/0"
+      },
+      "source": {
+        "Title": "",
+        "ItemName": "$7",
+        "DisplayEn": "DLS",
+        "DisplayJp": "",
+        "Formula": "REM {\n【内容】\t：\t選択肢のソートのための判定式。選択肢の追加時にデータ変更が必要ない。　 \n【作成日】 \t：\t2006/05/30\n【作成者】 \t：\tDLS.Chida\n};\n\n\n@If(MenteTarget = \"商品\";\"01\";\n\tMenteTarget = \"請求事由\";\"02\";\n\tMenteTarget = \"依頼内容\";\"03\";\n\tMenteTarget = \"回答内容\";\"04\";\"99\")",
+        "HeaderFontColor": "",
+        "DataFontColor": "",
+        "IsSorted": true,
+        "IsCategorized": false,
+        "IsHidden": true
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:e94e5b67d22b18a036f8",
+      "columnName": "MenteTarget",
+      "displayName": "選択肢",
+      "sourceField": "MenteTarget",
+      "dataType": null,
+      "hidden": false,
+      "categorized": true,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 1,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Columns/1"
+      },
+      "source": {
+        "Title": "選択肢",
+        "ItemName": "MenteTarget",
+        "DisplayEn": "Mente Target",
+        "DisplayJp": "選択肢",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "blue",
+        "IsSorted": true,
+        "IsCategorized": true,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:2bca968af4d43e775130",
+      "columnName": "SortNo",
+      "displayName": "ソートNo",
+      "sourceField": "SortNo",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 2,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Columns/2"
+      },
+      "source": {
+        "Title": "ソートNo",
+        "ItemName": "SortNo",
+        "DisplayEn": "Sort No",
+        "DisplayJp": "ソートNo",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "",
+        "IsSorted": true,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewColumn:566f3998c5efbce8b3f2",
+      "columnName": "Selection",
+      "displayName": "選択肢項目内容",
+      "sourceField": "Selection",
+      "dataType": null,
+      "hidden": false,
+      "categorized": false,
+      "sortable": null,
+      "formulaBased": false,
+      "width": null,
+      "alignment": null,
+      "sourceFormula": "",
+      "position": 3,
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Columns/3"
+      },
+      "source": {
+        "Title": "選択肢項目内容",
+        "ItemName": "Selection",
+        "DisplayEn": "Selection",
+        "DisplayJp": "選択肢項目内容",
+        "Formula": "",
+        "HeaderFontColor": "gray",
+        "DataFontColor": "",
+        "IsSorted": false,
+        "IsCategorized": false,
+        "IsHidden": false
+      }
+    }
+  ],
+  "formulas": [
+    {
+      "id": "49257BE3002293FD:viewFormula:5cf6edf5ec1efd630d14",
+      "formulaType": "SelectionFormula",
+      "formulaText": "SELECT Form = \"frmSelectionMente\" & DelFlag = 0",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/SelectionFormula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:00f9358553ed99f10f29",
+      "formulaType": "ColumnFormula",
+      "formulaText": "REM {\n【内容】\t：\t選択肢のソートのための判定式。選択肢の追加時にデータ変更が必要ない。　 \n【作成日】 \t：\t2006/05/30\n【作成者】 \t：\tDLS.Chida\n};\n\n\n@If(MenteTarget = \"商品\";\"01\";\n\tMenteTarget = \"請求事由\";\"02\";\n\tMenteTarget = \"依頼内容\";\"03\";\n\tMenteTarget = \"回答内容\";\"04\";\"99\")",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Columns/0/Formula"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:d6cb568e19ea7118022c",
+      "formulaType": "Actionclick",
+      "formulaText": "Action 00閉じる [click]:\n@Command([FileCloseWindow])",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/0"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:7e90086e6c528bed59fb",
+      "formulaType": "Actionlabel",
+      "formulaText": "Action 00閉じる [label]:\n\"閉じる\"",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/1"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:4aab1ff84af23570effc",
+      "formulaType": "Actionclick",
+      "formulaText": "Action 選択肢メンテナンス [click]:\n@Command([Compose];\"frmSelectionMente\")",
+      "supported": false,
+      "translationStrategy": "Custom Implementation Required",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/2"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFormula:e58f9495a08944b8cf9a",
+      "formulaType": "Actionlabel",
+      "formulaText": "Action 選択肢メンテナンス [label]:\n\"選択肢メンテナンス\"",
+      "supported": true,
+      "translationStrategy": "Preserve source semantics; target equivalence requires downstream review.",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/3"
+      }
+    }
+  ],
+  "grouping": {
+    "categorizedColumnIds": [
+      "49257BE3002293FD:viewColumn:e94e5b67d22b18a036f8"
+    ],
+    "sourceOrderPreserved": true
+  },
+  "folderBehavior": {
+    "isFolder": false,
+    "hierarchy": null
+  },
+  "sorting": {
+    "defaultSortedColumns": [
+      {
+        "columnId": "49257BE3002293FD:viewColumn:41df639b498a1964343a",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      },
+      {
+        "columnId": "49257BE3002293FD:viewColumn:e94e5b67d22b18a036f8",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      },
+      {
+        "columnId": "49257BE3002293FD:viewColumn:2bca968af4d43e775130",
+        "isSorted": true,
+        "sortOrder": null,
+        "resortAscending": null,
+        "resortDescending": null
+      }
+    ],
+    "unknownDirectionPreserved": true
+  },
+  "filtering": {
+    "selectionFormula": "SELECT Form = \"frmSelectionMente\" & DelFlag = 0",
+    "sourceReference": {
+      "artifactPath": "input\\ExtractedJson\\synopsis.json",
+      "jsonPointer": "/Views/8/SelectionFormula"
+    },
+    "authorization": false
+  },
+  "actions": [
+    {
+      "id": "49257BE3002293FD:viewAction:ddf7a817b964085dca0c",
+      "name": "00閉じる",
+      "actionType": "click",
+      "displayOrder": 0,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": "@Command([FileCloseWindow])",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/0"
+      },
+      "source": "Action 00閉じる [click]:\n@Command([FileCloseWindow])"
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:cde04f54c17fa9e6d4f9",
+      "name": "00閉じる",
+      "actionType": "label",
+      "displayOrder": 1,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/1"
+      },
+      "source": "Action 00閉じる [label]:\n\"閉じる\""
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:b2bed4e247d54df336eb",
+      "name": "選択肢メンテナンス",
+      "actionType": "click",
+      "displayOrder": 2,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": "@Command([Compose];\"frmSelectionMente\")",
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/2"
+      },
+      "source": "Action 選択肢メンテナンス [click]:\n@Command([Compose];\"frmSelectionMente\")"
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:bf74b9003bed0a64e286",
+      "name": "選択肢メンテナンス",
+      "actionType": "label",
+      "displayOrder": 3,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/3"
+      },
+      "source": "Action 選択肢メンテナンス [label]:\n\"選択肢メンテナンス\""
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:84d7b6c835f0b265ef7e",
+      "name": null,
+      "actionType": null,
+      "displayOrder": 4,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/4"
+      },
+      "source": "View Event Button Visibility: 00閉じる; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    },
+    {
+      "id": "49257BE3002293FD:viewAction:6453d080c2f4ac533284",
+      "name": null,
+      "actionType": null,
+      "displayOrder": 5,
+      "visibilityRule": null,
+      "enableRule": null,
+      "executionBehavior": null,
+      "dependencies": [],
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Actions/5"
+      },
+      "source": "View Event Button Visibility: 選択肢メンテナンス; Roles=; Statuses=; HideAttr=; ShowInBar=; ShowInMenu=false; RuleType=none; HideWhen="
+    }
+  ],
+  "security": {
+    "roles": [],
+    "readRules": [],
+    "writeRules": [],
+    "visibilityRules": [],
+    "actionRestrictions": [],
+    "columnRestrictions": [],
+    "enforcementNote": "UI filtering/hiding is not database/document authorization."
+  },
+  "navigation": {
+    "defaultAction": null,
+    "documentOpenBehavior": null,
+    "targetForms": [
+      "frmSelectionMente"
+    ],
+    "relatedViews": [],
+    "navigationRules": []
+  },
+  "dependencies": [
+    {
+      "id": "49257BE3002293FD:viewFormDependency:f0cfb3259e1da5d32bc2",
+      "type": "FORM_DISCRIMINATOR_OR_COMPOSE",
+      "sourceId": "49257BE3002293FD:Views:95813aa654844958a862",
+      "targetId": "49257BE3002293FD:Forms:9d24221dc3940e312e8f",
+      "targetReference": "frmSelectionMente",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8"
+      }
+    },
+    {
+      "id": "49257BE3002293FD:viewFieldDependency:2aa54ff59c5cd12b39af",
+      "type": "COLUMN_FIELD_INPUT",
+      "sourceId": "49257BE3002293FD:viewColumn:41df639b498a1964343a",
+      "targetId": "49257BE3002293FD:field:de2c8e1f83687b65ca9f",
+      "candidateTargetIds": [
+        "49257BE3002293FD:field:de2c8e1f83687b65ca9f"
+      ],
+      "targetReference": "MenteTarget",
+      "resolutionStatus": "RESOLVED",
+      "sourceReference": {
+        "artifactPath": "input\\ExtractedJson\\synopsis.json",
+        "jsonPointer": "/Views/8/Columns/0/Formula"
+      }
+    }
+  ],
+  "presentationHints": {
+    "rowBackgroundColor": "white",
+    "altRowBackgroundColor": "#e0ffbf",
+    "iconFormulas": []
+  },
+  "implementationHints": {},
+  "migrationHints": {
+    "advisoryOnly": true
+  },
+  "migrationRisks": [
+    {
+      "code": "UNKNOWN_METADATA",
+      "message": "Missing width/alignment/type/sort direction/resort flags/open-event metadata remain null; IsSorted does not prove user-resort capability."
+    },
+    {
+      "code": "PROJECTION_NOT_STORAGE",
+      "message": "Computed column ItemName such as $154 is not a stored-field mapping; source formulas preserved and field binding reviewed separately."
+    }
+  ]
+}
