@@ -3,7 +3,7 @@
 	"title": "Lotus Notes Application Script Blueprint",
 	"type": "object",
 	"additionalProperties": false,
-	"required": ["scriptBlueprintVersion", "traceability", "analysisStatus", "source", "sourceRegions", "scripts", "uiBehaviors", "handoffs", "summary", "dependencies", "findings", "migrationRisks", "migrationHints", "complexity", "validation"],
+	"required": ["scriptBlueprintVersion", "traceability", "analysisStatus", "source", "sourceRegions", "scripts", "uiBehaviors", "handoffs", "summary", "dependencies", "symbolResolutions", "findings", "migrationRisks", "migrationHints", "complexity", "validation"],
 	"properties": {
 		"scriptBlueprintVersion": { "const": "1.1" },
 		"traceability": {
@@ -56,6 +56,7 @@
 			}
 		},
 		"dependencies": { "type": "array", "items": { "$ref": "#/$defs/dependency" } },
+		"symbolResolutions": { "type": "array", "items": { "$ref": "#/$defs/symbolResolution" } },
 		"findings": { "type": "array", "items": { "$ref": "#/$defs/finding" } },
 		"migrationRisks": {
 			"type": "array",
@@ -149,7 +150,7 @@
 			"required": ["id", "classification", "evidenceId", "startOffset", "endOffset", "text", "reviewNotes"],
 			"properties": {
 				"id": { "$ref": "#/$defs/text" },
-				"classification": { "enum": ["EXECUTABLE_CODE", "COMMENT_DOCUMENTATION"] },
+				"classification": { "enum": ["EXECUTABLE_CODE", "COMMENT_DOCUMENTATION", "DEPENDENCY_METADATA"] },
 				"evidenceId": { "$ref": "#/$defs/text" },
 				"startOffset": { "type": "integer", "minimum": 0 },
 				"endOffset": { "type": "integer", "minimum": 1 },
@@ -311,8 +312,103 @@
 				"targetId": { "$ref": "#/$defs/nullableText" },
 				"targetReference": { "$ref": "#/$defs/text" },
 				"resolutionStatus": { "enum": ["RESOLVED", "EXTERNAL", "UNRESOLVED"] },
-				"regionIds": { "$ref": "#/$defs/evidenceIds" },
+				"regionIds": { "$ref": "#/$defs/ids" },
+				"importOrigin": { "enum": ["USE_IMPORT", "DEPENDENCY_METADATA"] },
 				"evidenceIds": { "$ref": "#/$defs/evidenceIds" }
+			},
+			"allOf": [
+				{
+					"if": { "properties": { "type": { "const": "LIBRARY_IMPORT" } } },
+					"then": { "required": ["importOrigin"] }
+				},
+				{
+					"if": {
+						"required": ["importOrigin"],
+						"properties": { "type": { "const": "LIBRARY_IMPORT" }, "importOrigin": { "const": "DEPENDENCY_METADATA" } }
+					},
+					"then": {},
+					"else": { "properties": { "regionIds": { "minItems": 1 } } }
+				}
+			]
+		},
+		"symbolResolution": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["id", "sourceId", "symbol", "regionIds", "evidenceIds", "resolutionAttempted", "resolutionStatus", "resolvedByDependencyMetadata", "resolvedLibrary", "resolvedByFormScope", "formScopeId", "resolutionMethod", "targetId", "candidateIds", "visibilityPath", "visibilityEvidence", "attemptedScopes"],
+			"properties": {
+				"id": { "$ref": "#/$defs/text" },
+				"sourceId": { "$ref": "#/$defs/text" },
+				"symbol": { "$ref": "#/$defs/text" },
+				"regionIds": { "$ref": "#/$defs/evidenceIds" },
+				"evidenceIds": { "$ref": "#/$defs/evidenceIds" },
+				"resolutionAttempted": { "const": true },
+				"resolutionStatus": { "enum": ["RESOLVED", "UNRESOLVED", "AMBIGUOUS"] },
+				"resolvedByDependencyMetadata": { "type": "boolean" },
+				"resolvedLibrary": { "$ref": "#/$defs/nullableText" },
+				"resolvedByFormScope": { "type": "boolean" },
+				"formScopeId": { "$ref": "#/$defs/nullableText" },
+				"resolutionMethod": { "enum": ["LOCAL_DECLARATION", "SAME_OWNER_DECLARATION", "FORM_DECLARATION", "USE_IMPORT", "DEPENDENCY_METADATA", "TRANSITIVE_LIBRARY_IMPORT", "BUILTIN", "NONE", "AMBIGUOUS"] },
+				"targetId": { "$ref": "#/$defs/nullableText" },
+				"candidateIds": { "$ref": "#/$defs/ids" },
+				"visibilityPath": { "$ref": "#/$defs/ids" },
+				"visibilityEvidence": { "type": "array", "items": { "$ref": "#/$defs/importEvidence" } },
+				"attemptedScopes": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } }
+			},
+			"allOf": [
+				{
+					"if": { "properties": { "resolutionStatus": { "const": "RESOLVED" } } },
+					"then": {
+						"properties": {
+							"targetId": { "$ref": "#/$defs/text" },
+							"candidateIds": { "minItems": 1, "maxItems": 1 },
+							"resolutionMethod": { "not": { "enum": ["NONE", "AMBIGUOUS"] } }
+						}
+					},
+					"else": {
+						"properties": { "targetId": { "type": "null" }, "resolvedLibrary": { "type": "null" }, "resolvedByDependencyMetadata": { "const": false } }
+					}
+				},
+				{
+					"if": { "properties": { "resolutionStatus": { "const": "UNRESOLVED" } } },
+					"then": { "properties": { "resolutionMethod": { "const": "NONE" }, "candidateIds": { "maxItems": 0 } } }
+				},
+				{
+					"if": { "properties": { "resolutionStatus": { "const": "AMBIGUOUS" } } },
+					"then": { "properties": { "resolutionMethod": { "const": "AMBIGUOUS" }, "candidateIds": { "minItems": 2 } } }
+				},
+				{
+					"if": { "properties": { "resolutionMethod": { "enum": ["USE_IMPORT", "DEPENDENCY_METADATA", "TRANSITIVE_LIBRARY_IMPORT"] } } },
+					"then": { "properties": { "resolvedLibrary": { "$ref": "#/$defs/text" }, "visibilityPath": { "minItems": 2 }, "visibilityEvidence": { "minItems": 1 } } }
+				},
+				{
+					"if": { "properties": { "resolutionMethod": { "const": "DEPENDENCY_METADATA" } } },
+					"then": { "properties": { "resolvedByDependencyMetadata": { "const": true } } }
+				},
+				{
+					"if": { "properties": { "resolvedByFormScope": { "const": true } } },
+					"then": { "properties": { "formScopeId": { "$ref": "#/$defs/text" }, "resolutionStatus": { "const": "RESOLVED" }, "visibilityPath": { "minItems": 2 } } },
+					"else": { "properties": { "formScopeId": { "type": "null" } } }
+				},
+				{
+					"if": { "properties": { "resolutionMethod": { "const": "FORM_DECLARATION" } } },
+					"then": { "properties": { "resolvedByFormScope": { "const": true } } }
+				}
+			]
+		},
+		"importEvidence": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["ownerId", "libraryName", "resolutionMethod", "evidenceId", "startOffset", "endOffset", "metadataIndex"],
+			"properties": {
+				"ownerId": { "$ref": "#/$defs/text" },
+				"libraryName": { "$ref": "#/$defs/text" },
+				"resolutionMethod": { "enum": ["USE_IMPORT", "DEPENDENCY_METADATA"] },
+				"evidenceId": { "$ref": "#/$defs/text" },
+				"sourcePointer": { "$ref": "#/$defs/text" },
+				"sourcePointers": { "$ref": "#/$defs/evidenceIds" },
+				"startOffset": { "type": ["integer", "null"], "minimum": 0 },
+				"endOffset": { "type": ["integer", "null"], "minimum": 1 },
+				"metadataIndex": { "type": ["integer", "null"], "minimum": 0 }
 			}
 		},
 		"finding": {

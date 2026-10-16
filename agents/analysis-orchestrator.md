@@ -308,6 +308,10 @@ Require comment-aware lexing before language detection, parsing, or symbol resol
 
 Carry script findings and dependencies into business-logic reconciliation. A structurally valid `REVIEW_REQUIRED` script blueprint is partial analysis, not a completed-analysis gate; unresolved required behavior prevents `ANALYSIS_COMPLETE`.
 
+Validate library visibility from executable Use imports and exported Dependencies metadata, including header lines and transitive imports. Require symbolResolutions diagnostics (`resolvedByDependencyMetadata`, `resolvedLibrary`, `resolutionMethod`) with implementation and visibility evidence. A unique visible implementation must resolve automatically, not retain UNRESOLVED_REFERENCE; multiple visible implementations require ambiguity review rather than a missing-reference finding. Metadata-only library-import edges may use property/header evidence without executable regions; actual calls still require executable-region evidence, and comments never establish imports.
+
+Require a form-level visibility scope from ImportedLibraries, LotusScriptOccurrences options Source, and Form Script[options] Use statements before resolving form code. Attach it by stable owner-form ID to all form functions, events, action handlers, and LotusScript routines. Validate local/same-script -> form declarations -> imported/transitive libraries -> Notes built-ins precedence, no cross-form leakage, deduplicated imports with all source pointers, and resolvedByFormScope/formScopeId diagnostics. Form options must not be required to appear in each child's own source; a unique accessible imported class/function must resolve without UNRESOLVED_REFERENCE. Preserve genuine ambiguity or unavailable implementations and regenerate older artifacts lacking import evidence rather than clearing findings by symbol name alone.
+
 Then run business-logic analysis:
 
 Run:
